@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.typehandlers.base.PointerReturnValue</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.typehandlers-module.html">Package&nbsp;typehandlers</a> ::
+        <a href="pybindgen.typehandlers.base-module.html">Module&nbsp;base</a> ::
+        Class&nbsp;PointerReturnValue
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.base.PointerReturnValue-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class PointerReturnValue</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#PointerReturnValue">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_71" name="uml_class_diagram_for_pybindge_71">
+<area shape="rect" href="pybindgen.typehandlers.base.PointerReturnValue&#45;class.html#CTYPES" title="pybindgen.typehandlers.base.PointerReturnValue.CTYPES" alt="" coords="17,228,388,247"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerReturnValue&#45;class.html#__init__" title="Creates a return value object" alt="" coords="17,249,388,268"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerReturnValue&#45;class.html" title="Base class for all pointer&#45;to&#45;something handlers" alt="" coords="16,211,389,269"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.CStringReturn&#45;class.html" title="pybindgen.typehandlers.stringtype.CStringReturn" alt="" coords="125,299,280,325"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue.__metaclass__&#45;class.html" title="Metaclass for automatically registering parameter type handlers" alt="" coords="27,28,379,47"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#REQUIRES_ASSIGNMENT_CONSTRUCTOR" title="pybindgen.typehandlers.base.ReturnValue.REQUIRES_ASSIGNMENT_CONSTRUCTOR" alt="" coords="27,47,379,65"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#SUPPORTS_TRANSFORMATIONS" title="pybindgen.typehandlers.base.ReturnValue.SUPPORTS_TRANSFORMATIONS" alt="" coords="27,65,379,84"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#convert_c_to_python" title="Writes code to convert the C return value the Python return." alt="" coords="27,87,379,105"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#set_tranformation" title="Set the type transformation to use in this type handler" alt="" coords="27,105,379,124"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#get_c_error_return" title="Return a &quot;return &lt;value&gt;&quot; code string, for use in case of error" alt="" coords="27,124,379,143"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#new" title="pybindgen.typehandlers.base.ReturnValue.new" alt="" coords="27,143,379,161"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#convert_python_to_c" title="Writes code to convert the Python return value into the C &quot;retval&quot;  variable." alt="" coords="27,161,379,180"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html" title="Abstract base class for all classes dedicated to handle specific return value types" alt="" coords="25,11,380,181"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_71.gif" alt='' usemap="#uml_class_diagram_for_pybindge_71" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+Base class for all pointer-to-something handlers<br /><br />
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue.__metaclass__-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.PointerReturnValue-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ctype</span>,
+        <span class="summary-sig-arg">is_const</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">caller_owns_return</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Creates a return value object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#PointerReturnValue.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#convert_c_to_python">convert_c_to_python</a></code>,
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#convert_python_to_c">convert_python_to_c</a></code>,
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#get_c_error_return">get_c_error_return</a></code>,
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#set_tranformation">set_tranformation</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#new">new</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CTYPES"></a><span class="summary-name">CTYPES</span> = <code title="NotImplemented">NotImplemented</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#REQUIRES_ASSIGNMENT_CONSTRUCTOR">REQUIRES_ASSIGNMENT_CONSTRUCTOR</a></code>,
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#SUPPORTS_TRANSFORMATIONS">SUPPORTS_TRANSFORMATIONS</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ctype</span>,
+        <span class="sig-arg">is_const</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">caller_owns_return</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#PointerReturnValue.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Creates a return value object</p>
+  Keywork Arguments:
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.typehandlers.base.ReturnValue-class.html#__init__">ReturnValue.__init__</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:51 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.typehandlers.floattype</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.typehandlers-module.html">Package&nbsp;typehandlers</a> ::
+        Module&nbsp;floattype
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.floattype-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pybindgen.typehandlers.floattype-module.html">Module pybindgen.typehandlers.floattype</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># docstrings not neede here (the type handler floaterfaces are fully</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># documented in base.py) pylint: disable-msg=C0111</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module pybindgen.typehandlers.base=pybindgen.typehandlers.base-module.html"><a title="pybindgen.typehandlers.base" class="py-name" href="#" onclick="return doclink('link-0', 'base', 'link-0');">base</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class pybindgen.typehandlers.base.ReturnValue=pybindgen.typehandlers.base.ReturnValue-class.html"><a title="pybindgen.typehandlers.base.ReturnValue" class="py-name" href="#" onclick="return doclink('link-1', 'ReturnValue', 'link-1');">ReturnValue</a></tt><tt class="py-op">,</tt> <tt id="link-2" class="py-name" targets="Class pybindgen.typehandlers.base.Parameter=pybindgen.typehandlers.base.Parameter-class.html"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-2', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">,</tt> \ </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line">     <tt id="link-3" class="py-name" targets="Class pybindgen.typehandlers.base.ReverseWrapperBase=pybindgen.typehandlers.base.ReverseWrapperBase-class.html"><a title="pybindgen.typehandlers.base.ReverseWrapperBase" class="py-name" href="#" onclick="return doclink('link-3', 'ReverseWrapperBase', 'link-3');">ReverseWrapperBase</a></tt><tt class="py-op">,</tt> <tt id="link-4" class="py-name" targets="Class pybindgen.typehandlers.base.ForwardWrapperBase=pybindgen.typehandlers.base.ForwardWrapperBase-class.html"><a title="pybindgen.typehandlers.base.ForwardWrapperBase" class="py-name" href="#" onclick="return doclink('link-4', 'ForwardWrapperBase', 'link-4');">ForwardWrapperBase</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="FloatParam"></a><div id="FloatParam-def"><a name="L8"></a><tt class="py-lineno">  8</tt> <a class="py-toggle" href="#" id="FloatParam-toggle" onclick="return toggle('FloatParam');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatParam-class.html">FloatParam</a><tt class="py-op">(</tt><tt class="py-base-class">Parameter</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatParam-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FloatParam-expanded"><a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable pybindgen.cppclass.CppClassParameter.DIRECTIONS=pybindgen.cppclass.CppClassParameter-class.html#DIRECTIONS,Variable pybindgen.cppclass.CppClassParameterBase.DIRECTIONS=pybindgen.cppclass.CppClassParameterBase-class.html#DIRECTIONS,Variable pybindgen.cppclass.CppClassPtrParameter.DIRECTIONS=pybindgen.cppclass.CppClassPtrParameter-class.html#DIRECTIONS,Variable pybindgen.cppclass.CppClassRefParameter.DIRECTIONS=pybindgen.cppclass.CppClassRefParameter-class.html#DIRECTIONS,Variable pybindgen.cppmethod.DummyParameter.DIRECTIONS=pybindgen.cppmethod.DummyParameter-class.html#DIRECTIONS,Variable pybindgen.typehandlers.base.Parameter.DIRECTIONS=pybindgen.typehandlers.base.Parameter-class.html#DIRECTIONS,Variable pybindgen.typehandlers.booltype.BoolParam.DIRECTIONS=pybindgen.typehandlers.booltype.BoolParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.booltype.BoolPtrParam.DIRECTIONS=pybindgen.typehandlers.booltype.BoolPtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.booltype.BoolRefParam.DIRECTIONS=pybindgen.typehandlers.booltype.BoolRefParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.doubletype.DoubleParam.DIRECTIONS=pybindgen.typehandlers.doubletype.DoubleParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.doubletype.DoublePtrParam.DIRECTIONS=pybindgen.typehandlers.doubletype.DoublePtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.doubletype.DoubleRefParam.DIRECTIONS=pybindgen.typehandlers.doubletype.DoubleRefParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.floattype.FloatParam.DIRECTIONS=pybindgen.typehandlers.floattype.FloatParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.floattype.FloatPtrParam.DIRECTIONS=pybindgen.typehandlers.floattype.FloatPtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.floattype.FloatRefParam.DIRECTIONS=pybindgen.typehandlers.floattype.FloatRefParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.Int16Param.DIRECTIONS=pybindgen.typehandlers.inttype.Int16Param-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.Int8PtrParam.DIRECTIONS=pybindgen.typehandlers.inttype.Int8PtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.IntParam.DIRECTIONS=pybindgen.typehandlers.inttype.IntParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.IntPtrParam.DIRECTIONS=pybindgen.typehandlers.inttype.IntPtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.IntRefParam.DIRECTIONS=pybindgen.typehandlers.inttype.IntRefParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.LongLongParam.DIRECTIONS=pybindgen.typehandlers.inttype.LongLongParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.LongLongRefParam.DIRECTIONS=pybindgen.typehandlers.inttype.LongLongRefParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UInt16Param.DIRECTIONS=pybindgen.typehandlers.inttype.UInt16Param-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UInt8Param.DIRECTIONS=pybindgen.typehandlers.inttype.UInt8Param-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UInt8PtrParam.DIRECTIONS=pybindgen.typehandlers.inttype.UInt8PtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UnsignedIntParam.DIRECTIONS=pybindgen.typehandlers.inttype.UnsignedIntParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UnsignedIntPtrParam.DIRECTIONS=pybindgen.typehandlers.inttype.UnsignedIntPtrParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UnsignedLongLongParam.DIRECTIONS=pybindgen.typehandlers.inttype.UnsignedLongLongParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.DIRECTIONS=pybindgen.typehandlers.inttype.UnsignedLongLongRefParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.pyobjecttype.PyObjectParam.DIRECTIONS=pybindgen.typehandlers.pyobjecttype.PyObjectParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.stringtype.CStringParam.DIRECTIONS=pybindgen.typehandlers.stringtype.CStringParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.stringtype.CharParam.DIRECTIONS=pybindgen.typehandlers.stringtype.CharParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.stringtype.StdStringParam.DIRECTIONS=pybindgen.typehandlers.stringtype.StdStringParam-class.html#DIRECTIONS,Variable pybindgen.typehandlers.stringtype.StdStringRefParam.DIRECTIONS=pybindgen.typehandlers.stringtype.StdStringRefParam-class.html#DIRECTIONS"><a title="pybindgen.cppclass.CppClassParameter.DIRECTIONS
+pybindgen.cppclass.CppClassParameterBase.DIRECTIONS
+pybindgen.cppclass.CppClassPtrParameter.DIRECTIONS
+pybindgen.cppclass.CppClassRefParameter.DIRECTIONS
+pybindgen.cppmethod.DummyParameter.DIRECTIONS
+pybindgen.typehandlers.base.Parameter.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolParam.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolPtrParam.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolRefParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoubleParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoublePtrParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoubleRefParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatPtrParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.Int16Param.DIRECTIONS
+pybindgen.typehandlers.inttype.Int8PtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntPtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.LongLongParam.DIRECTIONS
+pybindgen.typehandlers.inttype.LongLongRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt16Param.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt8Param.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt8PtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedIntParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.DIRECTIONS
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.CStringParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.CharParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.StdStringParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.StdStringRefParam.DIRECTIONS" class="py-name" href="#" onclick="return doclink('link-5', 'DIRECTIONS', 'link-5');">DIRECTIONS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-6" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-6', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Variable pybindgen.typehandlers.base.Parameter.DIRECTION_IN=pybindgen.typehandlers.base.Parameter-class.html#DIRECTION_IN"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-7', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Variable pybindgen.cppclass.CppClassParameter.CTYPES=pybindgen.cppclass.CppClassParameter-class.html#CTYPES,Variable pybindgen.cppclass.CppClassParameterBase.CTYPES=pybindgen.cppclass.CppClassParameterBase-class.html#CTYPES,Variable pybindgen.cppclass.CppClassPtrParameter.CTYPES=pybindgen.cppclass.CppClassPtrParameter-class.html#CTYPES,Variable pybindgen.cppclass.CppClassPtrReturnValue.CTYPES=pybindgen.cppclass.CppClassPtrReturnValue-class.html#CTYPES,Variable pybindgen.cppclass.CppClassRefParameter.CTYPES=pybindgen.cppclass.CppClassRefParameter-class.html#CTYPES,Variable pybindgen.cppclass.CppClassReturnValue.CTYPES=pybindgen.cppclass.CppClassReturnValue-class.html#CTYPES,Variable pybindgen.cppclass.CppClassReturnValueBase.CTYPES=pybindgen.cppclass.CppClassReturnValueBase-class.html#CTYPES,Variable pybindgen.cppmethod.DummyParameter.CTYPES=pybindgen.cppmethod.DummyParameter-class.html#CTYPES,Variable pybindgen.cppmethod.DummyReturnValue.CTYPES=pybindgen.cppmethod.DummyReturnValue-class.html#CTYPES,Variable pybindgen.typehandlers.base.Parameter.CTYPES=pybindgen.typehandlers.base.Parameter-class.html#CTYPES,Variable pybindgen.typehandlers.base.PointerParameter.CTYPES=pybindgen.typehandlers.base.PointerParameter-class.html#CTYPES,Variable pybindgen.typehandlers.base.PointerReturnValue.CTYPES=pybindgen.typehandlers.base.PointerReturnValue-class.html#CTYPES,Variable pybindgen.typehandlers.base.ReturnValue.CTYPES=pybindgen.typehandlers.base.ReturnValue-class.html#CTYPES,Variable pybindgen.typehandlers.booltype.BoolParam.CTYPES=pybindgen.typehandlers.booltype.BoolParam-class.html#CTYPES,Variable pybindgen.typehandlers.booltype.BoolPtrParam.CTYPES=pybindgen.typehandlers.booltype.BoolPtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.booltype.BoolRefParam.CTYPES=pybindgen.typehandlers.booltype.BoolRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.booltype.BoolReturn.CTYPES=pybindgen.typehandlers.booltype.BoolReturn-class.html#CTYPES,Variable pybindgen.typehandlers.doubletype.DoubleParam.CTYPES=pybindgen.typehandlers.doubletype.DoubleParam-class.html#CTYPES,Variable pybindgen.typehandlers.doubletype.DoublePtrParam.CTYPES=pybindgen.typehandlers.doubletype.DoublePtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.doubletype.DoubleRefParam.CTYPES=pybindgen.typehandlers.doubletype.DoubleRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.doubletype.DoubleReturn.CTYPES=pybindgen.typehandlers.doubletype.DoubleReturn-class.html#CTYPES,Variable pybindgen.typehandlers.floattype.FloatParam.CTYPES=pybindgen.typehandlers.floattype.FloatParam-class.html#CTYPES,Variable pybindgen.typehandlers.floattype.FloatPtrParam.CTYPES=pybindgen.typehandlers.floattype.FloatPtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.floattype.FloatRefParam.CTYPES=pybindgen.typehandlers.floattype.FloatRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.floattype.FloatReturn.CTYPES=pybindgen.typehandlers.floattype.FloatReturn-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.Int16Param.CTYPES=pybindgen.typehandlers.inttype.Int16Param-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.Int16Return.CTYPES=pybindgen.typehandlers.inttype.Int16Return-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.Int8PtrParam.CTYPES=pybindgen.typehandlers.inttype.Int8PtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.IntParam.CTYPES=pybindgen.typehandlers.inttype.IntParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.IntPtrParam.CTYPES=pybindgen.typehandlers.inttype.IntPtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.IntRefParam.CTYPES=pybindgen.typehandlers.inttype.IntRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.IntReturn.CTYPES=pybindgen.typehandlers.inttype.IntReturn-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.LongLongParam.CTYPES=pybindgen.typehandlers.inttype.LongLongParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.LongLongRefParam.CTYPES=pybindgen.typehandlers.inttype.LongLongRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.LongLongReturn.CTYPES=pybindgen.typehandlers.inttype.LongLongReturn-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UInt16Param.CTYPES=pybindgen.typehandlers.inttype.UInt16Param-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UInt16Return.CTYPES=pybindgen.typehandlers.inttype.UInt16Return-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UInt8Param.CTYPES=pybindgen.typehandlers.inttype.UInt8Param-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UInt8PtrParam.CTYPES=pybindgen.typehandlers.inttype.UInt8PtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UInt8Return.CTYPES=pybindgen.typehandlers.inttype.UInt8Return-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UnsignedIntParam.CTYPES=pybindgen.typehandlers.inttype.UnsignedIntParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UnsignedIntPtrParam.CTYPES=pybindgen.typehandlers.inttype.UnsignedIntPtrParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UnsignedIntReturn.CTYPES=pybindgen.typehandlers.inttype.UnsignedIntReturn-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UnsignedLongLongParam.CTYPES=pybindgen.typehandlers.inttype.UnsignedLongLongParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.CTYPES=pybindgen.typehandlers.inttype.UnsignedLongLongRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.inttype.UnsignedLongLongReturn.CTYPES=pybindgen.typehandlers.inttype.UnsignedLongLongReturn-class.html#CTYPES,Variable pybindgen.typehandlers.pyobjecttype.PyObjectParam.CTYPES=pybindgen.typehandlers.pyobjecttype.PyObjectParam-class.html#CTYPES,Variable pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.CTYPES=pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.CStringParam.CTYPES=pybindgen.typehandlers.stringtype.CStringParam-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.CStringReturn.CTYPES=pybindgen.typehandlers.stringtype.CStringReturn-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.CharParam.CTYPES=pybindgen.typehandlers.stringtype.CharParam-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.CharReturn.CTYPES=pybindgen.typehandlers.stringtype.CharReturn-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.StdStringParam.CTYPES=pybindgen.typehandlers.stringtype.StdStringParam-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.StdStringRefParam.CTYPES=pybindgen.typehandlers.stringtype.StdStringRefParam-class.html#CTYPES,Variable pybindgen.typehandlers.stringtype.StdStringReturn.CTYPES=pybindgen.typehandlers.stringtype.StdStringReturn-class.html#CTYPES,Variable pybindgen.typehandlers.voidtype.VoidReturn.CTYPES=pybindgen.typehandlers.voidtype.VoidReturn-class.html#CTYPES"><a title="pybindgen.cppclass.CppClassParameter.CTYPES
+pybindgen.cppclass.CppClassParameterBase.CTYPES
+pybindgen.cppclass.CppClassPtrParameter.CTYPES
+pybindgen.cppclass.CppClassPtrReturnValue.CTYPES
+pybindgen.cppclass.CppClassRefParameter.CTYPES
+pybindgen.cppclass.CppClassReturnValue.CTYPES
+pybindgen.cppclass.CppClassReturnValueBase.CTYPES
+pybindgen.cppmethod.DummyParameter.CTYPES
+pybindgen.cppmethod.DummyReturnValue.CTYPES
+pybindgen.typehandlers.base.Parameter.CTYPES
+pybindgen.typehandlers.base.PointerParameter.CTYPES
+pybindgen.typehandlers.base.PointerReturnValue.CTYPES
+pybindgen.typehandlers.base.ReturnValue.CTYPES
+pybindgen.typehandlers.booltype.BoolParam.CTYPES
+pybindgen.typehandlers.booltype.BoolPtrParam.CTYPES
+pybindgen.typehandlers.booltype.BoolRefParam.CTYPES
+pybindgen.typehandlers.booltype.BoolReturn.CTYPES
+pybindgen.typehandlers.doubletype.DoubleParam.CTYPES
+pybindgen.typehandlers.doubletype.DoublePtrParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleRefParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleReturn.CTYPES
+pybindgen.typehandlers.floattype.FloatParam.CTYPES
+pybindgen.typehandlers.floattype.FloatPtrParam.CTYPES
+pybindgen.typehandlers.floattype.FloatRefParam.CTYPES
+pybindgen.typehandlers.floattype.FloatReturn.CTYPES
+pybindgen.typehandlers.inttype.Int16Param.CTYPES
+pybindgen.typehandlers.inttype.Int16Return.CTYPES
+pybindgen.typehandlers.inttype.Int8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntParam.CTYPES
+pybindgen.typehandlers.inttype.IntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntRefParam.CTYPES
+pybindgen.typehandlers.inttype.IntReturn.CTYPES
+pybindgen.typehandlers.inttype.LongLongParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongReturn.CTYPES
+pybindgen.typehandlers.inttype.UInt16Param.CTYPES
+pybindgen.typehandlers.inttype.UInt16Return.CTYPES
+pybindgen.typehandlers.inttype.UInt8Param.CTYPES
+pybindgen.typehandlers.inttype.UInt8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.UInt8Return.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntReturn.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongReturn.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.CTYPES
+pybindgen.typehandlers.stringtype.CStringParam.CTYPES
+pybindgen.typehandlers.stringtype.CStringReturn.CTYPES
+pybindgen.typehandlers.stringtype.CharParam.CTYPES
+pybindgen.typehandlers.stringtype.CharReturn.CTYPES
+pybindgen.typehandlers.stringtype.StdStringParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringRefParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringReturn.CTYPES
+pybindgen.typehandlers.voidtype.VoidReturn.CTYPES" class="py-name" href="#" onclick="return doclink('link-8', 'CTYPES', 'link-8');">CTYPES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'float'</tt><tt class="py-op">]</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="FloatParam.convert_c_to_python"></a><div id="FloatParam.convert_c_to_python-def"><a name="L13"></a><tt class="py-lineno"> 13</tt> <a class="py-toggle" href="#" id="FloatParam.convert_c_to_python-toggle" onclick="return toggle('FloatParam.convert_c_to_python');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatParam-class.html#convert_c_to_python">convert_c_to_python</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatParam.convert_c_to_python-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatParam.convert_c_to_python-expanded"><a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">wrapper</tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name"><a title="pybindgen.typehandlers.base.ReverseWrapperBase" class="py-name" href="#" onclick="return doclink('link-9', 'ReverseWrapperBase', 'link-3');">ReverseWrapperBase</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">        <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method pybindgen.typehandlers.base.BuildValueParameters.add_parameter()=pybindgen.typehandlers.base.BuildValueParameters-class.html#add_parameter,Method pybindgen.typehandlers.base.ParseTupleParameters.add_parameter()=pybindgen.typehandlers.base.ParseTupleParameters-class.html#add_parameter"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-10', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="FloatParam.convert_python_to_c"></a><div id="FloatParam.convert_python_to_c-def"><a name="L17"></a><tt class="py-lineno"> 17</tt> <a class="py-toggle" href="#" id="FloatParam.convert_python_to_c-toggle" onclick="return toggle('FloatParam.convert_python_to_c');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatParam-class.html#convert_python_to_c">convert_python_to_c</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatParam.convert_python_to_c-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatParam.convert_python_to_c-expanded"><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-keyword">assert</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">wrapper</tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name"><a title="pybindgen.typehandlers.base.ForwardWrapperBase" class="py-name" href="#" onclick="return doclink('link-11', 'ForwardWrapperBase', 'link-4');">ForwardWrapperBase</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt id="link-12" class="py-name" targets="Variable pybindgen.module.ModuleBase.name=pybindgen.module.ModuleBase-class.html#name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-12', 'name', 'link-12');">name</a></tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.declare_variable()=pybindgen.typehandlers.base.CodeBlock-class.html#declare_variable,Method pybindgen.typehandlers.base.DeclarationsScope.declare_variable()=pybindgen.typehandlers.base.DeclarationsScope-class.html#declare_variable"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-13', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ctype_no_const</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-14', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">        <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-15', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">'&amp;'</tt><tt class="py-op">+</tt><tt id="link-16" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-16', 'name', 'link-12');">name</a></tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">call_params</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-17', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="FloatReturn"></a><div id="FloatReturn-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="FloatReturn-toggle" onclick="return toggle('FloatReturn');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatReturn-class.html">FloatReturn</a><tt class="py-op">(</tt><tt class="py-base-class">ReturnValue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatReturn-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FloatReturn-expanded"><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt id="link-18" class="py-name"><a title="pybindgen.cppclass.CppClassParameter.CTYPES
+pybindgen.cppclass.CppClassParameterBase.CTYPES
+pybindgen.cppclass.CppClassPtrParameter.CTYPES
+pybindgen.cppclass.CppClassPtrReturnValue.CTYPES
+pybindgen.cppclass.CppClassRefParameter.CTYPES
+pybindgen.cppclass.CppClassReturnValue.CTYPES
+pybindgen.cppclass.CppClassReturnValueBase.CTYPES
+pybindgen.cppmethod.DummyParameter.CTYPES
+pybindgen.cppmethod.DummyReturnValue.CTYPES
+pybindgen.typehandlers.base.Parameter.CTYPES
+pybindgen.typehandlers.base.PointerParameter.CTYPES
+pybindgen.typehandlers.base.PointerReturnValue.CTYPES
+pybindgen.typehandlers.base.ReturnValue.CTYPES
+pybindgen.typehandlers.booltype.BoolParam.CTYPES
+pybindgen.typehandlers.booltype.BoolPtrParam.CTYPES
+pybindgen.typehandlers.booltype.BoolRefParam.CTYPES
+pybindgen.typehandlers.booltype.BoolReturn.CTYPES
+pybindgen.typehandlers.doubletype.DoubleParam.CTYPES
+pybindgen.typehandlers.doubletype.DoublePtrParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleRefParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleReturn.CTYPES
+pybindgen.typehandlers.floattype.FloatParam.CTYPES
+pybindgen.typehandlers.floattype.FloatPtrParam.CTYPES
+pybindgen.typehandlers.floattype.FloatRefParam.CTYPES
+pybindgen.typehandlers.floattype.FloatReturn.CTYPES
+pybindgen.typehandlers.inttype.Int16Param.CTYPES
+pybindgen.typehandlers.inttype.Int16Return.CTYPES
+pybindgen.typehandlers.inttype.Int8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntParam.CTYPES
+pybindgen.typehandlers.inttype.IntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntRefParam.CTYPES
+pybindgen.typehandlers.inttype.IntReturn.CTYPES
+pybindgen.typehandlers.inttype.LongLongParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongReturn.CTYPES
+pybindgen.typehandlers.inttype.UInt16Param.CTYPES
+pybindgen.typehandlers.inttype.UInt16Return.CTYPES
+pybindgen.typehandlers.inttype.UInt8Param.CTYPES
+pybindgen.typehandlers.inttype.UInt8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.UInt8Return.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntReturn.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongReturn.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.CTYPES
+pybindgen.typehandlers.stringtype.CStringParam.CTYPES
+pybindgen.typehandlers.stringtype.CStringReturn.CTYPES
+pybindgen.typehandlers.stringtype.CharParam.CTYPES
+pybindgen.typehandlers.stringtype.CharReturn.CTYPES
+pybindgen.typehandlers.stringtype.StdStringParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringRefParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringReturn.CTYPES
+pybindgen.typehandlers.voidtype.VoidReturn.CTYPES" class="py-name" href="#" onclick="return doclink('link-18', 'CTYPES', 'link-8');">CTYPES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'float'</tt><tt class="py-op">]</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="FloatReturn.get_c_error_return"></a><div id="FloatReturn.get_c_error_return-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="FloatReturn.get_c_error_return-toggle" onclick="return toggle('FloatReturn.get_c_error_return');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatReturn-class.html#get_c_error_return">get_c_error_return</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatReturn.get_c_error_return-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatReturn.get_c_error_return-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"return 0;"</tt> </tt>
+</div><a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">     </tt>
+<a name="FloatReturn.convert_python_to_c"></a><div id="FloatReturn.convert_python_to_c-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="FloatReturn.convert_python_to_c-toggle" onclick="return toggle('FloatReturn.convert_python_to_c');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatReturn-class.html#convert_python_to_c">convert_python_to_c</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatReturn.convert_python_to_c-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatReturn.convert_python_to_c-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-19', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"f"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">"&amp;"</tt><tt class="py-op">+</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">prepend</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="FloatReturn.convert_c_to_python"></a><div id="FloatReturn.convert_c_to_python-def"><a name="L34"></a><tt class="py-lineno"> 34</tt> <a class="py-toggle" href="#" id="FloatReturn.convert_c_to_python-toggle" onclick="return toggle('FloatReturn.convert_c_to_python');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatReturn-class.html#convert_c_to_python">convert_c_to_python</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatReturn.convert_c_to_python-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatReturn.convert_c_to_python-expanded"><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-20', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"f"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">prepend</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="FloatPtrParam"></a><div id="FloatPtrParam-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="FloatPtrParam-toggle" onclick="return toggle('FloatPtrParam');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatPtrParam-class.html">FloatPtrParam</a><tt class="py-op">(</tt><tt class="py-base-class">Parameter</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatPtrParam-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FloatPtrParam-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt id="link-21" class="py-name"><a title="pybindgen.cppclass.CppClassParameter.DIRECTIONS
+pybindgen.cppclass.CppClassParameterBase.DIRECTIONS
+pybindgen.cppclass.CppClassPtrParameter.DIRECTIONS
+pybindgen.cppclass.CppClassRefParameter.DIRECTIONS
+pybindgen.cppmethod.DummyParameter.DIRECTIONS
+pybindgen.typehandlers.base.Parameter.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolParam.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolPtrParam.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolRefParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoubleParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoublePtrParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoubleRefParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatPtrParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.Int16Param.DIRECTIONS
+pybindgen.typehandlers.inttype.Int8PtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntPtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.LongLongParam.DIRECTIONS
+pybindgen.typehandlers.inttype.LongLongRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt16Param.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt8Param.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt8PtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedIntParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.DIRECTIONS
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.CStringParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.CharParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.StdStringParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.StdStringRefParam.DIRECTIONS" class="py-name" href="#" onclick="return doclink('link-21', 'DIRECTIONS', 'link-5');">DIRECTIONS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-22" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-22', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-23', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">,</tt> <tt id="link-24" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-24', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Variable pybindgen.typehandlers.base.Parameter.DIRECTION_OUT=pybindgen.typehandlers.base.Parameter-class.html#DIRECTION_OUT"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-25', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">                  <tt id="link-26" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-26', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-27', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">|</tt><tt id="link-28" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-28', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-29', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt id="link-30" class="py-name"><a title="pybindgen.cppclass.CppClassParameter.CTYPES
+pybindgen.cppclass.CppClassParameterBase.CTYPES
+pybindgen.cppclass.CppClassPtrParameter.CTYPES
+pybindgen.cppclass.CppClassPtrReturnValue.CTYPES
+pybindgen.cppclass.CppClassRefParameter.CTYPES
+pybindgen.cppclass.CppClassReturnValue.CTYPES
+pybindgen.cppclass.CppClassReturnValueBase.CTYPES
+pybindgen.cppmethod.DummyParameter.CTYPES
+pybindgen.cppmethod.DummyReturnValue.CTYPES
+pybindgen.typehandlers.base.Parameter.CTYPES
+pybindgen.typehandlers.base.PointerParameter.CTYPES
+pybindgen.typehandlers.base.PointerReturnValue.CTYPES
+pybindgen.typehandlers.base.ReturnValue.CTYPES
+pybindgen.typehandlers.booltype.BoolParam.CTYPES
+pybindgen.typehandlers.booltype.BoolPtrParam.CTYPES
+pybindgen.typehandlers.booltype.BoolRefParam.CTYPES
+pybindgen.typehandlers.booltype.BoolReturn.CTYPES
+pybindgen.typehandlers.doubletype.DoubleParam.CTYPES
+pybindgen.typehandlers.doubletype.DoublePtrParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleRefParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleReturn.CTYPES
+pybindgen.typehandlers.floattype.FloatParam.CTYPES
+pybindgen.typehandlers.floattype.FloatPtrParam.CTYPES
+pybindgen.typehandlers.floattype.FloatRefParam.CTYPES
+pybindgen.typehandlers.floattype.FloatReturn.CTYPES
+pybindgen.typehandlers.inttype.Int16Param.CTYPES
+pybindgen.typehandlers.inttype.Int16Return.CTYPES
+pybindgen.typehandlers.inttype.Int8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntParam.CTYPES
+pybindgen.typehandlers.inttype.IntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntRefParam.CTYPES
+pybindgen.typehandlers.inttype.IntReturn.CTYPES
+pybindgen.typehandlers.inttype.LongLongParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongReturn.CTYPES
+pybindgen.typehandlers.inttype.UInt16Param.CTYPES
+pybindgen.typehandlers.inttype.UInt16Return.CTYPES
+pybindgen.typehandlers.inttype.UInt8Param.CTYPES
+pybindgen.typehandlers.inttype.UInt8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.UInt8Return.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntReturn.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongReturn.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.CTYPES
+pybindgen.typehandlers.stringtype.CStringParam.CTYPES
+pybindgen.typehandlers.stringtype.CStringReturn.CTYPES
+pybindgen.typehandlers.stringtype.CharParam.CTYPES
+pybindgen.typehandlers.stringtype.CharReturn.CTYPES
+pybindgen.typehandlers.stringtype.StdStringParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringRefParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringReturn.CTYPES
+pybindgen.typehandlers.voidtype.VoidReturn.CTYPES" class="py-name" href="#" onclick="return doclink('link-30', 'CTYPES', 'link-8');">CTYPES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'float*'</tt><tt class="py-op">]</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="FloatPtrParam.__init__"></a><div id="FloatPtrParam.__init__-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="FloatPtrParam.__init__-toggle" onclick="return toggle('FloatPtrParam.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatPtrParam-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">ctype</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">,</tt> <tt class="py-param">direction</tt><tt class="py-op">=</tt><tt id="link-31" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-31', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-32', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">,</tt> <tt class="py-param">is_const</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-param">default_value</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">array_length</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatPtrParam.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatPtrParam.__init__-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-33" class="py-name" targets="Class pybindgen.typehandlers.floattype.FloatPtrParam=pybindgen.typehandlers.floattype.FloatPtrParam-class.html"><a title="pybindgen.typehandlers.floattype.FloatPtrParam" class="py-name" href="#" onclick="return doclink('link-33', 'FloatPtrParam', 'link-33');">FloatPtrParam</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method pybindgen.cppattribute.CppInstanceAttributeGetter.__init__()=pybindgen.cppattribute.CppInstanceAttributeGetter-class.html#__init__,Method pybindgen.cppattribute.CppInstanceAttributeSetter.__init__()=pybindgen.cppattribute.CppInstanceAttributeSetter-class.html#__init__,Method pybindgen.cppattribute.CppStaticAttributeGetter.__init__()=pybindgen.cppattribute.CppStaticAttributeGetter-class.html#__init__,Method pybindgen.cppattribute.CppStaticAttributeSetter.__init__()=pybindgen.cppattribute.CppStaticAttributeSetter-class.html#__init__,Method pybindgen.cppattribute.PyGetSetDef.__init__()=pybindgen.cppattribute.PyGetSetDef-class.html#__init__,Method pybindgen.cppattribute.PyMetaclass.__init__()=pybindgen.cppattribute.PyMetaclass-class.html#__init__,Method pybindgen.cppclass.CppClass.__init__()=pybindgen.cppclass.CppClass-class.html#__init__,Method pybindgen.cppclass.CppClassParameterBase.__init__()=pybindgen.cppclass.CppClassParameterBase-class.html#__init__,Method pybindgen.cppclass.CppClassPtrParameter.__init__()=pybindgen.cppclass.CppClassPtrParameter-class.html#__init__,Method pybindgen.cppclass.CppClassPtrReturnValue.__init__()=pybindgen.cppclass.CppClassPtrReturnValue-class.html#__init__,Method pybindgen.cppclass.CppClassRefParameter.__init__()=pybindgen.cppclass.CppClassRefParameter-class.html#__init__,Method pybindgen.cppclass.CppClassReturnValue.__init__()=pybindgen.cppclass.CppClassReturnValue-class.html#__init__,Method pybindgen.cppclass.CppClassReturnValueBase.__init__()=pybindgen.cppclass.CppClassReturnValueBase-class.html#__init__,Method pybindgen.cppclass.CppHelperClass.__init__()=pybindgen.cppclass.CppHelperClass-class.html#__init__,Method pybindgen.cppmethod.CppConstructor.__init__()=pybindgen.cppmethod.CppConstructor-class.html#__init__,Method pybindgen.cppmethod.CppDummyMethod.__init__()=pybindgen.cppmethod.CppDummyMethod-class.html#__init__,Method pybindgen.cppmethod.CppFunctionAsConstructor.__init__()=pybindgen.cppmethod.CppFunctionAsConstructor-class.html#__init__,Method pybindgen.cppmethod.CppMethod.__init__()=pybindgen.cppmethod.CppMethod-class.html#__init__,Method pybindgen.cppmethod.CppNoConstructor.__init__()=pybindgen.cppmethod.CppNoConstructor-class.html#__init__,Method pybindgen.cppmethod.CppVirtualMethodParentCaller.__init__()=pybindgen.cppmethod.CppVirtualMethodParentCaller-class.html#__init__,Method pybindgen.cppmethod.CppVirtualMethodProxy.__init__()=pybindgen.cppmethod.CppVirtualMethodProxy-class.html#__init__,Method pybindgen.cppmethod.CustomCppConstructorWrapper.__init__()=pybindgen.cppmethod.CustomCppConstructorWrapper-class.html#__init__,Method pybindgen.cppmethod.CustomCppMethodWrapper.__init__()=pybindgen.cppmethod.CustomCppMethodWrapper-class.html#__init__,Method pybindgen.cppmethod.DummyParameter.__init__()=pybindgen.cppmethod.DummyParameter-class.html#__init__,Method pybindgen.cppmethod.DummyReturnValue.__init__()=pybindgen.cppmethod.DummyReturnValue-class.html#__init__,Method pybindgen.enum.Enum.__init__()=pybindgen.enum.Enum-class.html#__init__,Method pybindgen.function.CustomFunctionWrapper.__init__()=pybindgen.function.CustomFunctionWrapper-class.html#__init__,Method pybindgen.function.Function.__init__()=pybindgen.function.Function-class.html#__init__,Method pybindgen.gccxmlparser.AnnotationsScanner.__init__()=pybindgen.gccxmlparser.AnnotationsScanner-class.html#__init__,Method pybindgen.gccxmlparser.GccXmlTypeRegistry.__init__()=pybindgen.gccxmlparser.GccXmlTypeRegistry-class.html#__init__,Method pybindgen.gccxmlparser.ModuleParser.__init__()=pybindgen.gccxmlparser.ModuleParser-class.html#__init__,Method pybindgen.gccxmlparser.PygenSection.__init__()=pybindgen.gccxmlparser.PygenSection-class.html#__init__,Method pybindgen.gccxmlparser_flymake.AnnotationsScanner.__init__()=pybindgen.gccxmlparser_flymake.AnnotationsScanner-class.html#__init__,Method pybindgen.gccxmlparser_flymake.GccXmlTypeRegistry.__init__()=pybindgen.gccxmlparser_flymake.GccXmlTypeRegistry-class.html#__init__,Method pybindgen.gccxmlparser_flymake.ModuleParser.__init__()=pybindgen.gccxmlparser_flymake.ModuleParser-class.html#__init__,Method pybindgen.module.Module.__init__()=pybindgen.module.Module-class.html#__init__,Method pybindgen.module.ModuleBase.__init__()=pybindgen.module.ModuleBase-class.html#__init__,Method pybindgen.module.SubModule.__init__()=pybindgen.module.SubModule-class.html#__init__,Method pybindgen.module._MonolithicSinkManager.__init__()=pybindgen.module._MonolithicSinkManager-class.html#__init__,Method pybindgen.module._MultiSectionSinkManager.__init__()=pybindgen.module._MultiSectionSinkManager-class.html#__init__,Method pybindgen.overloading.OverloadedWrapper.__init__()=pybindgen.overloading.OverloadedWrapper-class.html#__init__,Method pybindgen.typehandlers.base.BuildValueParameters.__init__()=pybindgen.typehandlers.base.BuildValueParameters-class.html#__init__,Method pybindgen.typehandlers.base.CodeBlock.CleanupHandle.__init__()=pybindgen.typehandlers.base.CodeBlock.CleanupHandle-class.html#__init__,Method pybindgen.typehandlers.base.CodeBlock.__init__()=pybindgen.typehandlers.base.CodeBlock-class.html#__init__,Method pybindgen.typehandlers.base.DeclarationsScope.__init__()=pybindgen.typehandlers.base.DeclarationsScope-class.html#__init__,Method pybindgen.typehandlers.base.ForwardWrapperBase.__init__()=pybindgen.typehandlers.base.ForwardWrapperBase-class.html#__init__,Method pybindgen.typehandlers.base.Parameter.__init__()=pybindgen.typehandlers.base.Parameter-class.html#__init__,Method pybindgen.typehandlers.base.Parameter.__metaclass__.__init__()=pybindgen.typehandlers.base.Parameter.__metaclass__-class.html#__init__,Method pybindgen.typehandlers.base.ParseTupleParameters.__init__()=pybindgen.typehandlers.base.ParseTupleParameters-class.html#__init__,Method pybindgen.typehandlers.base.PointerParameter.__init__()=pybindgen.typehandlers.base.PointerParameter-class.html#__init__,Method pybindgen.typehandlers.base.PointerReturnValue.__init__()=pybindgen.typehandlers.base.PointerReturnValue-class.html#__init__,Method pybindgen.typehandlers.base.ReturnValue.__init__()=pybindgen.typehandlers.base.ReturnValue-class.html#__init__,Method pybindgen.typehandlers.base.ReturnValue.__metaclass__.__init__()=pybindgen.typehandlers.base.ReturnValue.__metaclass__-class.html#__init__,Method pybindgen.typehandlers.base.ReverseWrapperBase.__init__()=pybindgen.typehandlers.base.ReverseWrapperBase-class.html#__init__,Method pybindgen.typehandlers.base.TypeMatcher.__init__()=pybindgen.typehandlers.base.TypeMatcher-class.html#__init__,Method pybindgen.typehandlers.codesink.CodeSink.__init__()=pybindgen.typehandlers.codesink.CodeSink-class.html#__init__,Method pybindgen.typehandlers.codesink.FileCodeSink.__init__()=pybindgen.typehandlers.codesink.FileCodeSink-class.html#__init__,Method pybindgen.typehandlers.codesink.MemoryCodeSink.__init__()=pybindgen.typehandlers.codesink.MemoryCodeSink-class.html#__init__,Method pybindgen.typehandlers.codesink.NullCodeSink.__init__()=pybindgen.typehandlers.codesink.NullCodeSink-class.html#__init__,Method pybindgen.typehandlers.ctypeparser.CType.__init__()=pybindgen.typehandlers.ctypeparser.CType-class.html#__init__,Method pybindgen.typehandlers.ctypeparser.tokenizer.Token.__init__()=pybindgen.typehandlers.ctypeparser.tokenizer.Token-class.html#__init__,Method pybindgen.typehandlers.floattype.FloatPtrParam.__init__()=pybindgen.typehandlers.floattype.FloatPtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.Int8PtrParam.__init__()=pybindgen.typehandlers.inttype.Int8PtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.IntPtrParam.__init__()=pybindgen.typehandlers.inttype.IntPtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.UInt8PtrParam.__init__()=pybindgen.typehandlers.inttype.UInt8PtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.UnsignedIntPtrParam.__init__()=pybindgen.typehandlers.inttype.UnsignedIntPtrParam-class.html#__init__,Method pybindgen.typehandlers.pyobjecttype.PyObjectParam.__init__()=pybindgen.typehandlers.pyobjecttype.PyObjectParam-class.html#__init__,Method pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.__init__()=pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue-class.html#__init__"><a title="pybindgen.cppattribute.CppInstanceAttributeGetter.__init__
+pybindgen.cppattribute.CppInstanceAttributeSetter.__init__
+pybindgen.cppattribute.CppStaticAttributeGetter.__init__
+pybindgen.cppattribute.CppStaticAttributeSetter.__init__
+pybindgen.cppattribute.PyGetSetDef.__init__
+pybindgen.cppattribute.PyMetaclass.__init__
+pybindgen.cppclass.CppClass.__init__
+pybindgen.cppclass.CppClassParameterBase.__init__
+pybindgen.cppclass.CppClassPtrParameter.__init__
+pybindgen.cppclass.CppClassPtrReturnValue.__init__
+pybindgen.cppclass.CppClassRefParameter.__init__
+pybindgen.cppclass.CppClassReturnValue.__init__
+pybindgen.cppclass.CppClassReturnValueBase.__init__
+pybindgen.cppclass.CppHelperClass.__init__
+pybindgen.cppmethod.CppConstructor.__init__
+pybindgen.cppmethod.CppDummyMethod.__init__
+pybindgen.cppmethod.CppFunctionAsConstructor.__init__
+pybindgen.cppmethod.CppMethod.__init__
+pybindgen.cppmethod.CppNoConstructor.__init__
+pybindgen.cppmethod.CppVirtualMethodParentCaller.__init__
+pybindgen.cppmethod.CppVirtualMethodProxy.__init__
+pybindgen.cppmethod.CustomCppConstructorWrapper.__init__
+pybindgen.cppmethod.CustomCppMethodWrapper.__init__
+pybindgen.cppmethod.DummyParameter.__init__
+pybindgen.cppmethod.DummyReturnValue.__init__
+pybindgen.enum.Enum.__init__
+pybindgen.function.CustomFunctionWrapper.__init__
+pybindgen.function.Function.__init__
+pybindgen.gccxmlparser.AnnotationsScanner.__init__
+pybindgen.gccxmlparser.GccXmlTypeRegistry.__init__
+pybindgen.gccxmlparser.ModuleParser.__init__
+pybindgen.gccxmlparser.PygenSection.__init__
+pybindgen.gccxmlparser_flymake.AnnotationsScanner.__init__
+pybindgen.gccxmlparser_flymake.GccXmlTypeRegistry.__init__
+pybindgen.gccxmlparser_flymake.ModuleParser.__init__
+pybindgen.module.Module.__init__
+pybindgen.module.ModuleBase.__init__
+pybindgen.module.SubModule.__init__
+pybindgen.module._MonolithicSinkManager.__init__
+pybindgen.module._MultiSectionSinkManager.__init__
+pybindgen.overloading.OverloadedWrapper.__init__
+pybindgen.typehandlers.base.BuildValueParameters.__init__
+pybindgen.typehandlers.base.CodeBlock.CleanupHandle.__init__
+pybindgen.typehandlers.base.CodeBlock.__init__
+pybindgen.typehandlers.base.DeclarationsScope.__init__
+pybindgen.typehandlers.base.ForwardWrapperBase.__init__
+pybindgen.typehandlers.base.Parameter.__init__
+pybindgen.typehandlers.base.Parameter.__metaclass__.__init__
+pybindgen.typehandlers.base.ParseTupleParameters.__init__
+pybindgen.typehandlers.base.PointerParameter.__init__
+pybindgen.typehandlers.base.PointerReturnValue.__init__
+pybindgen.typehandlers.base.ReturnValue.__init__
+pybindgen.typehandlers.base.ReturnValue.__metaclass__.__init__
+pybindgen.typehandlers.base.ReverseWrapperBase.__init__
+pybindgen.typehandlers.base.TypeMatcher.__init__
+pybindgen.typehandlers.codesink.CodeSink.__init__
+pybindgen.typehandlers.codesink.FileCodeSink.__init__
+pybindgen.typehandlers.codesink.MemoryCodeSink.__init__
+pybindgen.typehandlers.codesink.NullCodeSink.__init__
+pybindgen.typehandlers.ctypeparser.CType.__init__
+pybindgen.typehandlers.ctypeparser.tokenizer.Token.__init__
+pybindgen.typehandlers.floattype.FloatPtrParam.__init__
+pybindgen.typehandlers.inttype.Int8PtrParam.__init__
+pybindgen.typehandlers.inttype.IntPtrParam.__init__
+pybindgen.typehandlers.inttype.UInt8PtrParam.__init__
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.__init__
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.__init__
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.__init__" class="py-name" href="#" onclick="return doclink('link-34', '__init__', 'link-34');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">ctype</tt><tt class="py-op">,</tt> <tt id="link-35" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-35', 'name', 'link-12');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">direction</tt><tt class="py-op">,</tt> <tt class="py-name">is_const</tt><tt class="py-op">,</tt> <tt class="py-name">default_value</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt> <tt class="py-op">=</tt> <tt class="py-name">array_length</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">     </tt>
+<a name="FloatPtrParam.convert_c_to_python"></a><div id="FloatPtrParam.convert_c_to_python-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="FloatPtrParam.convert_c_to_python-toggle" onclick="return toggle('FloatPtrParam.convert_c_to_python');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatPtrParam-class.html#convert_c_to_python">convert_c_to_python</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatPtrParam.convert_c_to_python-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatPtrParam.convert_c_to_python-expanded"><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-36', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-37', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">'*'</tt><tt class="py-op">+</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-38', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-39', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"f"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-40', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="FloatPtrParam.convert_python_to_c"></a><div id="FloatPtrParam.convert_python_to_c-def"><a name="L55"></a><tt class="py-lineno"> 55</tt> <a class="py-toggle" href="#" id="FloatPtrParam.convert_python_to_c-toggle" onclick="return toggle('FloatPtrParam.convert_python_to_c');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatPtrParam-class.html#convert_python_to_c">convert_python_to_c</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatPtrParam.convert_python_to_c-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatPtrParam.convert_python_to_c-expanded"><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-comment">#assert self.ctype == 'float*'</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">            <tt id="link-41" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-41', 'name', 'link-12');">name</a></tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-42', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ctype_no_const</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-43', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">call_params</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'&amp;'</tt><tt class="py-op">+</tt><tt id="link-44" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-44', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-45', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-46', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">'&amp;'</tt><tt class="py-op">+</tt><tt id="link-47" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-47', 'name', 'link-12');">name</a></tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-48', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-49', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-50', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"f"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt id="link-51" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-51', 'name', 'link-12');">name</a></tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt id="link-52" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-52', 'name', 'link-12');">name</a></tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-53', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ctype_no_const</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-54', 'name', 'link-12');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">=</tt><tt class="py-string">"[%i]"</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">            <tt class="py-name">py_list</tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-55" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-55', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-string">"PyObject*"</tt><tt class="py-op">,</tt> <tt class="py-string">"py_list"</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">            <tt class="py-name">idx</tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-56" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-56', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-string">"int"</tt><tt class="py-op">,</tt> <tt class="py-string">"idx"</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">call_params</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-57" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-57', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-58', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-name">elem</tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-59', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-string">"PyObject*"</tt><tt class="py-op">,</tt> <tt class="py-string">"element"</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-60" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-60', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'O!'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">'&amp;PyList_Type'</tt><tt class="py-op">,</tt> <tt class="py-string">'&amp;'</tt><tt class="py-op">+</tt><tt class="py-name">py_list</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-61', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.write_error_check()=pybindgen.typehandlers.base.CodeBlock-class.html#write_error_check"><a title="pybindgen.typehandlers.base.CodeBlock.write_error_check" class="py-name" href="#" onclick="return doclink('link-62', 'write_error_check', 'link-62');">write_error_check</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                        <tt class="py-string">'PyList_Size(%s) != %i'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">py_list</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                        <tt class="py-string">'PyErr_SetString(PyExc_TypeError, "Parameter `%s\' must be a list of %i floats");'</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                        <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-63" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-63', 'name', 'link-12');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-64" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.write_code()=pybindgen.typehandlers.base.CodeBlock-class.html#write_code"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-64', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                    <tt class="py-string">"for (%s = 0; %s &lt; %i; %s++) {"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">idx</tt><tt class="py-op">,</tt> <tt class="py-name">idx</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">,</tt> <tt class="py-name">idx</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-65" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.indent()=pybindgen.typehandlers.base.CodeBlock-class.html#indent,Method pybindgen.typehandlers.codesink.CodeSink.indent()=pybindgen.typehandlers.codesink.CodeSink-class.html#indent"><a title="pybindgen.typehandlers.base.CodeBlock.indent
+pybindgen.typehandlers.codesink.CodeSink.indent" class="py-name" href="#" onclick="return doclink('link-65', 'indent', 'link-65');">indent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-66" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-66', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"%(elem)s = PyList_GET_ITEM(%(py_list)s, %(idx)s);"</tt> <tt class="py-op">%</tt> <tt class="py-name">vars</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-67" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_error_check" class="py-name" href="#" onclick="return doclink('link-67', 'write_error_check', 'link-62');">write_error_check</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                        <tt class="py-string">'!PyFloat_Check(element)'</tt><tt class="py-op">,</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                        <tt class="py-string">'PyErr_SetString(PyExc_TypeError, "Parameter `%s\' must be a list of %i floats");'</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                        <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-68" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-68', 'name', 'link-12');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-69" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-69', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"%(name)s[%(idx)s] = PyFloat_AsDouble(%(elem)s);"</tt> <tt class="py-op">%</tt> <tt class="py-name">vars</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-70" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.unindent()=pybindgen.typehandlers.base.CodeBlock-class.html#unindent,Method pybindgen.typehandlers.codesink.CodeSink.unindent()=pybindgen.typehandlers.codesink.CodeSink-class.html#unindent"><a title="pybindgen.typehandlers.base.CodeBlock.unindent
+pybindgen.typehandlers.codesink.CodeSink.unindent" class="py-name" href="#" onclick="return doclink('link-70', 'unindent', 'link-70');">unindent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">before_call</tt><tt class="py-op">.</tt><tt id="link-71" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-71', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">'}'</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-72" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-72', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">after_call</tt><tt class="py-op">.</tt><tt id="link-73" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-73', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"%s = PyList_New(%i);"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">py_list</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">after_call</tt><tt class="py-op">.</tt><tt id="link-74" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-74', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                    <tt class="py-string">"for (%s = 0; %s &lt; %i; %s++) {"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">idx</tt><tt class="py-op">,</tt> <tt class="py-name">idx</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">array_length</tt><tt class="py-op">,</tt> <tt class="py-name">idx</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">after_call</tt><tt class="py-op">.</tt><tt id="link-75" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.indent
+pybindgen.typehandlers.codesink.CodeSink.indent" class="py-name" href="#" onclick="return doclink('link-75', 'indent', 'link-65');">indent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">after_call</tt><tt class="py-op">.</tt><tt id="link-76" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-76', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"PyList_SET_ITEM(%(py_list)s, %(idx)s, PyFloat_FromDouble(%(name)s[%(idx)s]));"</tt> <tt class="py-op">%</tt> <tt class="py-name">vars</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">after_call</tt><tt class="py-op">.</tt><tt id="link-77" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.unindent
+pybindgen.typehandlers.codesink.CodeSink.unindent" class="py-name" href="#" onclick="return doclink('link-77', 'unindent', 'link-70');">unindent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">after_call</tt><tt class="py-op">.</tt><tt id="link-78" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-78', 'write_code', 'link-64');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">'}'</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-79" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-79', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"N"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">py_list</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="FloatRefParam"></a><div id="FloatRefParam-def"><a name="L104"></a><tt class="py-lineno">104</tt> <a class="py-toggle" href="#" id="FloatRefParam-toggle" onclick="return toggle('FloatRefParam');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatRefParam-class.html">FloatRefParam</a><tt class="py-op">(</tt><tt class="py-base-class">Parameter</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatRefParam-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FloatRefParam-expanded"><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt id="link-80" class="py-name"><a title="pybindgen.cppclass.CppClassParameter.DIRECTIONS
+pybindgen.cppclass.CppClassParameterBase.DIRECTIONS
+pybindgen.cppclass.CppClassPtrParameter.DIRECTIONS
+pybindgen.cppclass.CppClassRefParameter.DIRECTIONS
+pybindgen.cppmethod.DummyParameter.DIRECTIONS
+pybindgen.typehandlers.base.Parameter.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolParam.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolPtrParam.DIRECTIONS
+pybindgen.typehandlers.booltype.BoolRefParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoubleParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoublePtrParam.DIRECTIONS
+pybindgen.typehandlers.doubletype.DoubleRefParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatPtrParam.DIRECTIONS
+pybindgen.typehandlers.floattype.FloatRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.Int16Param.DIRECTIONS
+pybindgen.typehandlers.inttype.Int8PtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntPtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.IntRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.LongLongParam.DIRECTIONS
+pybindgen.typehandlers.inttype.LongLongRefParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt16Param.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt8Param.DIRECTIONS
+pybindgen.typehandlers.inttype.UInt8PtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedIntParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.DIRECTIONS
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.DIRECTIONS
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.CStringParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.CharParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.StdStringParam.DIRECTIONS
+pybindgen.typehandlers.stringtype.StdStringRefParam.DIRECTIONS" class="py-name" href="#" onclick="return doclink('link-80', 'DIRECTIONS', 'link-5');">DIRECTIONS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-81" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-81', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-82" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-82', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">,</tt> <tt id="link-83" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-83', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-84" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-84', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                  <tt id="link-85" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-85', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-86" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-86', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">|</tt><tt id="link-87" class="py-name"><a title="pybindgen.typehandlers.base.Parameter" class="py-name" href="#" onclick="return doclink('link-87', 'Parameter', 'link-2');">Parameter</a></tt><tt class="py-op">.</tt><tt id="link-88" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-88', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt id="link-89" class="py-name"><a title="pybindgen.cppclass.CppClassParameter.CTYPES
+pybindgen.cppclass.CppClassParameterBase.CTYPES
+pybindgen.cppclass.CppClassPtrParameter.CTYPES
+pybindgen.cppclass.CppClassPtrReturnValue.CTYPES
+pybindgen.cppclass.CppClassRefParameter.CTYPES
+pybindgen.cppclass.CppClassReturnValue.CTYPES
+pybindgen.cppclass.CppClassReturnValueBase.CTYPES
+pybindgen.cppmethod.DummyParameter.CTYPES
+pybindgen.cppmethod.DummyReturnValue.CTYPES
+pybindgen.typehandlers.base.Parameter.CTYPES
+pybindgen.typehandlers.base.PointerParameter.CTYPES
+pybindgen.typehandlers.base.PointerReturnValue.CTYPES
+pybindgen.typehandlers.base.ReturnValue.CTYPES
+pybindgen.typehandlers.booltype.BoolParam.CTYPES
+pybindgen.typehandlers.booltype.BoolPtrParam.CTYPES
+pybindgen.typehandlers.booltype.BoolRefParam.CTYPES
+pybindgen.typehandlers.booltype.BoolReturn.CTYPES
+pybindgen.typehandlers.doubletype.DoubleParam.CTYPES
+pybindgen.typehandlers.doubletype.DoublePtrParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleRefParam.CTYPES
+pybindgen.typehandlers.doubletype.DoubleReturn.CTYPES
+pybindgen.typehandlers.floattype.FloatParam.CTYPES
+pybindgen.typehandlers.floattype.FloatPtrParam.CTYPES
+pybindgen.typehandlers.floattype.FloatRefParam.CTYPES
+pybindgen.typehandlers.floattype.FloatReturn.CTYPES
+pybindgen.typehandlers.inttype.Int16Param.CTYPES
+pybindgen.typehandlers.inttype.Int16Return.CTYPES
+pybindgen.typehandlers.inttype.Int8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntParam.CTYPES
+pybindgen.typehandlers.inttype.IntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.IntRefParam.CTYPES
+pybindgen.typehandlers.inttype.IntReturn.CTYPES
+pybindgen.typehandlers.inttype.LongLongParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.LongLongReturn.CTYPES
+pybindgen.typehandlers.inttype.UInt16Param.CTYPES
+pybindgen.typehandlers.inttype.UInt16Return.CTYPES
+pybindgen.typehandlers.inttype.UInt8Param.CTYPES
+pybindgen.typehandlers.inttype.UInt8PtrParam.CTYPES
+pybindgen.typehandlers.inttype.UInt8Return.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedIntReturn.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongRefParam.CTYPES
+pybindgen.typehandlers.inttype.UnsignedLongLongReturn.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.CTYPES
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.CTYPES
+pybindgen.typehandlers.stringtype.CStringParam.CTYPES
+pybindgen.typehandlers.stringtype.CStringReturn.CTYPES
+pybindgen.typehandlers.stringtype.CharParam.CTYPES
+pybindgen.typehandlers.stringtype.CharReturn.CTYPES
+pybindgen.typehandlers.stringtype.StdStringParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringRefParam.CTYPES
+pybindgen.typehandlers.stringtype.StdStringReturn.CTYPES
+pybindgen.typehandlers.voidtype.VoidReturn.CTYPES" class="py-name" href="#" onclick="return doclink('link-89', 'CTYPES', 'link-8');">CTYPES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'float&amp;'</tt><tt class="py-op">]</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">     </tt>
+<a name="FloatRefParam.convert_c_to_python"></a><div id="FloatRefParam.convert_c_to_python-def"><a name="L110"></a><tt class="py-lineno">110</tt> <a class="py-toggle" href="#" id="FloatRefParam.convert_c_to_python-toggle" onclick="return toggle('FloatRefParam.convert_c_to_python');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatRefParam-class.html#convert_c_to_python">convert_c_to_python</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatRefParam.convert_c_to_python-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatRefParam.convert_c_to_python-expanded"><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-90" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-90', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-91" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-91', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-92" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-92', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-93" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-93', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"f"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-94" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-94', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="FloatRefParam.convert_python_to_c"></a><div id="FloatRefParam.convert_python_to_c-def"><a name="L116"></a><tt class="py-lineno">116</tt> <a class="py-toggle" href="#" id="FloatRefParam.convert_python_to_c-toggle" onclick="return toggle('FloatRefParam.convert_python_to_c');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.typehandlers.floattype.FloatRefParam-class.html#convert_python_to_c">convert_python_to_c</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FloatRefParam.convert_python_to_c-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FloatRefParam.convert_python_to_c-expanded"><a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-comment">#assert self.ctype == 'float&amp;'</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt id="link-95" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-95', 'name', 'link-12');">name</a></tt> <tt class="py-op">=</tt> <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">declarations</tt><tt class="py-op">.</tt><tt id="link-96" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-96', 'declare_variable', 'link-13');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ctype_no_const</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-97" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-97', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">call_params</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt id="link-98" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-98', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-99" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" class="py-name" href="#" onclick="return doclink('link-99', 'DIRECTION_IN', 'link-7');">DIRECTION_IN</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">parse_params</tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-100', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">'f'</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-string">'&amp;'</tt><tt class="py-op">+</tt><tt id="link-101" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-101', 'name', 'link-12');">name</a></tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-102" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-102', 'name', 'link-12');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">direction</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-103" class="py-name"><a title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" class="py-name" href="#" onclick="return doclink('link-103', 'DIRECTION_OUT', 'link-25');">DIRECTION_OUT</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">            <tt class="py-name">wrapper</tt><tt class="py-op">.</tt><tt class="py-name">build_params</tt><tt class="py-op">.</tt><tt id="link-104" class="py-name"><a title="pybindgen.typehandlers.base.BuildValueParameters.add_parameter
+pybindgen.typehandlers.base.ParseTupleParameters.add_parameter" class="py-name" href="#" onclick="return doclink('link-104', 'add_parameter', 'link-10');">add_parameter</a></tt><tt class="py-op">(</tt><tt class="py-string">"f"</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt id="link-105" class="py-name"><a title="pybindgen.module.ModuleBase.name" class="py-name" href="#" onclick="return doclink('link-105', 'name', 'link-12');">name</a></tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:58 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

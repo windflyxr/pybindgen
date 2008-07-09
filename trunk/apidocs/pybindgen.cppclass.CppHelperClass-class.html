@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.cppclass.CppHelperClass</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.cppclass-module.html">Module&nbsp;cppclass</a> ::
+        Class&nbsp;CppHelperClass
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.cppclass.CppHelperClass-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CppHelperClass</h1><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_17" name="uml_class_diagram_for_pybindge_17">
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_method" title="pybindgen.cppclass.CppHelperClass.add_virtual_method" alt="" coords="17,36,335,54"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_post_generation_code" title="Add custom code to be included right after the helper class is generated." alt="" coords="17,54,335,73"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_proxy" title="Add a new CppVirtualMethodProxy object to this class" alt="" coords="17,73,335,92"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_custom_method" title="Add a custom method to the helper class, given by a declaration line and a  body." alt="" coords="17,92,335,110"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate_forward_declarations" title="Generate the proxy class (declaration only) to a given code sink" alt="" coords="17,110,335,129"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate" title="Generate the proxy class (virtual method bodies only) to a given code sink." alt="" coords="17,129,335,148"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#__init__" title="class_ &#45;&#45; original CppClass wrapper object" alt="" coords="17,148,335,166"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_parent_caller" title="Add a new CppVirtualMethodParentCaller object to this helper class" alt="" coords="17,166,335,185"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html" title="Generates code for a C++ proxy subclass that takes care of forwarding virtual methods from C++ to Python." alt="" coords="16,10,336,186"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_17.gif" alt='' usemap="#uml_class_diagram_for_pybindge_17" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+Generates code for a C++ proxy subclass that takes care of forwarding 
+  virtual methods from C++ to Python.<br /><br />
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.CppHelperClass-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">class_</span>)</span><br />
+      class_ -- original CppClass wrapper object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.__init__">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___14-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for___init___14-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___14" name="call_graph_for___init___14">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_helper_class" title="CppClass.get_helper_class()" alt="" coords="7,6,241,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#__init__" title="__init__()" alt="" coords="291,6,387,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_pystruct" title="CppClass.get_pystruct()" alt="" coords="435,6,640,38"/>
+</map>
+  <img src="call_graph_for___init___14.gif" alt='' usemap="#call_graph_for___init___14" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_virtual_method"></a><span class="summary-sig-name">add_virtual_method</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">method</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.add_virtual_method">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_virtual_met-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_virtual_met-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_virtual_met" name="call_graph_for_add_virtual_met">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_add_method_obj" title="CppClass._add_method_obj()" alt="" coords="75,62,325,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_method" title="add_virtual_method()" alt="" coords="444,90,625,122"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_inherit_helper_class_parent_virtuals" title="CppClass._inherit_helper_class_parent_virtuals()" alt="" coords="7,118,393,150"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_parent_caller" title="add_virtual_parent_caller()" alt="" coords="743,6,964,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_proxy" title="add_virtual_proxy()" alt="" coords="768,62,939,94"/>
+<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html#matches_signature" title="cppmethod.CppMethod.matches_signature()" alt="" coords="676,118,1031,150"/>
+<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html#set_helper_class" title="cppmethod.CppMethod.set_helper_class()" alt="" coords="683,174,1024,206"/>
+</map>
+  <img src="call_graph_for_add_virtual_met.gif" alt='' usemap="#call_graph_for_add_virtual_met" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_virtual_parent_caller"></a><span class="summary-sig-name">add_virtual_parent_caller</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">parent_caller</span>)</span><br />
+      Add a new CppVirtualMethodParentCaller object to this helper 
+      class</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.add_virtual_parent_caller">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_virtual_par-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_virtual_par-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_virtual_par" name="call_graph_for_add_virtual_par">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_pystruct" title="CppClass.get_pystruct()" alt="" coords="576,6,781,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_method" title="add_virtual_method()" alt="" coords="7,62,188,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_parent_caller" title="add_virtual_parent_caller()" alt="" coords="237,62,459,94"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#__init__" title="overloading.OverloadedWrapper.__init__()" alt="" coords="507,62,851,94"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#add" title="overloading.OverloadedWrapper.add()" alt="" coords="524,118,833,150"/>
+</map>
+  <img src="call_graph_for_add_virtual_par.gif" alt='' usemap="#call_graph_for_add_virtual_par" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.CppHelperClass-class.html#add_custom_method" class="summary-sig-name">add_custom_method</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">declaration</span>,
+        <span class="summary-sig-arg">body</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add a custom method to the helper class, given by a declaration 
+      line and a body.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.add_custom_method">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_post_generation_code"></a><span class="summary-sig-name">add_post_generation_code</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code</span>)</span><br />
+      Add custom code to be included right after the helper class is 
+      generated.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.add_post_generation_code">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_virtual_proxy"></a><span class="summary-sig-name">add_virtual_proxy</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">virtual_proxy</span>)</span><br />
+      Add a new CppVirtualMethodProxy object to this class</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.add_virtual_proxy">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_virtual_pro-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_virtual_pro-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_virtual_pro" name="call_graph_for_add_virtual_pro">
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_method" title="add_virtual_method()" alt="" coords="7,6,188,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#add_virtual_proxy" title="add_virtual_proxy()" alt="" coords="237,6,408,38"/>
+</map>
+  <img src="call_graph_for_add_virtual_pro.gif" alt='' usemap="#call_graph_for_add_virtual_pro" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate_forward_declarations"></a><span class="summary-sig-name">generate_forward_declarations</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink_param</span>)</span><br />
+      Generate the proxy class (declaration only) to a given code 
+      sink</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.generate_forward_declarations">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_generate_forwar_2-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_generate_forwar_2-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_generate_forwar_2" name="call_graph_for_generate_forwar_2">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate_forward_declarations" title="CppClass.generate_forward_declarations()" alt="" coords="5,62,347,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate_forward_declarations" title="generate_forward_declarations()" alt="" coords="396,62,657,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#_generate_forward_declarations" title="_generate_forward_declarations()" alt="" coords="775,6,1047,38"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#__init__" title="typehandlers.codesink.MemoryCodeSink.__init__()" alt="" coords="707,62,1115,94"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#flush_to" title="typehandlers.codesink.MemoryCodeSink.flush_to()" alt="" coords="707,118,1115,150"/>
+</map>
+  <img src="call_graph_for_generate_forwar_2.gif" alt='' usemap="#call_graph_for_generate_forwar_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.CppHelperClass-class.html#_generate_forward_declarations" class="summary-sig-name">_generate_forward_declarations</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink</span>)</span><br />
+      Generate the proxy class (declaration only) to a given code 
+      sink.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass._generate_forward_declarations">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__generate_forwa-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for__generate_forwa-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for__generate_forwa" name="call_graph_for__generate_forwa">
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#_generate_forward_declarations" title="_generate_forward_declarations()" alt="" coords="317,202,589,234"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#generate_class_declaration" title="overloading.OverloadedWrapper.generate_class_declaration()" alt="" coords="644,6,1124,38"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#reset_code_generation_state" title="overloading.OverloadedWrapper.reset_code_generation_state()" alt="" coords="637,62,1131,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base&#45;module.html#join_ctype_and_name" title="typehandlers.base.join_ctype_and_name()" alt="" coords="716,118,1052,150"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="typehandlers.codesink.CodeSink.indent()" alt="" coords="720,174,1048,206"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="typehandlers.codesink.CodeSink.unindent()" alt="" coords="711,230,1057,262"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="typehandlers.codesink.MemoryCodeSink.writeln()" alt="" coords="687,286,1081,318"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.NullCodeSink&#45;class.html#__init__" title="typehandlers.codesink.NullCodeSink.__init__()" alt="" coords="696,342,1072,374"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#call_with_error_handling" title="utils.call_with_error_handling()" alt="" coords="759,398,1009,430"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate_forward_declarations" title="generate_forward_declarations()" alt="" coords="7,202,268,234"/>
+</map>
+  <img src="call_graph_for__generate_forwa.gif" alt='' usemap="#call_graph_for__generate_forwa" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.CppHelperClass-class.html#generate" class="summary-sig-name">generate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink</span>)</span><br />
+      Generate the proxy class (virtual method bodies only) to a given 
+      code sink.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.generate">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_generate_10-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_generate_10-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_generate_10" name="call_graph_for_generate_10">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate" title="CppClass.generate()" alt="" coords="5,62,179,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate" title="generate()" alt="" coords="228,62,321,94"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#get_py_method_def" title="overloading.OverloadedWrapper.get_py_method_def()" alt="" coords="371,6,803,38"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html#writeln" title="typehandlers.codesink.FileCodeSink.writeln()" alt="" coords="407,62,767,94"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#call_with_error_handling" title="utils.call_with_error_handling()" alt="" coords="461,118,712,150"/>
+</map>
+  <img src="call_graph_for_generate_10.gif" alt='' usemap="#call_graph_for_generate_10" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">class_</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.__init__">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___14-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for___init___14-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___14" name="call_graph_for___init___14">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_helper_class" title="CppClass.get_helper_class()" alt="" coords="7,6,241,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#__init__" title="__init__()" alt="" coords="291,6,387,38"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_pystruct" title="CppClass.get_pystruct()" alt="" coords="435,6,640,38"/>
+</map>
+  <img src="call_graph_for___init___14.gif" alt='' usemap="#call_graph_for___init___14" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  class_ -- original CppClass wrapper object
+  <dl class="fields">
+    <dt>Overrides:
+      object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_custom_method"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_custom_method</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">declaration</span>,
+        <span class="sig-arg">body</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.add_custom_method">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Add a custom method to the helper class, given by a declaration line 
+  and a body.  The body can be None, in case the whole method definition is
+  included in the declaration itself.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_generate_forward_declarations"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_generate_forward_declarations</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">code_sink</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass._generate_forward_declarations">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__generate_forwa-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for__generate_forwa-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for__generate_forwa" name="call_graph_for__generate_forwa">
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#_generate_forward_declarations" title="_generate_forward_declarations()" alt="" coords="317,202,589,234"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#generate_class_declaration" title="overloading.OverloadedWrapper.generate_class_declaration()" alt="" coords="644,6,1124,38"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#reset_code_generation_state" title="overloading.OverloadedWrapper.reset_code_generation_state()" alt="" coords="637,62,1131,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base&#45;module.html#join_ctype_and_name" title="typehandlers.base.join_ctype_and_name()" alt="" coords="716,118,1052,150"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="typehandlers.codesink.CodeSink.indent()" alt="" coords="720,174,1048,206"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="typehandlers.codesink.CodeSink.unindent()" alt="" coords="711,230,1057,262"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="typehandlers.codesink.MemoryCodeSink.writeln()" alt="" coords="687,286,1081,318"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.NullCodeSink&#45;class.html#__init__" title="typehandlers.codesink.NullCodeSink.__init__()" alt="" coords="696,342,1072,374"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#call_with_error_handling" title="utils.call_with_error_handling()" alt="" coords="759,398,1009,430"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate_forward_declarations" title="generate_forward_declarations()" alt="" coords="7,202,268,234"/>
+</map>
+  <img src="call_graph_for__generate_forwa.gif" alt='' usemap="#call_graph_for__generate_forwa" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  <p>Generate the proxy class (declaration only) to a given code sink.</p>
+  Returns True if all is well, False if a pure virtual method was found 
+  that could not be generated.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="generate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">generate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">code_sink</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#CppHelperClass.generate">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_generate_10-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_generate_10-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_generate_10" name="call_graph_for_generate_10">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate" title="CppClass.generate()" alt="" coords="5,62,179,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppHelperClass&#45;class.html#generate" title="generate()" alt="" coords="228,62,321,94"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#get_py_method_def" title="overloading.OverloadedWrapper.get_py_method_def()" alt="" coords="371,6,803,38"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html#writeln" title="typehandlers.codesink.FileCodeSink.writeln()" alt="" coords="407,62,767,94"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#call_with_error_handling" title="utils.call_with_error_handling()" alt="" coords="461,118,712,150"/>
+</map>
+  <img src="call_graph_for_generate_10.gif" alt='' usemap="#call_graph_for_generate_10" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Generate the proxy class (virtual method bodies only) to a given code 
+  sink. returns pymethodef list of parent callers
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:42 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.module.ModuleBase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.module-module.html">Module&nbsp;module</a> ::
+        Class&nbsp;ModuleBase
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.module.ModuleBase-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ModuleBase</h1><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_50" name="uml_class_diagram_for_pybindge_50">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#current_section" title="pybindgen.module.ModuleBase.current_section" alt="" coords="17,364,457,383"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#name" title="pybindgen.module.ModuleBase.name" alt="" coords="17,383,457,401"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_strip_prefix" title="Sets the prefix string to be used when transforming a C function name into  the python function name; the given prefix string is removed from the C  function name." alt="" coords="17,404,457,423"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="Note: this is an abstract base class, see Module" alt="" coords="17,423,457,441"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_c_function_name_transformer" title="Sets the function to be used when transforming a C function name into the  python function name; the given given function is called like this:" alt="" coords="17,441,457,460"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_module_path" title="Get the full [module, submodule, submodule,...] path" alt="" coords="17,460,457,479"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_enum" title="Add an enumeration to the module." alt="" coords="17,479,457,497"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_namespace_path" title="Get the full [root_namespace, namespace, namespace,...] path (C++)" alt="" coords="17,497,457,516"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="pybindgen.module.ModuleBase.get_current_section" alt="" coords="17,516,457,535"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#declare_one_time_definition" title="Internal helper method for code geneneration to coordinate generation of  code that can only be defined once per compilation unit" alt="" coords="17,535,457,553"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="Add a class to the module." alt="" coords="17,553,457,572"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="Adds an additional include directive, needed to compile this python module" alt="" coords="17,572,457,591"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_cpp_namespace" title="Add a nested module namespace corresponding to a C++ namespace." alt="" coords="17,591,457,609"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#generate_forward_declarations" title="(internal) generate forward declarations for types" alt="" coords="17,609,457,628"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#begin_section" title="Declare that types and functions registered with the module in the future  belong to the section given by that section_name parameter, until a  matching end_section() is called." alt="" coords="17,628,457,647"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="(internal) Generates the module." alt="" coords="17,665,457,684"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html" title="ModuleBase objects can be indexed dictionary style to access contained types." alt="" coords="16,347,459,685"/>
+<area shape="rect" href="pybindgen.module.Module&#45;class.html" title="pybindgen.module.Module" alt="" coords="151,715,207,741"/>
+<area shape="rect" href="pybindgen.module.SubModule&#45;class.html" title="pybindgen.module.SubModule" alt="" coords="257,715,335,741"/>
+<area shape="rect" href="javascript: void(0);" title="Returns:  an iterator over the (key, value) items of D" alt="" coords="179,36,296,55"/>
+<area shape="rect" href="javascript: void(0);" title="x.__getattribute__(&#39;name&#39;) &lt;==&gt; x.name" alt="" coords="179,55,296,73"/>
+<area shape="rect" href="javascript: void(0);" title="If key is not found, d is returned if given, otherwise KeyError is raised" alt="" coords="179,73,296,92"/>
+<area shape="rect" href="javascript: void(0);" title="Returns:  True if D has a key k, else False" alt="" coords="179,92,296,111"/>
+<area shape="rect" href="javascript: void(0);" title="x&lt;y" alt="" coords="179,111,296,129"/>
+<area shape="rect" href="javascript: void(0);" title="Returns:  a new object with type S, a subtype of T" alt="" coords="179,129,296,148"/>
+<area shape="rect" href="javascript: void(0);" title="Returns:  True if D has a key k, else False" alt="" coords="179,148,296,167"/>
+<area shape="rect" href="javascript: void(0);" title="cmp(x,y)" alt="" coords="179,167,296,185"/>
+<area shape="rect" href="javascript: void(0);" title="Returns:  an iterator over the values of D" alt="" coords="179,185,296,204"/>
+<area shape="rect" href="javascript: void(0);" title="len(x)" alt="" coords="179,204,296,223"/>
+<area shape="rect" href="javascript: void(0);" title="x!=y" alt="" coords="179,223,296,241"/>
+<area shape="rect" href="javascript: void(0);" title="x[y]" alt="" coords="179,241,296,260"/>
+<area shape="rect" href="javascript: void(0);" title="d defaults to None." alt="" coords="179,260,296,279"/>
+<area shape="rect" href="javascript: void(0);" title="x&gt;=y" alt="" coords="179,297,296,316"/>
+<area shape="rect" href="javascript: void(0);" title="dict() &#45;&gt; new empty dictionary." alt="" coords="177,11,297,317"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_50.gif" alt='' usemap="#uml_class_diagram_for_pybindge_50" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+ModuleBase objects can be indexed dictionary style to access contained
+  types.  Example:
+<pre class="literalblock">
+ &gt;&gt;&gt; from enum import Enum
+ &gt;&gt;&gt; from cppclass import CppClass
+ &gt;&gt;&gt; m = Module(&quot;foo&quot;, cpp_namespace=&quot;foo&quot;)
+ &gt;&gt;&gt; subm = m.add_cpp_namespace(&quot;subm&quot;)
+ &gt;&gt;&gt; c1 = m.add_class(&quot;Bar&quot;)
+ &gt;&gt;&gt; c2 = subm.add_class(&quot;Zbr&quot;)
+ &gt;&gt;&gt; e1 = m.add_enum(&quot;En1&quot;, [&quot;XX&quot;])
+ &gt;&gt;&gt; e2 = subm.add_enum(&quot;En2&quot;, [&quot;XX&quot;])
+ &gt;&gt;&gt; m[&quot;Bar&quot;] is c1
+ True
+ &gt;&gt;&gt; m[&quot;foo::Bar&quot;] is c1
+ True
+ &gt;&gt;&gt; m[&quot;En1&quot;] is e1
+ True
+ &gt;&gt;&gt; m[&quot;foo::En1&quot;] is e1
+ True
+ &gt;&gt;&gt; m[&quot;badname&quot;]
+ Traceback (most recent call last):
+   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ KeyError: 'badname'
+ &gt;&gt;&gt; m[&quot;foo::subm::Zbr&quot;] is c2
+ True
+ &gt;&gt;&gt; m[&quot;foo::subm::En2&quot;] is e2
+ True
+</pre><br /><br />
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">parent</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">docstring</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cpp_namespace</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Note: this is an abstract base class, see <a 
+      href="pybindgen.module.Module-class.html" class="link">Module</a></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.__init__">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___37-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for___init___37-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___37" name="call_graph_for___init___37">
+<area shape="rect" href="pybindgen.module.Module&#45;class.html#__init__" title="Module.__init__()" alt="" coords="21,90,179,122"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="__init__()" alt="" coords="243,118,339,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_namespace_path" title="get_namespace_path()" alt="" coords="496,6,685,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_name" title="set_name()" alt="" coords="539,62,643,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_strip_prefix" title="set_strip_prefix()" alt="" coords="516,118,665,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#__init__" title="typehandlers.base.CodeBlock.__init__()" alt="" coords="429,174,752,206"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#__init__" title="typehandlers.codesink.MemoryCodeSink.__init__()" alt="" coords="387,230,795,262"/>
+<area shape="rect" href="pybindgen.module.SubModule&#45;class.html#__init__" title="SubModule.__init__()" alt="" coords="7,146,193,178"/>
+</map>
+  <img src="call_graph_for___init___37.gif" alt='' usemap="#call_graph_for___init___37" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_current_section"></a><span class="summary-sig-name">get_current_section</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_current_section">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_current_sec-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_current_sec-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_current_sec" name="call_graph_for_get_current_sec">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="17,6,169,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="231,62,409,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_enum_obj" title="_add_enum_obj()" alt="" coords="16,62,171,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_function_obj" title="_add_function_obj()" alt="" coords="5,118,181,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_root" title="get_root()" alt="" coords="459,62,555,94"/>
+</map>
+  <img src="call_graph_for_get_current_sec.gif" alt='' usemap="#call_graph_for_get_current_sec" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#begin_section" class="summary-sig-name">begin_section</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">section_name</span>)</span><br />
+      Declare that types and functions registered with the module in the
+      future belong to the section given by that section_name parameter, 
+      until a matching end_section() is called.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.begin_section">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#end_section" class="summary-sig-name">end_section</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">section_name</span>)</span><br />
+      Declare the end of a section, i.e.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.end_section">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_name"></a><span class="summary-sig-name">get_name</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_name">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_name-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_name-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_name" name="call_graph_for_get_name">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="do_generate()" alt="" coords="25,6,148,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_name" title="get_name()" alt="" coords="216,90,320,122"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_module_path" title="get_module_path()" alt="" coords="5,62,168,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_submodule" title="get_submodule()" alt="" coords="13,118,160,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_name" title="set_name()" alt="" coords="35,174,139,206"/>
+</map>
+  <img src="call_graph_for_get_name.gif" alt='' usemap="#call_graph_for_get_name" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_name"></a><span class="summary-sig-name">set_name</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.set_name">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_set_name-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_set_name-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_set_name" name="call_graph_for_set_name">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="__init__()" alt="" coords="5,6,101,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_name" title="set_name()" alt="" coords="149,6,253,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_name" title="get_name()" alt="" coords="301,6,405,38"/>
+</map>
+  <img src="call_graph_for_set_name.gif" alt='' usemap="#call_graph_for_set_name" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_submodule"></a><span class="summary-sig-name">get_submodule</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">submodule_name</span>)</span><br />
+      get a submodule by its name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_submodule">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_submodule-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_submodule-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_submodule" name="call_graph_for_get_submodule">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_functions" title="gccxmlparser.ModuleParser._scan_namespace_functions()" alt="" coords="7,6,465,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_submodule" title="get_submodule()" alt="" coords="515,34,661,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_cpp_namespace" title="add_cpp_namespace()" alt="" coords="140,62,332,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_name" title="get_name()" alt="" coords="709,34,813,66"/>
+</map>
+  <img src="call_graph_for_get_submodule.gif" alt='' usemap="#call_graph_for_get_submodule" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#get_root" class="summary-sig-name">get_root</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns:
+      the root <a href="pybindgen.module.Module-class.html" 
+      class="link">Module</a> (even if it is self)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_root">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_root-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_root-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_root" name="call_graph_for_get_root">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_functions" title="gccxmlparser.ModuleParser._scan_namespace_functions()" alt="" coords="7,6,465,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_root" title="get_root()" alt="" coords="515,62,611,94"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="20,62,452,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="147,118,325,150"/>
+</map>
+  <img src="call_graph_for_get_root.gif" alt='' usemap="#call_graph_for_get_root" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_strip_prefix"></a><span class="summary-sig-name">set_strip_prefix</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prefix</span>)</span><br />
+      Sets the prefix string to be used when transforming a C function 
+      name into the python function name; the given prefix string is 
+      removed from the C function name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.set_strip_prefix">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_set_strip_prefi-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_set_strip_prefi-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_set_strip_prefi" name="call_graph_for_set_strip_prefi">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="__init__()" alt="" coords="5,6,101,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_strip_prefix" title="set_strip_prefix()" alt="" coords="151,6,300,38"/>
+</map>
+  <img src="call_graph_for_set_strip_prefi.gif" alt='' usemap="#call_graph_for_set_strip_prefi" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#set_c_function_name_transformer" class="summary-sig-name">set_c_function_name_transformer</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">transformer</span>)</span><br />
+      Sets the function to be used when transforming a C function name 
+      into the python function name; the given given function is called 
+      like this:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.set_c_function_name_transformer">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#add_include" class="summary-sig-name">add_include</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">include</span>)</span><br />
+      Adds an additional include directive, needed to compile this 
+      python module</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_include">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_include-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_include-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_include" name="call_graph_for_add_include">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="gccxmlparser.ModuleParser.parse_init()" alt="" coords="5,6,323,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="add_include()" alt="" coords="372,6,495,38"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="544,6,645,38"/>
+</map>
+  <img src="call_graph_for_add_include.gif" alt='' usemap="#call_graph_for_add_include" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_add_function_obj"></a><span class="summary-sig-name">_add_function_obj</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase._add_function_obj">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__add_function_o-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for__add_function_o-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for__add_function_o" name="call_graph_for__add_function_o">
+<area shape="rect" href="pybindgen.function.Function&#45;class.html#set_module" title="function.Function.set_module()" alt="" coords="591,6,847,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_function_obj" title="_add_function_obj()" alt="" coords="323,146,499,178"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="629,62,808,94"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#__init__" title="overloading.OverloadedWrapper.__init__()" alt="" coords="547,118,891,150"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#add" title="overloading.OverloadedWrapper.add()" alt="" coords="564,174,873,206"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="668,230,769,262"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#get_mangled_name" title="utils.get_mangled_name()" alt="" coords="613,286,824,318"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_custom_function_wrapper" title="add_custom_function_wrapper()" alt="" coords="7,118,273,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_function" title="add_function()" alt="" coords="75,174,205,206"/>
+</map>
+  <img src="call_graph_for__add_function_o.gif" alt='' usemap="#call_graph_for__add_function_o" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#add_function" class="summary-sig-name">add_function</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Add a function to the module/namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_function">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_function-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_function-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_function" name="call_graph_for_add_function">
+<area shape="rect" href="pybindgen.function.Function&#45;class.html#__init__" title="function.Function.__init__()" alt="" coords="696,6,928,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_functions" title="gccxmlparser.ModuleParser._scan_namespace_functions()" alt="" coords="7,34,465,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_function" title="add_function()" alt="" coords="516,34,647,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_function_obj" title="_add_function_obj()" alt="" coords="724,62,900,94"/>
+</map>
+  <img src="call_graph_for_add_function.gif" alt='' usemap="#call_graph_for_add_function" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#add_custom_function_wrapper" class="summary-sig-name">add_custom_function_wrapper</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Add a function, using custom wrapper code, to the 
+      module/namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_custom_function_wrapper">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_custom_func-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_custom_func-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_custom_func" name="call_graph_for_add_custom_func">
+<area shape="rect" href="pybindgen.function.CustomFunctionWrapper&#45;class.html#__init__" title="function.CustomFunctionWrapper.__init__()" alt="" coords="324,6,679,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_function_obj" title="_add_function_obj()" alt="" coords="413,62,589,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_custom_function_wrapper" title="add_custom_function_wrapper()" alt="" coords="7,34,273,66"/>
+</map>
+  <img src="call_graph_for_add_custom_func.gif" alt='' usemap="#call_graph_for_add_custom_func" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#register_type" class="summary-sig-name">register_type</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">full_name</span>,
+        <span class="summary-sig-arg">type_wrapper</span>)</span><br />
+      Register a type wrapper with the module, for easy access in the 
+      future.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.register_type">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_register_type-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_register_type-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_register_type" name="call_graph_for_register_type">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#register_alias" title="cppclass.CppClass.register_alias()" alt="" coords="7,6,284,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#register_type" title="register_type()" alt="" coords="335,62,463,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="69,62,221,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_enum_obj" title="_add_enum_obj()" alt="" coords="68,118,223,150"/>
+</map>
+  <img src="call_graph_for_register_type.gif" alt='' usemap="#call_graph_for_register_type" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#_add_class_obj" class="summary-sig-name">_add_class_obj</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">class_</span>)</span><br />
+      Add a class to the module.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase._add_class_obj">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__add_class_obj-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for__add_class_obj-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for__add_class_obj" name="call_graph_for__add_class_obj">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#set_module" title="cppclass.CppClass.set_module()" alt="" coords="363,6,632,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="163,62,315,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="408,62,587,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#register_type" title="register_type()" alt="" coords="433,118,561,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="add_class()" alt="" coords="7,62,113,94"/>
+</map>
+  <img src="call_graph_for__add_class_obj.gif" alt='' usemap="#call_graph_for__add_class_obj" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#add_class" class="summary-sig-name">add_class</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Add a class to the module.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_class">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_class-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_class-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_class" name="call_graph_for_add_class">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#__init__" title="cppclass.CppClass.__init__()" alt="" coords="643,6,888,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="5,34,437,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="add_class()" alt="" coords="487,34,593,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="689,62,841,94"/>
+</map>
+  <img src="call_graph_for_add_class.gif" alt='' usemap="#call_graph_for_add_class" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#add_cpp_namespace" class="summary-sig-name">add_cpp_namespace</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Add a nested module namespace corresponding to a C++ 
+      namespace.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_cpp_namespace">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_cpp_namespa-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_cpp_namespa-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_cpp_namespa" name="call_graph_for_add_cpp_namespa">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="5,62,437,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_cpp_namespace" title="add_cpp_namespace()" alt="" coords="485,62,677,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_submodule" title="get_submodule()" alt="" coords="747,6,893,38"/>
+<area shape="rect" href="pybindgen.module.SubModule&#45;class.html#__init__" title="SubModule.__init__()" alt="" coords="727,62,913,94"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="769,118,871,150"/>
+</map>
+  <img src="call_graph_for_add_cpp_namespa.gif" alt='' usemap="#call_graph_for_add_cpp_namespa" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_add_enum_obj"></a><span class="summary-sig-name">_add_enum_obj</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enum</span>)</span><br />
+      Add an enumeration.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase._add_enum_obj">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__add_enum_obj-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for__add_enum_obj-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for__add_enum_obj" name="call_graph_for__add_enum_obj">
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#set_module" title="enum.Enum.set_module()" alt="" coords="369,6,580,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_enum_obj" title="_add_enum_obj()" alt="" coords="165,62,320,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="385,62,564,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#register_type" title="register_type()" alt="" coords="411,118,539,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_enum" title="add_enum()" alt="" coords="7,62,116,94"/>
+</map>
+  <img src="call_graph_for__add_enum_obj.gif" alt='' usemap="#call_graph_for__add_enum_obj" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#add_enum" class="summary-sig-name">add_enum</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Add an enumeration to the module.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_enum">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_enum-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_enum-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_enum" name="call_graph_for_add_enum">
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#__init__" title="enum.Enum.__init__()" alt="" coords="647,6,833,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="5,34,437,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_enum" title="add_enum()" alt="" coords="487,34,596,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_enum_obj" title="_add_enum_obj()" alt="" coords="663,62,817,94"/>
+</map>
+  <img src="call_graph_for_add_enum.gif" alt='' usemap="#call_graph_for_add_enum" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#declare_one_time_definition" class="summary-sig-name">declare_one_time_definition</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">definition_name</span>)</span><br />
+      Internal helper method for code geneneration to coordinate 
+      generation of code that can only be defined once per compilation 
+      unit</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.declare_one_time_definition">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_declare_one_tim-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_declare_one_tim-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_declare_one_tim" name="call_graph_for_declare_one_tim">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_generate_typeid_map" title="cppclass.CppClass._generate_typeid_map()" alt="" coords="5,6,357,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#declare_one_time_definition" title="declare_one_time_definition()" alt="" coords="405,6,648,38"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="696,6,797,38"/>
+</map>
+  <img src="call_graph_for_declare_one_tim.gif" alt='' usemap="#call_graph_for_declare_one_tim" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate_forward_declarations"></a><span class="summary-sig-name">generate_forward_declarations</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink</span>)</span><br />
+      (internal) generate forward declarations for types</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.generate_forward_declarations">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_generate_forwar_3-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_generate_forwar_3-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_generate_forwar_3" name="call_graph_for_generate_forwar_3">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate_forward_declarations" title="cppclass.CppClass.generate_forward_declarations()" alt="" coords="492,6,903,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="do_generate()" alt="" coords="7,34,129,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#generate_forward_declarations" title="generate_forward_declarations()" alt="" coords="180,34,441,66"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html#writeln" title="typehandlers.codesink.FileCodeSink.writeln()" alt="" coords="517,62,877,94"/>
+</map>
+  <img src="call_graph_for_generate_forwar_3.gif" alt='' usemap="#call_graph_for_generate_forwar_3" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_module_path"></a><span class="summary-sig-name">get_module_path</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the full [module, submodule, submodule,...] path</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_module_path">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_module_path-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_module_path-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_module_path" name="call_graph_for_get_module_path">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_generate_type_structure" title="cppclass.CppClass._generate_type_structure()" alt="" coords="7,6,377,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_module_path" title="get_module_path()" alt="" coords="427,34,589,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="do_generate()" alt="" coords="131,62,253,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_name" title="get_name()" alt="" coords="637,34,741,66"/>
+</map>
+  <img src="call_graph_for_get_module_path.gif" alt='' usemap="#call_graph_for_get_module_path" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_namespace_path"></a><span class="summary-sig-name">get_namespace_path</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the full [root_namespace, namespace, namespace,...] path 
+      (C++)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_namespace_path">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_namespace_p-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_namespace_p-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_namespace_p" name="call_graph_for_get_namespace_p">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_functions" title="gccxmlparser.ModuleParser._scan_namespace_functions()" alt="" coords="7,6,465,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_namespace_path" title="get_namespace_path()" alt="" coords="515,62,704,94"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="20,62,452,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="__init__()" alt="" coords="188,118,284,150"/>
+</map>
+  <img src="call_graph_for_get_namespace_p.gif" alt='' usemap="#call_graph_for_get_namespace_p" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="do_generate"></a><span class="summary-sig-name">do_generate</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">out</span>,
+        <span class="summary-sig-arg">module_file_base_name</span>=<span class="summary-sig-default">None</span>)</span><br />
+      (internal) Generates the module.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.do_generate">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_do_generate-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_do_generate-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_do_generate" name="call_graph_for_do_generate">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate" title="cppclass.CppClass.generate()" alt="" coords="481,6,724,38"/>
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#generate" title="enum.Enum.generate()" alt="" coords="509,62,696,94"/>
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#generate_declaration" title="enum.Enum.generate_declaration()" alt="" coords="464,118,741,150"/>
+<area shape="rect" href="pybindgen.module.Module&#45;class.html#generate" title="Module.generate()" alt="" coords="7,482,161,514"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="do_generate()" alt="" coords="212,482,335,514"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#generate_forward_declarations" title="generate_forward_declarations()" alt="" coords="472,174,733,206"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_module_path" title="get_module_path()" alt="" coords="521,230,684,262"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_name" title="get_name()" alt="" coords="551,286,655,318"/>
+<area shape="rect" href="pybindgen.module._MonolithicSinkManager&#45;class.html#get_code_sink_for_wrapper" title="_MonolithicSinkManager.get_code_sink_for_wrapper()" alt="" coords="385,342,820,374"/>
+<area shape="rect" href="pybindgen.module._MonolithicSinkManager&#45;class.html#get_includes_code_sink" title="_MonolithicSinkManager.get_includes_code_sink()" alt="" coords="401,398,804,430"/>
+<area shape="rect" href="pybindgen.module._MonolithicSinkManager&#45;class.html#get_main_code_sink" title="_MonolithicSinkManager.get_main_code_sink()" alt="" coords="413,454,792,486"/>
+<area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#get_py_method_def" title="overloading.OverloadedWrapper.get_py_method_def()" alt="" coords="387,510,819,542"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_cleanup" title="typehandlers.base.CodeBlock.write_cleanup()" alt="" coords="421,566,784,598"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="431,622,775,654"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="typehandlers.base.CodeBlock.write_error_check()" alt="" coords="404,678,801,710"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="typehandlers.codesink.CodeSink.indent()" alt="" coords="439,734,767,766"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="typehandlers.codesink.CodeSink.unindent()" alt="" coords="429,790,776,822"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html#writeln" title="typehandlers.codesink.FileCodeSink.writeln()" alt="" coords="423,846,783,878"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#flush_to" title="typehandlers.codesink.MemoryCodeSink.flush_to()" alt="" coords="399,902,807,934"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#call_with_error_handling" title="utils.call_with_error_handling()" alt="" coords="477,958,728,990"/>
+</map>
+  <img src="call_graph_for_do_generate.gif" alt='' usemap="#call_graph_for_do_generate" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      repr(x)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.__repr__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__cmp__</code>,
+      <code>__contains__</code>,
+      <code>__delitem__</code>,
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__getattribute__</code>,
+      <code>__getitem__</code>,
+      <code>__gt__</code>,
+      <code>__hash__</code>,
+      <code>__iter__</code>,
+      <code>__le__</code>,
+      <code>__len__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>,
+      <code>__new__</code>,
+      <code>__setitem__</code>,
+      <code>clear</code>,
+      <code>copy</code>,
+      <code>fromkeys</code>,
+      <code>get</code>,
+      <code>has_key</code>,
+      <code>items</code>,
+      <code>iteritems</code>,
+      <code>iterkeys</code>,
+      <code>itervalues</code>,
+      <code>keys</code>,
+      <code>pop</code>,
+      <code>popitem</code>,
+      <code>setdefault</code>,
+      <code>update</code>,
+      <code>values</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pybindgen.module.ModuleBase-class.html#current_section" class="summary-name">current_section</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pybindgen.module.ModuleBase-class.html#name" class="summary-name">name</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">parent</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">docstring</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cpp_namespace</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.__init__">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___37-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for___init___37-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___37" name="call_graph_for___init___37">
+<area shape="rect" href="pybindgen.module.Module&#45;class.html#__init__" title="Module.__init__()" alt="" coords="21,90,179,122"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="__init__()" alt="" coords="243,118,339,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_namespace_path" title="get_namespace_path()" alt="" coords="496,6,685,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_name" title="set_name()" alt="" coords="539,62,643,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_strip_prefix" title="set_strip_prefix()" alt="" coords="516,118,665,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#__init__" title="typehandlers.base.CodeBlock.__init__()" alt="" coords="429,174,752,206"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#__init__" title="typehandlers.codesink.MemoryCodeSink.__init__()" alt="" coords="387,230,795,262"/>
+<area shape="rect" href="pybindgen.module.SubModule&#45;class.html#__init__" title="SubModule.__init__()" alt="" coords="7,146,193,178"/>
+</map>
+  <img src="call_graph_for___init___37.gif" alt='' usemap="#call_graph_for___init___37" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Note: this is an abstract base class, see <a 
+  href="pybindgen.module.Module-class.html" class="link">Module</a>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> - module name</li>
+        <li><strong class="pname"><code>parent</code></strong> - parent <a href="pybindgen.module.Module-class.html" 
+          class="link">module</a> (i.e. the one that contains this 
+          submodule) or None if this is a root module</li>
+        <li><strong class="pname"><code>docstring</code></strong> - docstring to use for this module</li>
+        <li><strong class="pname"><code>cpp_namespace</code></strong> - C++ namespace prefix associated with this module</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a new module object</dd>
+    <dt>Overrides:
+      dict.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="begin_section"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_section</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">section_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.begin_section">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Declare that types and functions registered with the module in the 
+  future belong to the section given by that section_name parameter, until 
+  a matching end_section() is called.
+  <dl class="fields">
+  </dl>
+<div class="fields">      <p><strong>Note:</strong>
+        <a href="pybindgen.module.ModuleBase-class.html#begin_section" 
+        class="link">begin_section</a>/<a 
+        href="pybindgen.module.ModuleBase-class.html#end_section" 
+        class="link">end_section</a> are silently ignored unless a <a 
+        href="pybindgen.module.MultiSectionFactory-class.html" 
+        class="link">MultiSectionFactory</a> object is used as code 
+        generation output.
+      </p>
+</div></td></tr></table>
+</div>
+<a name="end_section"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">end_section</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">section_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.end_section">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Declare the end of a section, i.e. further types and functions will 
+  belong to the main module.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>section_name</code></strong> - name of section; must match the one in the previous <a 
+          href="pybindgen.module.ModuleBase-class.html#begin_section" 
+          class="link">begin_section</a> call.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_root"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_root</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.get_root">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_root-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_get_root-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_root" name="call_graph_for_get_root">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_functions" title="gccxmlparser.ModuleParser._scan_namespace_functions()" alt="" coords="7,6,465,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_root" title="get_root()" alt="" coords="515,62,611,94"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="20,62,452,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="147,118,325,150"/>
+</map>
+  <img src="call_graph_for_get_root.gif" alt='' usemap="#call_graph_for_get_root" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the root <a href="pybindgen.module.Module-class.html" 
+          class="link">Module</a> (even if it is self)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="set_c_function_name_transformer"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_c_function_name_transformer</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">transformer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.set_c_function_name_transformer">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Sets the function to be used when transforming a C function name into 
+  the python function name; the given given function is called like 
+  this:
+<pre class="literalblock">
+ python_name = transformer(c_name)
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_include"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_include</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">include</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_include">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_include-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_include-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_include" name="call_graph_for_add_include">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="gccxmlparser.ModuleParser.parse_init()" alt="" coords="5,6,323,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="add_include()" alt="" coords="372,6,495,38"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="544,6,645,38"/>
+</map>
+  <img src="call_graph_for_add_include.gif" alt='' usemap="#call_graph_for_add_include" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Adds an additional include directive, needed to compile this python 
+  module
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>include</code></strong> - the name of the header file to include, including surrounding 
+          &quot;&quot; or &lt;&gt;.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_function"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_function</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_function">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_function-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_function-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_function" name="call_graph_for_add_function">
+<area shape="rect" href="pybindgen.function.Function&#45;class.html#__init__" title="function.Function.__init__()" alt="" coords="696,6,928,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_functions" title="gccxmlparser.ModuleParser._scan_namespace_functions()" alt="" coords="7,34,465,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_function" title="add_function()" alt="" coords="516,34,647,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_function_obj" title="_add_function_obj()" alt="" coords="724,62,900,94"/>
+</map>
+  <img src="call_graph_for_add_function.gif" alt='' usemap="#call_graph_for_add_function" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add a function to the module/namespace. See the documentation for <a 
+  href="pybindgen.function.Function-class.html#__init__" 
+  class="link">Function.__init__</a> for information on accepted 
+  parameters.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_custom_function_wrapper"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_custom_function_wrapper</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_custom_function_wrapper">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_custom_func-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_custom_func-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_custom_func" name="call_graph_for_add_custom_func">
+<area shape="rect" href="pybindgen.function.CustomFunctionWrapper&#45;class.html#__init__" title="function.CustomFunctionWrapper.__init__()" alt="" coords="324,6,679,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_function_obj" title="_add_function_obj()" alt="" coords="413,62,589,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_custom_function_wrapper" title="add_custom_function_wrapper()" alt="" coords="7,34,273,66"/>
+</map>
+  <img src="call_graph_for_add_custom_func.gif" alt='' usemap="#call_graph_for_add_custom_func" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add a function, using custom wrapper code, to the module/namespace. 
+  See the documentation for <a 
+  href="pybindgen.function.CustomFunctionWrapper-class.html#__init__" 
+  class="link">CustomFunctionWrapper.__init__</a> for information on 
+  accepted parameters.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="register_type"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">register_type</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">full_name</span>,
+        <span class="sig-arg">type_wrapper</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.register_type">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_register_type-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_register_type-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_register_type" name="call_graph_for_register_type">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#register_alias" title="cppclass.CppClass.register_alias()" alt="" coords="7,6,284,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#register_type" title="register_type()" alt="" coords="335,62,463,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="69,62,221,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_enum_obj" title="_add_enum_obj()" alt="" coords="68,118,223,150"/>
+</map>
+  <img src="call_graph_for_register_type.gif" alt='' usemap="#call_graph_for_register_type" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Register a type wrapper with the module, for easy access in the 
+  future.  Normally should not be called by the programmer, as it is meant 
+  for internal pybindgen use and called automatically.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> - type name without any C++ namespace prefix, or None</li>
+        <li><strong class="pname"><code>full_name</code></strong> - type name with a C++ namespace prefix, or None</li>
+        <li><strong class="pname"><code>type_wrapper</code></strong> - the wrapper object for the type (e.g. <a 
+          href="pybindgen.cppclass.CppClass-class.html" 
+          class="link">CppClass</a> or <a 
+          href="pybindgen.enum.Enum-class.html" class="link">Enum</a>)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_add_class_obj"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_add_class_obj</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">class_</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase._add_class_obj">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__add_class_obj-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for__add_class_obj-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for__add_class_obj" name="call_graph_for__add_class_obj">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#set_module" title="cppclass.CppClass.set_module()" alt="" coords="363,6,632,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="163,62,315,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="get_current_section()" alt="" coords="408,62,587,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#register_type" title="register_type()" alt="" coords="433,118,561,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="add_class()" alt="" coords="7,62,113,94"/>
+</map>
+  <img src="call_graph_for__add_class_obj.gif" alt='' usemap="#call_graph_for__add_class_obj" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add a class to the module.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>class_</code></strong> - a CppClass object</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_class"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_class</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_class">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_class-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_class-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_class" name="call_graph_for_add_class">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#__init__" title="cppclass.CppClass.__init__()" alt="" coords="643,6,888,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="5,34,437,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="add_class()" alt="" coords="487,34,593,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_class_obj" title="_add_class_obj()" alt="" coords="689,62,841,94"/>
+</map>
+  <img src="call_graph_for_add_class.gif" alt='' usemap="#call_graph_for_add_class" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add a class to the module. See the documentation for <a 
+  href="pybindgen.cppclass.CppClass-class.html#__init__" 
+  class="link">CppClass.__init__</a> for information on accepted 
+  parameters.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_cpp_namespace"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_cpp_namespace</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_cpp_namespace">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_cpp_namespa-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_cpp_namespa-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_cpp_namespa" name="call_graph_for_add_cpp_namespa">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="5,62,437,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_cpp_namespace" title="add_cpp_namespace()" alt="" coords="485,62,677,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_submodule" title="get_submodule()" alt="" coords="747,6,893,38"/>
+<area shape="rect" href="pybindgen.module.SubModule&#45;class.html#__init__" title="SubModule.__init__()" alt="" coords="727,62,913,94"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="769,118,871,150"/>
+</map>
+  <img src="call_graph_for_add_cpp_namespa.gif" alt='' usemap="#call_graph_for_add_cpp_namespa" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add a nested module namespace corresponding to a C++ namespace.  If 
+  the requested namespace was already added, the existing module is 
+  returned instead of creating a new one.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> - name of C++ namespace (just the last component, not full 
+          scoped name); this also becomes the name of the submodule.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a <a href="pybindgen.module.SubModule-class.html" 
+          class="link">SubModule</a> object that maps to this 
+          namespace.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_enum"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_enum</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.add_enum">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_enum-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_enum-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_enum" name="call_graph_for_add_enum">
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#__init__" title="enum.Enum.__init__()" alt="" coords="647,6,833,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="gccxmlparser.ModuleParser._scan_namespace_types()" alt="" coords="5,34,437,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_enum" title="add_enum()" alt="" coords="487,34,596,66"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#_add_enum_obj" title="_add_enum_obj()" alt="" coords="663,62,817,94"/>
+</map>
+  <img src="call_graph_for_add_enum.gif" alt='' usemap="#call_graph_for_add_enum" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add an enumeration to the module. See the documentation for <a 
+  href="pybindgen.enum.Enum-class.html#__init__" 
+  class="link">Enum.__init__</a> for information on accepted 
+  parameters.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="declare_one_time_definition"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">declare_one_time_definition</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">definition_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.declare_one_time_definition">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_declare_one_tim-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_declare_one_tim-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_declare_one_tim" name="call_graph_for_declare_one_tim">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_generate_typeid_map" title="cppclass.CppClass._generate_typeid_map()" alt="" coords="5,6,357,38"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#declare_one_time_definition" title="declare_one_time_definition()" alt="" coords="405,6,648,38"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="696,6,797,38"/>
+</map>
+  <img src="call_graph_for_declare_one_tim.gif" alt='' usemap="#call_graph_for_declare_one_tim" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  <p>Internal helper method for code geneneration to coordinate generation 
+  of code that can only be defined once per compilation unit</p>
+  (note: assuming here one-to-one mapping between 'module' and 
+  'compilation unit').
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>definition_name</code></strong> - a string that uniquely identifies the code definition that 
+          will be added.  If the given definition was already declared 
+          KeyError is raised.
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>module = Module(<span class="py-string">'foo'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>module.declare_one_time_definition(<span class="py-string">&quot;zbr&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>module.declare_one_time_definition(<span class="py-string">&quot;zbr&quot;</span>)
+<span class="py-except">Traceback (most recent call last):</span>
+<span class="py-except">...</span>
+<span class="py-except">KeyError</span>
+<span class="py-except"></span><span class="py-prompt">&gt;&gt;&gt; </span>module.declare_one_time_definition(<span class="py-string">&quot;bar&quot;</span>)</pre></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__repr__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.module-pysrc.html#ModuleBase.__repr__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  repr(x)
+  <dl class="fields">
+    <dt>Overrides:
+      dict.__repr__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="current_section"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">current_section</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#get_current_section" class="summary-sig-name">pybindgen.module.ModuleBase.get_current_section</a>(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="name"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">name</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#get_name" class="summary-sig-name">pybindgen.module.ModuleBase.get_name</a>(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><a href="pybindgen.module.ModuleBase-class.html#set_name" class="summary-sig-name">pybindgen.module.ModuleBase.set_name</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:48 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.typehandlers.base.Parameter</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.typehandlers-module.html">Package&nbsp;typehandlers</a> ::
+        <a href="pybindgen.typehandlers.base-module.html">Module&nbsp;base</a> ::
+        Class&nbsp;Parameter
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.base.Parameter-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Parameter</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_67" name="uml_class_diagram_for_pybindge_67">
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatRefParam&#45;class.html" title="pybindgen.typehandlers.floattype.FloatRefParam" alt="" coords="16,286,168,312"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringParam&#45;class.html" title="pybindgen.typehandlers.stringtype.StdStringParam" alt="" coords="219,286,384,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.Int8PtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.Int8PtrParam" alt="" coords="793,342,927,368"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringRefParam&#45;class.html" title="pybindgen.typehandlers.stringtype.StdStringRefParam" alt="" coords="435,286,621,312"/>
+<area shape="rect" href="pybindgen.typehandlers.doubletype.DoubleParam&#45;class.html" title="pybindgen.typehandlers.doubletype.DoubleParam" alt="" coords="672,286,829,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.LongLongRefParam&#45;class.html" title="pybindgen.typehandlers.inttype.LongLongRefParam" alt="" coords="4344,342,4515,368"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.CharParam&#45;class.html" title="pybindgen.typehandlers.stringtype.CharParam" alt="" coords="880,286,1019,312"/>
+<area shape="rect" href="pybindgen.typehandlers.doubletype.DoublePtrParam&#45;class.html" title="pybindgen.typehandlers.doubletype.DoublePtrParam" alt="" coords="1069,286,1245,312"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html" title="Base class for all pointer&#45;to&#45;something handlers" alt="" coords="1296,286,1411,312"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.CStringParam&#45;class.html" title="pybindgen.typehandlers.stringtype.CStringParam" alt="" coords="977,342,1132,368"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntPtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.IntPtrParam" alt="" coords="1183,342,1308,368"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8PtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.UInt8PtrParam" alt="" coords="1359,342,1500,368"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UnsignedIntPtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.UnsignedIntPtrParam" alt="" coords="1551,342,1729,368"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html" title="Class handlers" alt="" coords="1780,342,1967,368"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html" title="pybindgen.typehandlers.floattype.FloatPtrParam" alt="" coords="1461,286,1611,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt16Param&#45;class.html" title="pybindgen.typehandlers.inttype.UInt16Param" alt="" coords="1661,286,1792,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UnsignedLongLongRefParam&#45;class.html" title="pybindgen.typehandlers.inttype.UnsignedLongLongRefParam" alt="" coords="3300,342,3524,368"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html" title="Class&amp; handlers" alt="" coords="2017,342,2223,368"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassParameterBase&#45;class.html" title="Base class for all C++ Class parameter handlers" alt="" coords="1843,286,2059,312"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrParameter&#45;class.html" title="Class* handlers" alt="" coords="2273,342,2476,368"/>
+<area shape="rect" href="pybindgen.typehandlers.pyobjecttype.PyObjectParam&#45;class.html" title="pybindgen.typehandlers.pyobjecttype.PyObjectParam" alt="" coords="2109,286,2293,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntParam&#45;class.html" title="pybindgen.typehandlers.inttype.IntParam" alt="" coords="2344,286,2453,312"/>
+<area shape="rect" href="pybindgen.cppmethod.DummyParameter&#45;class.html" title="pybindgen.cppmethod.DummyParameter" alt="" coords="2504,286,2691,312"/>
+<area shape="rect" href="pybindgen.typehandlers.booltype.BoolParam&#45;class.html" title="pybindgen.typehandlers.booltype.BoolParam" alt="" coords="2741,286,2872,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UnsignedIntParam&#45;class.html" title="pybindgen.typehandlers.inttype.UnsignedIntParam" alt="" coords="2923,286,3085,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.Int16Param&#45;class.html" title="pybindgen.typehandlers.inttype.Int16Param" alt="" coords="3136,286,3259,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UnsignedLongLongParam&#45;class.html" title="pybindgen.typehandlers.inttype.UnsignedLongLongParam" alt="" coords="3309,286,3515,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntRefParam&#45;class.html" title="pybindgen.typehandlers.inttype.IntRefParam" alt="" coords="3565,286,3693,312"/>
+<area shape="rect" href="pybindgen.typehandlers.booltype.BoolPtrParam&#45;class.html" title="pybindgen.typehandlers.booltype.BoolPtrParam" alt="" coords="3744,286,3891,312"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatParam&#45;class.html" title="pybindgen.typehandlers.floattype.FloatParam" alt="" coords="3941,286,4075,312"/>
+<area shape="rect" href="pybindgen.typehandlers.doubletype.DoubleRefParam&#45;class.html" title="pybindgen.typehandlers.doubletype.DoubleRefParam" alt="" coords="4125,286,4304,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.LongLongParam&#45;class.html" title="pybindgen.typehandlers.inttype.LongLongParam" alt="" coords="4355,286,4504,312"/>
+<area shape="rect" href="pybindgen.typehandlers.booltype.BoolRefParam&#45;class.html" title="pybindgen.typehandlers.booltype.BoolRefParam" alt="" coords="4555,286,4704,312"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8Param&#45;class.html" title="pybindgen.typehandlers.inttype.UInt8Param" alt="" coords="4755,286,4880,312"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter.__metaclass__&#45;class.html" title="Metaclass for automatically registering parameter type handlers" alt="" coords="2273,28,2721,47"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#CTYPES" title="pybindgen.typehandlers.base.Parameter.CTYPES" alt="" coords="2273,47,2721,66"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTIONS" title="pybindgen.typehandlers.base.Parameter.DIRECTIONS" alt="" coords="2273,66,2721,84"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_INOUT" title="pybindgen.typehandlers.base.Parameter.DIRECTION_INOUT" alt="" coords="2273,84,2721,103"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_OUT" title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" alt="" coords="2273,103,2721,122"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_IN" title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" alt="" coords="2273,122,2721,140"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#SUPPORTS_TRANSFORMATIONS" title="pybindgen.typehandlers.base.Parameter.SUPPORTS_TRANSFORMATIONS" alt="" coords="2273,140,2721,159"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#__init__" title="Creates a parameter object" alt="" coords="2273,162,2721,180"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#new" title="pybindgen.typehandlers.base.Parameter.new" alt="" coords="2273,180,2721,199"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#set_tranformation" title="Set the type transformation to use in this type handler" alt="" coords="2273,199,2721,218"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#convert_c_to_python" title="Write some code before calling the Python method." alt="" coords="2273,218,2721,236"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#convert_python_to_c" title="Write some code before calling the C method." alt="" coords="2273,236,2721,255"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html" title="Abstract base class for all classes dedicated to handle specific parameter types" alt="" coords="2272,11,2723,256"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_67.gif" alt='' usemap="#uml_class_diagram_for_pybindge_67" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+Abstract base class for all classes dedicated to handle specific 
+  parameter types<br /><br />
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pybindgen.typehandlers.base.Parameter.__metaclass__-class.html" class="summary-name">__metaclass__</a><br />
+      Metaclass for automatically registering parameter type 
+        handlers
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.Parameter-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ctype</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">direction</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">is_const</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">default_value</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Creates a parameter object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_tranformation"></a><span class="summary-sig-name">set_tranformation</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">transformation</span>,
+        <span class="summary-sig-arg">untransformed_ctype</span>)</span><br />
+      Set the type transformation to use in this type handler</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter.set_tranformation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="convert_c_to_python"></a><span class="summary-sig-name">convert_c_to_python</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span><br />
+      Write some code before calling the Python method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter.convert_c_to_python">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="convert_python_to_c"></a><span class="summary-sig-name">convert_python_to_c</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span><br />
+      Write some code before calling the C method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter.convert_python_to_c">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_direction_value_to_name"></a><span class="summary-sig-name">_direction_value_to_name</span>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter._direction_value_to_name">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="new"></a><span class="summary-sig-name">new</span>(<span class="summary-sig-arg">cls</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter.new">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DIRECTION_IN"></a><span class="summary-name">DIRECTION_IN</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DIRECTION_OUT"></a><span class="summary-name">DIRECTION_OUT</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DIRECTION_INOUT"></a><span class="summary-name">DIRECTION_INOUT</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DIRECTIONS"></a><span class="summary-name">DIRECTIONS</span> = <code title="NotImplemented">NotImplemented</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SUPPORTS_TRANSFORMATIONS"></a><span class="summary-name">SUPPORTS_TRANSFORMATIONS</span> = <code title="False">False</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CTYPES"></a><span class="summary-name">CTYPES</span> = <code title="NotImplemented">NotImplemented</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ctype</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">direction</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">is_const</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">default_value</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#Parameter.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Creates a parameter object</p>
+  Keywork Arguments:
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ctype</code></strong> - actual C/C++ type being used</li>
+        <li><strong class="pname"><code>name</code></strong> - parameter name</li>
+        <li><strong class="pname"><code>direction</code></strong> - direction of the parameter transfer, valid values are 
+          DIRECTION_IN, DIRECTION_OUT, and DIRECTION_IN|DIRECTION_OUT</li>
+    </ul></dd>
+    <dt>Overrides:
+      object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:51 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>
