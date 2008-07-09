@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.typehandlers.base.ParseTupleParameters</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.typehandlers-module.html">Package&nbsp;typehandlers</a> ::
+        <a href="pybindgen.typehandlers.base-module.html">Module&nbsp;base</a> ::
+        Class&nbsp;ParseTupleParameters
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.base.ParseTupleParameters-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ParseTupleParameters</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_69" name="uml_class_diagram_for_pybindge_69">
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#get_parameters" title="returns a list of parameters to pass into a PyArg_ParseTuple&#45;style function call, the first paramter in the list being the template string." alt="" coords="17,36,633,55"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#add_parameter" title="Adds a new parameter specification" alt="" coords="17,55,633,73"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#clear" title="pybindgen.typehandlers.base.ParseTupleParameters.clear" alt="" coords="17,73,633,92"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#is_empty" title="pybindgen.typehandlers.base.ParseTupleParameters.is_empty" alt="" coords="17,92,633,111"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#__init__" title="pybindgen.typehandlers.base.ParseTupleParameters.__init__" alt="" coords="17,111,633,129"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#get_keywords" title="returns list of keywords (parameter names), or None if none of the  parameters had a name; should only be called if names were given for all  parameters or none of them." alt="" coords="17,129,633,148"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html" title="Object to keep track of PyArg_ParseTuple (or similar) parameters" alt="" coords="16,11,635,149"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_69.gif" alt='' usemap="#uml_class_diagram_for_pybindge_69" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+Object to keep track of PyArg_ParseTuple (or similar) parameters<br /><br />
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.ParseTupleParameters-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear"></a><span class="summary-sig-name">clear</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.clear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.ParseTupleParameters-class.html#add_parameter" class="summary-sig-name">add_parameter</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">param_template</span>,
+        <span class="summary-sig-arg">param_values</span>,
+        <span class="summary-sig-arg">param_name</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">prepend</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">optional</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Adds a new parameter specification</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.add_parameter">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_parameter_2-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_parameter_2-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_parameter_2" name="call_graph_for_add_parameter_2">
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassParameter.convert_python_to_c()" alt="" coords="19,6,437,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#add_parameter" title="add_parameter()" alt="" coords="499,398,643,430"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassPtrParameter.convert_python_to_c()" alt="" coords="8,62,448,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassRefParameter.convert_python_to_c()" alt="" coords="5,118,451,150"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassReturnValue&#45;class.html#convert_python_to_c" title="cppclass.CppClassReturnValue.convert_python_to_c()" alt="" coords="11,174,445,206"/>
+<area shape="rect" href="pybindgen.typehandlers.doubletype.DoubleParam&#45;class.html#convert_python_to_c" title="doubletype.DoubleParam.convert_python_to_c()" alt="" coords="33,230,423,262"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="40,286,416,318"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntParam&#45;class.html#convert_python_to_c" title="inttype.IntParam.convert_python_to_c()" alt="" coords="67,342,389,374"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntReturn&#45;class.html#convert_python_to_c" title="inttype.IntReturn.convert_python_to_c()" alt="" coords="65,398,391,430"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt16Return&#45;class.html#convert_python_to_c" title="inttype.UInt16Return.convert_python_to_c()" alt="" coords="51,454,405,486"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8Return&#45;class.html#convert_python_to_c" title="inttype.UInt8Return.convert_python_to_c()" alt="" coords="55,510,401,542"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.CStringParam&#45;class.html#convert_python_to_c" title="stringtype.CStringParam.convert_python_to_c()" alt="" coords="37,566,419,598"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringParam&#45;class.html#convert_python_to_c" title="stringtype.StdStringParam.convert_python_to_c()" alt="" coords="31,622,425,654"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringRefParam&#45;class.html#convert_python_to_c" title="stringtype.StdStringRefParam.convert_python_to_c()" alt="" coords="17,678,439,710"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringReturn&#45;class.html#convert_python_to_c" title="stringtype.StdStringReturn.convert_python_to_c()" alt="" coords="29,734,427,766"/>
+<area shape="rect" href="pybindgen.typehandlers.voidtype.VoidReturn&#45;class.html#convert_python_to_c" title="voidtype.VoidReturn.convert_python_to_c()" alt="" coords="51,790,405,822"/>
+</map>
+  <img src="call_graph_for_add_parameter_2.gif" alt='' usemap="#call_graph_for_add_parameter_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="is_empty"></a><span class="summary-sig-name">is_empty</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.is_empty">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_is_empty-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_is_empty-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_is_empty" name="call_graph_for_is_empty">
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#get_parameters" title="get_parameters()" alt="" coords="155,6,301,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#is_empty" title="is_empty()" alt="" coords="5,6,107,38"/>
+</map>
+  <img src="call_graph_for_is_empty.gif" alt='' usemap="#call_graph_for_is_empty" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_parameters"></a><span class="summary-sig-name">get_parameters</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      returns a list of parameters to pass into a PyArg_ParseTuple-style
+      function call, the first paramter in the list being the template 
+      string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.get_parameters">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_parameters_2-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_parameters_2-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_parameters_2" name="call_graph_for_get_parameters_2">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="7,6,401,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#get_parameters" title="get_parameters()" alt="" coords="451,62,597,94"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="16,62,392,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#is_empty" title="is_empty()" alt="" coords="153,118,255,150"/>
+</map>
+  <img src="call_graph_for_get_parameters_2.gif" alt='' usemap="#call_graph_for_get_parameters_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_keywords"></a><span class="summary-sig-name">get_keywords</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      returns list of keywords (parameter names), or None if none of the
+      parameters had a name; should only be called if names were given for 
+      all parameters or none of them.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.get_keywords">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params = ParseTupleParameters()
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.add_parameter(<span class="py-string">'i'</span>, [<span class="py-string">'&amp;foo'</span>], <span class="py-string">'foo'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.add_parameter(<span class="py-string">'s'</span>, [<span class="py-string">'&amp;bar'</span>], <span class="py-string">'bar'</span>, optional=True)
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.get_parameters()
+<span class="py-output">['&quot;i|s&quot;', '&amp;foo', '&amp;bar']</span>
+<span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.get_keywords()
+<span class="py-output">['foo', 'bar']</span></pre>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params = ParseTupleParameters()
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.add_parameter(<span class="py-string">'i'</span>, [<span class="py-string">'&amp;foo'</span>], <span class="py-string">'foo'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.add_parameter(<span class="py-string">'s'</span>, [<span class="py-string">'&amp;bar'</span>], <span class="py-string">'bar'</span>, prepend=True)
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.get_parameters()
+<span class="py-output">['&quot;si&quot;', '&amp;bar', '&amp;foo']</span>
+<span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.get_keywords()
+<span class="py-output">['bar', 'foo']</span></pre>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params = ParseTupleParameters()
+<span class="py-prompt">&gt;&gt;&gt; </span>tuple_params.add_parameter(<span class="py-string">'i'</span>, [<span class="py-string">'&amp;foo'</span>])
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> tuple_params.get_keywords()
+<span class="py-output">None</span></pre>
+  <dl class="fields">
+    <dt>Overrides:
+      object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_parameter"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_parameter</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">param_template</span>,
+        <span class="sig-arg">param_values</span>,
+        <span class="sig-arg">param_name</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">prepend</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">optional</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ParseTupleParameters.add_parameter">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_parameter_2-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_parameter_2-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_parameter_2" name="call_graph_for_add_parameter_2">
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassParameter.convert_python_to_c()" alt="" coords="19,6,437,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#add_parameter" title="add_parameter()" alt="" coords="499,398,643,430"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassPtrParameter.convert_python_to_c()" alt="" coords="8,62,448,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassRefParameter.convert_python_to_c()" alt="" coords="5,118,451,150"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassReturnValue&#45;class.html#convert_python_to_c" title="cppclass.CppClassReturnValue.convert_python_to_c()" alt="" coords="11,174,445,206"/>
+<area shape="rect" href="pybindgen.typehandlers.doubletype.DoubleParam&#45;class.html#convert_python_to_c" title="doubletype.DoubleParam.convert_python_to_c()" alt="" coords="33,230,423,262"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="40,286,416,318"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntParam&#45;class.html#convert_python_to_c" title="inttype.IntParam.convert_python_to_c()" alt="" coords="67,342,389,374"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntReturn&#45;class.html#convert_python_to_c" title="inttype.IntReturn.convert_python_to_c()" alt="" coords="65,398,391,430"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt16Return&#45;class.html#convert_python_to_c" title="inttype.UInt16Return.convert_python_to_c()" alt="" coords="51,454,405,486"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8Return&#45;class.html#convert_python_to_c" title="inttype.UInt8Return.convert_python_to_c()" alt="" coords="55,510,401,542"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.CStringParam&#45;class.html#convert_python_to_c" title="stringtype.CStringParam.convert_python_to_c()" alt="" coords="37,566,419,598"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringParam&#45;class.html#convert_python_to_c" title="stringtype.StdStringParam.convert_python_to_c()" alt="" coords="31,622,425,654"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringRefParam&#45;class.html#convert_python_to_c" title="stringtype.StdStringRefParam.convert_python_to_c()" alt="" coords="17,678,439,710"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringReturn&#45;class.html#convert_python_to_c" title="stringtype.StdStringReturn.convert_python_to_c()" alt="" coords="29,734,427,766"/>
+<area shape="rect" href="pybindgen.typehandlers.voidtype.VoidReturn&#45;class.html#convert_python_to_c" title="voidtype.VoidReturn.convert_python_to_c()" alt="" coords="51,790,405,822"/>
+</map>
+  <img src="call_graph_for_add_parameter_2.gif" alt='' usemap="#call_graph_for_add_parameter_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Adds a new parameter specification
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>param_template</code></strong> - template item, see documentation for PyArg_ParseTuple for more
+          information</li>
+        <li><strong class="pname"><code>param_values</code></strong> - list of parameters, see documentation for PyArg_ParseTuple for
+          more information</li>
+        <li><strong class="pname"><code>prepend</code></strong> - whether this parameter should be parsed first</li>
+        <li><strong class="pname"><code>optional</code></strong> - whether the parameter is optional; note that after the first 
+          optional parameter, all remaining parameters must also be 
+          optional</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:51 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

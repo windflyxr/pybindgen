@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.typehandlers.base.ForwardWrapperBase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.typehandlers-module.html">Package&nbsp;typehandlers</a> ::
+        <a href="pybindgen.typehandlers.base-module.html">Module&nbsp;base</a> ::
+        Class&nbsp;ForwardWrapperBase
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.base.ForwardWrapperBase-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ForwardWrapperBase</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_64" name="uml_class_diagram_for_pybindge_64">
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#PARSE_TUPLE" title="pybindgen.typehandlers.base.ForwardWrapperBase.PARSE_TUPLE" alt="" coords="599,28,1383,46"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#PARSE_TUPLE_AND_KEYWORDS" title="pybindgen.typehandlers.base.ForwardWrapperBase.PARSE_TUPLE_AND_KEYWORDS" alt="" coords="599,46,1383,65"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#reset_code_generation_state" title="pybindgen.typehandlers.base.ForwardWrapperBase.reset_code_generation_state" alt="" coords="599,68,1383,86"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_close_wrapper" title="pybindgen.typehandlers.base.ForwardWrapperBase.write_close_wrapper" alt="" coords="599,86,1383,105"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_open_wrapper" title="pybindgen.typehandlers.base.ForwardWrapperBase.write_open_wrapper" alt="" coords="599,105,1383,124"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#set_parse_error_return" title="pybindgen.typehandlers.base.ForwardWrapperBase.set_parse_error_return" alt="" coords="599,124,1383,142"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="Generate the wrapper function body code_sink &#45;&#45; a CodeSink object that will receive the code" alt="" coords="599,142,1383,161"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#get_py_method_def_flags" title="Get a list of PyMethodDef flags that should be used for this wrapper." alt="" coords="599,161,1383,180"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_call" title="Generates the code (into self.before_call) to call into Python, storing the result in the variable &#39;py_retval&#39;; should also check for call error." alt="" coords="599,180,1383,198"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#__init__" title="Base constructor" alt="" coords="599,198,1383,217"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html" title="Generic base for all forward wrapper generators." alt="" coords="597,10,1384,218"/>
+<area shape="rect" href="pybindgen.function.Function&#45;class.html" title="Class that generates a wrapper to a C function." alt="" coords="255,248,367,274"/>
+<area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html" title="Class that generates a wrapper to a C++ class constructor." alt="" coords="608,248,779,274"/>
+<area shape="rect" href="pybindgen.cppattribute.PyGetter&#45;class.html" title="generates a getter, for use in a PyGetSetDef table" alt="" coords="921,248,1060,274"/>
+<area shape="rect" href="pybindgen.cppmethod.CppNoConstructor&#45;class.html" title="Class that generates a constructor that raises an exception saying that the class has no constructor." alt="" coords="1111,248,1297,274"/>
+<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html" title="Class that generates a wrapper to a C++ class method" alt="" coords="1604,248,1751,274"/>
+<area shape="rect" href="pybindgen.function.CustomFunctionWrapper&#45;class.html" title="Adds a custom function wrapper." alt="" coords="16,304,221,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html" title="Class that generates a wrapper to a C/C++ function that appears as a contructor." alt="" coords="272,304,509,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CustomCppConstructorWrapper&#45;class.html" title="Adds a custom constructor wrapper." alt="" coords="560,304,827,330"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html" title="A getter for a C++ class static attribute." alt="" coords="877,304,1104,330"/>
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html" title="A getter for a C++ instance attribute." alt="" coords="1155,304,1397,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CppDummyMethod&#45;class.html" title="A &#39;dummy&#39; method; cannot be generated due to incomple or incorrect parameters, but is added to the class to model the missing method." alt="" coords="1448,304,1640,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CustomCppMethodWrapper&#45;class.html" title="Adds a custom method wrapper." alt="" coords="1691,304,1933,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CppVirtualMethodParentCaller&#45;class.html" title="Class that generates a wrapper that calls a virtual method default implementation in a parent base class." alt="" coords="1984,304,2240,330"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_64.gif" alt='' usemap="#uml_class_diagram_for_pybindge_64" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+<p>Generic base for all forward wrapper generators.</p>
+  Forward wrappers all have the following general structure in 
+  common:
+  <ol start="1">
+    <li>
+      'declarations' -- variable declarations; for compatibility with 
+      older C compilers it is very important that all declarations come 
+      before any simple statement.  Declarations can be added with the 
+      add_declaration() method on the 'declarations' attribute.  Two 
+      standard declarations are always predeclared: '&lt;return-type&gt; 
+      retval', unless return-type is void, and 'PyObject *py_retval';
+    </li>
+    <li>
+      'code before parse' -- code before the PyArg_ParseTupleAndKeywords
+      call; code can be freely added to it by accessing the 'before_parse' 
+      (a CodeBlock instance) attribute;
+    </li>
+    <li>
+      A PyArg_ParseTupleAndKeywords call; uses items from the 
+      parse_params object;
+    </li>
+    <li>
+      'code before call' -- this is a code block dedicated to contain 
+      all code that is needed before calling the C function; code can be 
+      freely added to it by accessing the 'before_call' (a CodeBlock 
+      instance) attribute;
+    </li>
+    <li>
+      'call into C' -- this is realized by a C/C++ call; the list of 
+      parameters that should be used is in the 'call_params' wrapper 
+      attribute;
+    </li>
+    <li>
+      'code after call' -- this is a code block dedicated to contain all
+      code that must come after calling into Python; code can be freely 
+      added to it by accessing the 'after_call' (a CodeBlock instance) 
+      attribute;
+    </li>
+    <li>
+      A py_retval = Py_BuildValue(...) call; this call can be 
+      customized, so that out/inout parameters can add additional return 
+      values, by accessing the 'build_params' (a BuildValueParameters 
+      instance) attribute;
+    </li>
+    <li>
+      Cleanup and return.
+    </li>
+  </ol>
+  Object constructors cannot return values, and so the step 7 is to be 
+  omitted for them.<br /><br />
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.ForwardWrapperBase-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">return_value</span>,
+        <span class="summary-sig-arg">parameters</span>,
+        <span class="summary-sig-arg">parse_error_return</span>,
+        <span class="summary-sig-arg">error_return</span>,
+        <span class="summary-sig-arg">force_parse</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">no_c_retval</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">unblock_threads</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Base constructor</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="reset_code_generation_state"></a><span class="summary-sig-name">reset_code_generation_state</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.reset_code_generation_state">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="set_parse_error_return"></a><span class="summary-sig-name">set_parse_error_return</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">parse_error_return</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.set_parse_error_return">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate_call"></a><span class="summary-sig-name">generate_call</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Generates the code (into self.before_call) to call into Python, 
+      storing the result in the variable 'py_retval'; should also check for
+      call error.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.generate_call">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.ForwardWrapperBase-class.html#_before_return_hook" class="summary-sig-name">_before_return_hook</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Optional hook that lets subclasses add code after all parameters 
+      are parsed and after the function C return value is processed, but 
+      after the python wrapper return value (py_ret) is built and 
+      returned.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase._before_return_hook">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="write_open_wrapper"></a><span class="summary-sig-name">write_open_wrapper</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink</span>,
+        <span class="summary-sig-arg">add_static</span>=<span class="summary-sig-default">False</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.write_open_wrapper">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="write_close_wrapper"></a><span class="summary-sig-name">write_close_wrapper</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.write_close_wrapper">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate_body"></a><span class="summary-sig-name">generate_body</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_sink</span>,
+        <span class="summary-sig-arg">gen_call_params</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>)</span><br />
+      Generate the wrapper function body code_sink -- a CodeSink object 
+      that will receive the code</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.generate_body">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_py_method_def_flags"></a><span class="summary-sig-name">get_py_method_def_flags</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get a list of PyMethodDef flags that should be used for this 
+      wrapper.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.get_py_method_def_flags">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PARSE_TUPLE"></a><span class="summary-name">PARSE_TUPLE</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PARSE_TUPLE_AND_KEYWORDS"></a><span class="summary-name">PARSE_TUPLE_AND_KEYWORDS</span> = <code title="2">2</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">return_value</span>,
+        <span class="sig-arg">parameters</span>,
+        <span class="sig-arg">parse_error_return</span>,
+        <span class="sig-arg">error_return</span>,
+        <span class="sig-arg">force_parse</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">no_c_retval</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">unblock_threads</span>=<span class="sig-default">False</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Base constructor
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>return_value</code></strong> - type handler for the return value</li>
+        <li><strong class="pname"><code>parameters</code></strong> - a list of type handlers for the parameters</li>
+        <li><strong class="pname"><code>parse_error_return</code></strong> - statement to return an error during parameter parsing</li>
+        <li><strong class="pname"><code>error_return</code></strong> - statement to return an error after parameter parsing</li>
+        <li><strong class="pname"><code>force_parse</code></strong> - force generation of code to parse parameters even if there are
+          none</li>
+        <li><strong class="pname"><code>no_c_retval</code></strong> - force the wrapper to not have a C return value</li>
+        <li><strong class="pname"><code>unblock_threads</code></strong> - generate code to unblock python threads during the C function 
+          call</li>
+    </ul></dd>
+    <dt>Overrides:
+      object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_before_return_hook"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_before_return_hook</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase._before_return_hook">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Optional hook that lets subclasses add code after all parameters are 
+  parsed and after the function C return value is processed, but after the 
+  python wrapper return value (py_ret) is built and returned.  Subclasses 
+  may add code to self.after_call, which will be placed before py_ret is 
+  created.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:50 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

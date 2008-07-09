@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.typehandlers.base.CodeBlock</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.typehandlers-module.html">Package&nbsp;typehandlers</a> ::
+        <a href="pybindgen.typehandlers.base-module.html">Module&nbsp;base</a> ::
+        Class&nbsp;CodeBlock
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.base.CodeBlock-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CodeBlock</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_59" name="uml_class_diagram_for_pybindge_59">
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle&#45;class.html" title="Handle for some cleanup code" alt="" coords="17,28,396,46"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#remove_cleanup_code" title="Remove cleanup code previously added with add_cleanup_code()" alt="" coords="17,49,396,68"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="Write out some simple code" alt="" coords="17,68,396,86"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_return" title="Add a chunk of code that cleans up and returns an error." alt="" coords="17,86,396,105"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="Add a chunk of code that checks for a possible error" alt="" coords="17,105,396,124"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#__init__" title="CodeBlock constructor" alt="" coords="17,124,396,142"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#get_cleanup_code" title="return a new list with all cleanup actions, including the ones from  predecessor code blocks; Note: cleanup actions are executed in reverse  order than when they were added." alt="" coords="17,142,396,161"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_cleanup" title="Write the current cleanup code." alt="" coords="17,161,396,180"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#unindent" title="Revert indentation level to the value before last indent() call" alt="" coords="17,180,396,198"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#indent" title="Add a certain ammount of indentation to all lines written from now on and  until unindent() is called" alt="" coords="17,198,396,217"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#clear" title="pybindgen.typehandlers.base.CodeBlock.clear" alt="" coords="17,217,396,236"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#declare_variable" title="Calls declare_variable() on the associated DeclarationsScope object." alt="" coords="17,236,396,254"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#add_cleanup_code" title="Add a chunk of code used to cleanup previously allocated resources" alt="" coords="17,254,396,273"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html" title="An intelligent code block that keeps track of cleanup actions." alt="" coords="16,10,397,274"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_59.gif" alt='' usemap="#uml_class_diagram_for_pybindge_59" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+An intelligent code block that keeps track of cleanup actions. This 
+  object is to be used by TypeHandlers when generating code.<br /><br />
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle-class.html" class="summary-name">CleanupHandle</a><br />
+      Handle for some cleanup code
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.CodeBlock-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">error_return</span>,
+        <span class="summary-sig-arg">declarations</span>,
+        <span class="summary-sig-arg">predecessor</span>=<span class="summary-sig-default">None</span>)</span><br />
+      CodeBlock constructor</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.__init__">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___43-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for___init___43-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___43" name="call_graph_for___init___43">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="module.ModuleBase.__init__()" alt="" coords="5,6,259,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#__init__" title="__init__()" alt="" coords="307,6,403,38"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#__init__" title="codesink.MemoryCodeSink.__init__()" alt="" coords="451,6,760,38"/>
+</map>
+  <img src="call_graph_for___init___43.gif" alt='' usemap="#call_graph_for___init___43" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear"></a><span class="summary-sig-name">clear</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.clear">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_clear_2-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_clear_2-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_clear_2" name="call_graph_for_clear_2">
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#clear" title="clear()" alt="" coords="7,6,73,38"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#__init__" title="codesink.MemoryCodeSink.__init__()" alt="" coords="123,6,432,38"/>
+</map>
+  <img src="call_graph_for_clear_2.gif" alt='' usemap="#call_graph_for_clear_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="declare_variable"></a><span class="summary-sig-name">declare_variable</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type_</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">initializer</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">array</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Calls declare_variable() on the associated DeclarationsScope 
+      object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.declare_variable">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="write_code"></a><span class="summary-sig-name">write_code</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code</span>)</span><br />
+      Write out some simple code</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.write_code">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_code-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_write_code-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_code" name="call_graph_for_write_code">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="37,6,432,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="write_code()" alt="" coords="513,650,628,682"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="47,62,423,94"/>
+<area shape="rect" href="pybindgen.cppattribute.PyMetaclass&#45;class.html#generate" title="cppattribute.PyMetaclass.generate()" alt="" coords="91,118,379,150"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_register_typeid" title="cppclass.CppClass._register_typeid()" alt="" coords="84,174,385,206"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate" title="cppclass.CppClass.generate()" alt="" coords="113,230,356,262"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#write_incref" title="cppclass.CppClass.write_incref()" alt="" coords="99,286,371,318"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_c_to_python" title="cppclass.CppClassParameter.convert_c_to_python()" alt="" coords="25,342,444,374"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassParameter.convert_python_to_c()" alt="" coords="25,398,444,430"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassPtrParameter.convert_python_to_c()" alt="" coords="15,454,455,486"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrReturnValue&#45;class.html#convert_c_to_python" title="cppclass.CppClassPtrReturnValue.convert_c_to_python()" alt="" coords="7,510,463,542"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_c_to_python" title="cppclass.CppClassRefParameter.convert_c_to_python()" alt="" coords="12,566,457,598"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassRefParameter.convert_python_to_c()" alt="" coords="12,622,457,654"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassReturnValue&#45;class.html#convert_c_to_python" title="cppclass.CppClassReturnValue.convert_c_to_python()" alt="" coords="17,678,452,710"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassReturnValue&#45;class.html#convert_python_to_c" title="cppclass.CppClassReturnValue.convert_python_to_c()" alt="" coords="17,734,452,766"/>
+<area shape="rect" href="pybindgen.cppclass&#45;module.html#_add_ward" title="cppclass._add_ward()" alt="" coords="140,790,329,822"/>
+<area shape="rect" href="pybindgen.cppclass&#45;module.html#default_instance_creation_function" title="cppclass.default_instance_creation_function()" alt="" coords="53,846,416,878"/>
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#generate" title="enum.Enum.generate()" alt="" coords="141,902,328,934"/>
+<area shape="rect" href="pybindgen.function.Function&#45;class.html#generate_call" title="function.Function.generate_call()" alt="" coords="101,958,368,990"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="module.ModuleBase.do_generate()" alt="" coords="93,1014,376,1046"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="codesink.MemoryCodeSink.writeln()" alt="" coords="677,650,973,682"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="47,1070,423,1102"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt16Return&#45;class.html#convert_python_to_c" title="inttype.UInt16Return.convert_python_to_c()" alt="" coords="57,1126,412,1158"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8Return&#45;class.html#convert_python_to_c" title="inttype.UInt8Return.convert_python_to_c()" alt="" coords="61,1182,408,1214"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringRefParam&#45;class.html#convert_python_to_c" title="stringtype.StdStringRefParam.convert_python_to_c()" alt="" coords="24,1238,445,1270"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.StdStringReturn&#45;class.html#convert_python_to_c" title="stringtype.StdStringReturn.convert_python_to_c()" alt="" coords="36,1294,433,1326"/>
+</map>
+  <img src="call_graph_for_write_code.gif" alt='' usemap="#call_graph_for_write_code" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="indent"></a><span class="summary-sig-name">indent</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">level</span>=<span class="summary-sig-default">4</span>)</span><br />
+      Add a certain ammount of indentation to all lines written from now
+      on and until unindent() is called</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.indent">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_indent-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_indent-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_indent" name="call_graph_for_indent">
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassParameter.convert_python_to_c()" alt="" coords="25,6,444,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#indent" title="indent()" alt="" coords="513,146,591,178"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrReturnValue&#45;class.html#convert_c_to_python" title="cppclass.CppClassPtrReturnValue.convert_c_to_python()" alt="" coords="7,62,463,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_c_to_python" title="cppclass.CppClassRefParameter.convert_c_to_python()" alt="" coords="12,118,457,150"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassRefParameter.convert_python_to_c()" alt="" coords="12,174,457,206"/>
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#generate" title="enum.Enum.generate()" alt="" coords="141,230,328,262"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="codesink.CodeSink.indent()" alt="" coords="640,146,869,178"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="47,286,423,318"/>
+</map>
+  <img src="call_graph_for_indent.gif" alt='' usemap="#call_graph_for_indent" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unindent"></a><span class="summary-sig-name">unindent</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Revert indentation level to the value before last indent() 
+      call</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.unindent">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_unindent-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_unindent-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_unindent" name="call_graph_for_unindent">
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassParameter.convert_python_to_c()" alt="" coords="25,6,444,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#unindent" title="unindent()" alt="" coords="512,146,608,178"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassPtrReturnValue&#45;class.html#convert_c_to_python" title="cppclass.CppClassPtrReturnValue.convert_c_to_python()" alt="" coords="7,62,463,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_c_to_python" title="cppclass.CppClassRefParameter.convert_c_to_python()" alt="" coords="12,118,457,150"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassRefParameter.convert_python_to_c()" alt="" coords="12,174,457,206"/>
+<area shape="rect" href="pybindgen.enum.Enum&#45;class.html#generate" title="enum.Enum.generate()" alt="" coords="141,230,328,262"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="codesink.CodeSink.unindent()" alt="" coords="656,146,904,178"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="47,286,423,318"/>
+</map>
+  <img src="call_graph_for_unindent.gif" alt='' usemap="#call_graph_for_unindent" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.CodeBlock-class.html#add_cleanup_code" class="summary-sig-name">add_cleanup_code</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cleanup_code</span>)</span><br />
+      Add a chunk of code used to cleanup previously allocated 
+      resources</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.add_cleanup_code">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_cleanup_cod-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_add_cleanup_cod-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_cleanup_cod" name="call_graph_for_add_cleanup_cod">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="31,6,425,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#add_cleanup_code" title="add_cleanup_code()" alt="" coords="499,90,675,122"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="40,62,416,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_c_to_python" title="cppclass.CppClassRefParameter.convert_c_to_python()" alt="" coords="5,118,451,150"/>
+<area shape="rect" href="pybindgen.cppclass&#45;module.html#_add_ward" title="cppclass._add_ward()" alt="" coords="133,174,323,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle&#45;class.html#__init__" title="CleanupHandle.__init__()" alt="" coords="737,62,951,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle&#45;class.html#get_position" title="CleanupHandle.get_position()" alt="" coords="723,118,965,150"/>
+</map>
+  <img src="call_graph_for_add_cleanup_cod.gif" alt='' usemap="#call_graph_for_add_cleanup_cod" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="remove_cleanup_code"></a><span class="summary-sig-name">remove_cleanup_code</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handle</span>)</span><br />
+      Remove cleanup code previously added with add_cleanup_code()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.remove_cleanup_code">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_cleanup_code"></a><span class="summary-sig-name">get_cleanup_code</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      return a new list with all cleanup actions, including the ones 
+      from predecessor code blocks; Note: cleanup actions are executed in 
+      reverse order than when they were added.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.get_cleanup_code">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_cleanup_cod-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_cleanup_cod-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_cleanup_cod" name="call_graph_for_get_cleanup_cod">
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#get_cleanup_code" title="get_cleanup_code()" alt="" coords="191,30,359,62"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_cleanup" title="write_cleanup()" alt="" coords="5,30,141,62"/>
+</map>
+  <img src="call_graph_for_get_cleanup_cod.gif" alt='' usemap="#call_graph_for_get_cleanup_cod" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.CodeBlock-class.html#write_error_check" class="summary-sig-name">write_error_check</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">failure_expression</span>,
+        <span class="summary-sig-arg">failure_cleanup</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add a chunk of code that checks for a possible error</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.write_error_check">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_error_che-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_write_error_che-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_error_che" name="call_graph_for_write_error_che">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="7,6,401,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="write_error_check()" alt="" coords="452,174,620,206"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="16,62,392,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate" title="cppclass.CppClass.generate()" alt="" coords="83,118,325,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="module.ModuleBase.do_generate()" alt="" coords="63,174,345,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_return" title="write_error_return()" alt="" coords="733,90,901,122"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="codesink.CodeSink.indent()" alt="" coords="703,146,932,178"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="codesink.CodeSink.unindent()" alt="" coords="693,202,941,234"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="codesink.MemoryCodeSink.writeln()" alt="" coords="669,258,965,290"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="16,230,392,262"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt16Return&#45;class.html#convert_python_to_c" title="inttype.UInt16Return.convert_python_to_c()" alt="" coords="27,286,381,318"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8Return&#45;class.html#convert_python_to_c" title="inttype.UInt8Return.convert_python_to_c()" alt="" coords="31,342,377,374"/>
+</map>
+  <img src="call_graph_for_write_error_che.gif" alt='' usemap="#call_graph_for_write_error_che" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="write_cleanup"></a><span class="summary-sig-name">write_cleanup</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Write the current cleanup code.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.write_cleanup">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_cleanup-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_write_cleanup-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_cleanup" name="call_graph_for_write_cleanup">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="7,6,401,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_cleanup" title="write_cleanup()" alt="" coords="451,90,587,122"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="16,62,392,94"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="module.ModuleBase.do_generate()" alt="" coords="63,118,345,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#get_cleanup_code" title="get_cleanup_code()" alt="" coords="699,62,867,94"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="codesink.MemoryCodeSink.writeln()" alt="" coords="635,118,931,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_return" title="write_error_return()" alt="" coords="120,174,288,206"/>
+</map>
+  <img src="call_graph_for_write_cleanup.gif" alt='' usemap="#call_graph_for_write_cleanup" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="write_error_return"></a><span class="summary-sig-name">write_error_return</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Add a chunk of code that cleans up and returns an error.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.write_error_return">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_error_ret-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_write_error_ret-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_error_ret" name="call_graph_for_write_error_ret">
+<area shape="rect" href="pybindgen.cppclass.CppClassParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassParameter.convert_python_to_c()" alt="" coords="19,6,437,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_return" title="write_error_return()" alt="" coords="499,62,667,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_python_to_c" title="cppclass.CppClassRefParameter.convert_python_to_c()" alt="" coords="5,62,451,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_cleanup" title="write_cleanup()" alt="" coords="795,34,931,66"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="write_error_check()" alt="" coords="144,118,312,150"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="codesink.MemoryCodeSink.writeln()" alt="" coords="715,90,1011,122"/>
+</map>
+  <img src="call_graph_for_write_error_ret.gif" alt='' usemap="#call_graph_for_write_error_ret" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">error_return</span>,
+        <span class="sig-arg">declarations</span>,
+        <span class="sig-arg">predecessor</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.__init__">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___43-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for___init___43-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___43" name="call_graph_for___init___43">
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#__init__" title="module.ModuleBase.__init__()" alt="" coords="5,6,259,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#__init__" title="__init__()" alt="" coords="307,6,403,38"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#__init__" title="codesink.MemoryCodeSink.__init__()" alt="" coords="451,6,760,38"/>
+</map>
+  <img src="call_graph_for___init___43.gif" alt='' usemap="#call_graph_for___init___43" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  CodeBlock constructor
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>block = CodeBlock(<span class="py-string">&quot;return NULL;&quot;</span>, DeclarationsScope())
+<span class="py-prompt">&gt;&gt;&gt; </span>block.write_code(<span class="py-string">&quot;foo();&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>cleanup1 = block.add_cleanup_code(<span class="py-string">&quot;clean1();&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>cleanup2 = block.add_cleanup_code(<span class="py-string">&quot;clean2();&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>cleanup3 = block.add_cleanup_code(<span class="py-string">&quot;clean3();&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>cleanup2.cancel()
+<span class="py-prompt">&gt;&gt;&gt; </span>block.write_error_check(<span class="py-string">&quot;error()&quot;</span>, <span class="py-string">&quot;error_clean()&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>block.write_code(<span class="py-string">&quot;bar();&quot;</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span>block.write_cleanup()
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> block.sink.flush().rstrip()
+<span class="py-output">foo();</span>
+<span class="py-output">if (error()) {</span>
+<span class="py-output">    error_clean()</span>
+<span class="py-output">    clean3();</span>
+<span class="py-output">    clean1();</span>
+<span class="py-output">    return NULL;</span>
+<span class="py-output">}</span>
+<span class="py-output">bar();</span>
+<span class="py-output">clean3();</span>
+<span class="py-output">clean1();</span></pre>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>error_return</code></strong> - code that is generated on error conditions (detected by 
+          write_error_check()); normally it returns from the wrapper 
+          function, e.g. return NULL;</li>
+        <li><strong class="pname"><code>predecessor</code></strong> - optional predecessor code block; a predecessor is used to 
+          search for additional cleanup actions.</li>
+    </ul></dd>
+    <dt>Overrides:
+      object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_cleanup_code"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_cleanup_code</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cleanup_code</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.add_cleanup_code">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_add_cleanup_cod-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_add_cleanup_cod-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_add_cleanup_cod" name="call_graph_for_add_cleanup_cod">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="31,6,425,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#add_cleanup_code" title="add_cleanup_code()" alt="" coords="499,90,675,122"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="40,62,416,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClassRefParameter&#45;class.html#convert_c_to_python" title="cppclass.CppClassRefParameter.convert_c_to_python()" alt="" coords="5,118,451,150"/>
+<area shape="rect" href="pybindgen.cppclass&#45;module.html#_add_ward" title="cppclass._add_ward()" alt="" coords="133,174,323,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle&#45;class.html#__init__" title="CleanupHandle.__init__()" alt="" coords="737,62,951,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle&#45;class.html#get_position" title="CleanupHandle.get_position()" alt="" coords="723,118,965,150"/>
+</map>
+  <img src="call_graph_for_add_cleanup_cod.gif" alt='' usemap="#call_graph_for_add_cleanup_cod" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  <p>Add a chunk of code used to cleanup previously allocated resources</p>
+  Returns a handle used to cancel the cleanup code
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="write_error_check"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">write_error_check</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">failure_expression</span>,
+        <span class="sig-arg">failure_cleanup</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#CodeBlock.write_error_check">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_error_che-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_write_error_che-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_error_che" name="call_graph_for_write_error_che">
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="7,6,401,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="write_error_check()" alt="" coords="452,174,620,206"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="16,62,392,94"/>
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#generate" title="cppclass.CppClass.generate()" alt="" coords="83,118,325,150"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="module.ModuleBase.do_generate()" alt="" coords="63,174,345,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_return" title="write_error_return()" alt="" coords="733,90,901,122"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="codesink.CodeSink.indent()" alt="" coords="703,146,932,178"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="codesink.CodeSink.unindent()" alt="" coords="693,202,941,234"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html#writeln" title="codesink.MemoryCodeSink.writeln()" alt="" coords="669,258,965,290"/>
+<area shape="rect" href="pybindgen.typehandlers.floattype.FloatPtrParam&#45;class.html#convert_python_to_c" title="floattype.FloatPtrParam.convert_python_to_c()" alt="" coords="16,230,392,262"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt16Return&#45;class.html#convert_python_to_c" title="inttype.UInt16Return.convert_python_to_c()" alt="" coords="27,286,381,318"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8Return&#45;class.html#convert_python_to_c" title="inttype.UInt8Return.convert_python_to_c()" alt="" coords="31,342,377,374"/>
+</map>
+  <img src="call_graph_for_write_error_che.gif" alt='' usemap="#call_graph_for_write_error_che" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Add a chunk of code that checks for a possible error
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>failure_expression</code></strong> - C boolean expression that is true when an error occurred</li>
+        <li><strong class="pname"><code>failure_cleanup</code></strong> - optional extra cleanup code to write only for the the case 
+          when failure_expression is true; this extra cleanup code comes 
+          before all other cleanup code previously registered.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:49 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

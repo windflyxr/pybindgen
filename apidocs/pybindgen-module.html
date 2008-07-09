@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pybindgen
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package pybindgen</h1><span class="codelink"><a href="pybindgen-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="heading">Introduction</h1>
+    PyBindGen is a Python module that lets you generate python language 
+    bindings for C or C++ code.
+  <h1 class="heading">How to use it</h1>
+    There are multiple ways to use PyBindGen, and they are described in 
+    the following subsections.
+    <h2 class="heading">Basic Interface</h2>
+      PyBindGen does not have any command-line interface.  The author 
+      needs to write a small python script that imports the pybindgen 
+      module and uses it to generate the bindings.  For instance:
+<pre class="literalblock">
+ #! /usr/bin/env python
+
+ import sys
+
+ import pybindgen
+ from pybindgen import (ReturnValue, Parameter, Module, Function, FileCodeSink)
+
+ def my_module_gen(out_file):
+     pybindgen.write_preamble(FileCodeSink(out_file))
+
+     mod = Module('a')
+     mod.add_include('&quot;a.h&quot;')
+
+     mod.add_function('ADoA', None, [])
+     mod.add_function('ADoB', None, [Parameter.new('uint32_t', 'b')])
+     mod.add_function('ADoC', ReturnValue.new('uint32_t'), [])
+
+     mod.generate(FileCodeSink(out_file) )
+
+ if __name__ == '__main__':
+     my_module_gen(sys.stdout)
+</pre>
+      Running the above python script will generate to stdout the source
+      code for a C library with the following interface:
+<pre class="literalblock">
+ #include &lt;stdint.h&gt;
+
+ void ADoA (void);
+ void ADoB (uint32_t b);
+ uint32_t ADoC (void);
+</pre>
+      The most important classes to retain from pybindgen are:
+      <ul>
+        <li>
+          <a href="pybindgen.typehandlers.codesink.CodeSink-class.html" 
+          class="link">CodeSink</a>, which is an object that pybindgen uses
+          to receive the generated code.  Typically we want to use a 
+          subclass of it called <a 
+          href="pybindgen.typehandlers.codesink.FileCodeSink-class.html" 
+          class="link">FileCodeSink</a>, which receives generated code and 
+          writes it to a file-like object;
+        </li>
+        <li>
+          <a href="pybindgen.module.Module-class.html" 
+          class="link">Module</a>, which represents a Python extension 
+          module.  The progammer can <a 
+          href="pybindgen.module.ModuleBase-class.html#add_function" 
+          class="link">add functions</a>, <a 
+          href="pybindgen.module.ModuleBase-class.html#add_class" 
+          class="link">classes</a>, <a 
+          href="pybindgen.module.ModuleBase-class.html#add_enum" 
+          class="link">enums</a>, or even <a 
+          href="pybindgen.module.ModuleBase-class.html#add_cpp_namespace" 
+          class="link">other modules</a> to a module object.  The module 
+          object is the main front-end for <a 
+          href="pybindgen.module.Module-class.html#generate" 
+          class="link">code generation</a>, and it &quot;owns&quot; every 
+          other object.
+        </li>
+        <li>
+          Then there are objects to represent <a 
+          href="pybindgen.function.Function-class.html" 
+          class="link">functions</a>, <a 
+          href="pybindgen.cppclass.CppClass-class.html" class="link">C++ 
+          classes</a>, <a href="pybindgen.enum.Enum-class.html" 
+          class="link">enumerations</a>, etc.  These additionally make use 
+          of objects that represent <a 
+          href="pybindgen.typehandlers.base.ReturnValue-class.html" 
+          class="link">return values</a> and <a 
+          href="pybindgen.typehandlers.base.Parameter-class.html" 
+          class="link">parameters</a>.
+        </li>
+      </ul>
+    <h2 class="heading">Basic Interface with Error Handling</h2>
+      It is also possible to declare a error handler.  The error handler
+      will be invoked for API definitions that cannot be wrapped for some 
+      reason:
+<pre class="literalblock">
+ #! /usr/bin/env python
+
+ import sys
+
+ import pybindgen
+ from pybindgen import Module, FileCodeSink, retval, param
+
+ import pybindgen.settings
+ import warnings
+
+ class ErrorHandler(pybindgen.settings.ErrorHandler):
+     def handle_error(self, wrapper, exception, traceback_):
+         warnings.warn(&quot;exception %r in wrapper %s&quot; % (exception, wrapper))
+         return True
+ pybindgen.settings.error_handler = ErrorHandler()
+
+
+ def my_module_gen(out_file):
+     pybindgen.write_preamble(FileCodeSink(out_file))
+
+     mod = Module('a')
+     mod.add_include('&quot;a.h&quot;')
+
+     mod.add_function('ADoA', None, [])
+     mod.add_function('ADoB', None, [param('uint32_t', 'b')])
+     mod.add_function('ADoC', retval('uint32_t'), [])
+
+     mod.generate(FileCodeSink(out_file) )
+
+ if __name__ == '__main__':
+     my_module_gen(sys.stdout)
+</pre>
+      <p>In this example, we register a error handler that allows PyBindGen
+      to simply ignore API definitions with errors, and not wrap them, but 
+      move on.</p>
+      The difference between is Parameter.new(...) and param(...), as 
+      well as between ReturnValue.new(...) and retval(...) is to be noted 
+      here. The main difference is not that param(...) and retval(...) are 
+      shorter, it is that they allow delayed error handling.  For example, 
+      when you put Parameter.new(&quot;type that does not exist&quot;, 
+      &quot;foo&quot;) in your python script, a TypeLookupError exception 
+      is raised and it is not possible for the error handler to catch it.  
+      However, param(...) does not try to lookup the type handler 
+      immediately and instead lets Module.add_function() do that in a way 
+      that the error handler can be invoked and the function is simply not 
+      wrapped if the error handler says so.
+    <h2 class="heading">Header file scanning with (py)gccxml</h2>
+      If you have gccxml and pygccxml installed, PyBindGen can use them 
+      to scan the API definitions directly from the header files:
+<pre class="literalblock">
+ #! /usr/bin/env python
+
+ import sys
+
+ import pybindgen
+ from pybindgen import FileCodeSink
+ from pybindgen.gccxmlparser import ModuleParser
+
+ def my_module_gen():
+     module_parser = ModuleParser('a1', '::')
+     module = module_parser.parse([sys.argv[1]])
+     module.add_include('&quot;a.h&quot;')
+
+     pybindgen.write_preamble(FileCodeSink(sys.stdout))
+     module.generate(FileCodeSink(sys.stdout))
+
+ if __name__ == '__main__':
+     my_module_gen()
+</pre>
+      The above script will generate the bindings for the module 
+      directly. It expects the input header file, a.h, as first command 
+      line argument.
+    <h2 class="heading">Header file scanning with (py)gccxml: python intermediate file</h2>
+      The final code generation flow supported by PyBindGen is a hybrid 
+      of the previous ones.  One script scans C/C++ header files, but 
+      instead of generating C/C++ binding code directly it instead 
+      generates a PyBindGen based Python script:
+<pre class="literalblock">
+ #! /usr/bin/env python
+
+ import sys
+
+ from pybindgen import FileCodeSink
+ from pybindgen.gccxmlparser import ModuleParser
+
+ def my_module_gen():
+     module_parser = ModuleParser('a2', '::')
+     module_parser.parse([sys.argv[1]], includes=['&quot;a.h&quot;'], pygen_sink=FileCodeSink(sys.stdout))
+
+ if __name__ == '__main__':
+     my_module_gen()
+</pre>
+      The above script produces a Python program on stdout.  Running the
+      generated Python program will, in turn, generate the C++ code binding
+      our interface.<br /><br />
+
+<!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Submodules</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Submodules"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="pybindgen.cppattribute-module.html">pybindgen.cppattribute</a></strong>: <em class="summary">Wraps C++ class instance/static attributes.</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppclass-module.html">pybindgen.cppclass</a></strong>: <em class="summary">Wrap C++ classes and methods</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppmethod-module.html">pybindgen.cppmethod</a></strong>: <em class="summary">Wrap C++ class methods and constructods.</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.enum-module.html">pybindgen.enum</a></strong>: <em class="summary">Wraps enumerations</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.function-module.html">pybindgen.function</a></strong>: <em class="summary">C function wrapper</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser-module.html">pybindgen.gccxmlparser</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser_flymake-module.html">pybindgen.gccxmlparser_flymake</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.module-module.html">pybindgen.module</a></strong>: <em class="summary">Objects that represent -- and generate code for -- C/C++ Python 
+        extension modules.</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.overloading-module.html">pybindgen.overloading</a></strong>: <em class="summary">C wrapper wrapper</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.settings-module.html">pybindgen.settings</a></strong>: <em class="summary">Global settings to the code generator.</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers-module.html">pybindgen.typehandlers</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base-module.html">pybindgen.typehandlers.base</a></strong>: <em class="summary">Base classes for all parameter/return type handlers, and base 
+        interfaces for wrapper generators.</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype-module.html">pybindgen.typehandlers.booltype</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink-module.html">pybindgen.typehandlers.codesink</a></strong>: <em class="summary">Objects that receive generated C/C++ code lines, reindents them,
+        and writes them to a file, memory, or another code sink object.</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.ctypeparser-module.html">pybindgen.typehandlers.ctypeparser</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html">pybindgen.typehandlers.ctypeparser.tokenizer</a></strong>: <em class="summary">Tokenize C++ source code.</em>    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype-module.html">pybindgen.typehandlers.doubletype</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype-module.html">pybindgen.typehandlers.floattype</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype-module.html">pybindgen.typehandlers.inttype</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.pyobjecttype-module.html">pybindgen.typehandlers.pyobjecttype</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype-module.html">pybindgen.typehandlers.stringtype</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.voidtype-module.html">pybindgen.typehandlers.voidtype</a></strong>    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.utils-module.html">pybindgen.utils</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.version-module.html">pybindgen.version</a></strong>    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:35 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>
