@@ -58,53 +58,33 @@
     <li> <strong class="uidlink">object</strong>:
       <em class="summary">The most base type</em>
     <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.cppattribute.PyGetSetDef-class.html">pybindgen.cppattribute.PyGetSetDef</a></strong>:
-      <em class="summary">Class that generates a PyGetSet table</em>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle-class.html">pybindgen.typehandlers.base.CodeBlock.CleanupHandle</a></strong>:
+      <em class="summary">Handle for some cleanup code</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.TypeMatcher-class.html">pybindgen.typehandlers.base.TypeMatcher</a></strong>:
-      <em class="summary">Type matcher object: maps C type names to classes that handle 
-        those types.</em>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.PygenClassifier-class.html">pybindgen.gccxmlparser.PygenClassifier</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.settings.ErrorHandler-class.html">pybindgen.settings.ErrorHandler</a></strong>
-    <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.ErrorHandler-class.html">pybindgen.gccxmlparser.ErrorHandler</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.ModuleParser-class.html">pybindgen.gccxmlparser.ModuleParser</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser_flymake.ErrorHandler-class.html">pybindgen.gccxmlparser_flymake.ErrorHandler</a></strong>
-    </li>
-    </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.overloading.OverloadedWrapper-class.html">pybindgen.overloading.OverloadedWrapper</a></strong>:
-      <em class="summary">An object that aggregates a set of wrapper objects; it generates
-        a single python wrapper wrapper that supports overloading, i.e.</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.function.OverloadedFunction-class.html">pybindgen.function.OverloadedFunction</a></strong>:
-      <em class="summary">Adds support for overloaded functions</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.CppOverloadedConstructor-class.html">pybindgen.cppmethod.CppOverloadedConstructor</a></strong>:
-      <em class="summary">Support class for overloaded constructors</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.CppOverloadedMethod-class.html">pybindgen.cppmethod.CppOverloadedMethod</a></strong>:
-      <em class="summary">Support class for overloaded methods</em>
-    </li>
-    </ul>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.CodeBlock-class.html">pybindgen.typehandlers.base.CodeBlock</a></strong>:
+      <em class="summary">An intelligent code block that keeps track of cleanup 
+        actions.</em>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppclass.CppClass-class.html">pybindgen.cppclass.CppClass</a></strong>:
       <em class="summary">A CppClass object takes care of generating the code for wrapping
         a C++ class</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.PygenSection-class.html">pybindgen.gccxmlparser.PygenSection</a></strong>:
-      <em class="summary">Class to hold information about a python generation section</em>
+    <li> <strong class="uidlink"><a href="pybindgen.cppclass.CppHelperClass-class.html">pybindgen.cppclass.CppHelperClass</a></strong>:
+      <em class="summary">Generates code for a C++ proxy subclass that takes care of 
+        forwarding virtual methods from C++ to Python.</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.TypeTransformation-class.html">pybindgen.typehandlers.base.TypeTransformation</a></strong>:
-      <em class="summary">Type transformations are used to register handling of special 
-        types that are simple transformation over another type that is 
-        already registered.</em>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.TypeMatcher-class.html">pybindgen.typehandlers.base.TypeMatcher</a></strong>:
+      <em class="summary">Type matcher object: maps C type names to classes that handle 
+        those types.</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.ModuleParser-class.html">pybindgen.gccxmlparser.ModuleParser</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.BuildValueParameters-class.html">pybindgen.typehandlers.base.BuildValueParameters</a></strong>:
-      <em class="summary">Object to keep track of Py_BuildValue (or similar) 
-        parameters</em>
+    <li> <strong class="uidlink"><a href="pybindgen.module.MultiSectionFactory-class.html">pybindgen.module.MultiSectionFactory</a></strong>:
+      <em class="summary">Abstract base class for objects providing support for 
+        multi-section code generation, i.e., splitting the generated C/C++ 
+        code into multiple files.</em>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.ReverseWrapperBase-class.html">pybindgen.typehandlers.base.ReverseWrapperBase</a></strong>:
       <em class="summary">Generic base for all reverse wrapper generators.</em>
@@ -126,9 +106,14 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppclass.CppHelperClass-class.html">pybindgen.cppclass.CppHelperClass</a></strong>:
-      <em class="summary">Generates code for a C++ proxy subclass that takes care of 
-        forwarding virtual methods from C++ to Python.</em>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.BuildValueParameters-class.html">pybindgen.typehandlers.base.BuildValueParameters</a></strong>:
+      <em class="summary">Object to keep track of Py_BuildValue (or similar) 
+        parameters</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.ctypeparser.CType-class.html">pybindgen.typehandlers.ctypeparser.CType</a></strong>:
+      <em class="summary">A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
+        class="link">CType</a> represents a C/C++ type as a list of 
+        items.</em>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.ForwardWrapperBase-class.html">pybindgen.typehandlers.base.ForwardWrapperBase</a></strong>:
       <em class="summary">Generic base for all forward wrapper generators.</em>
@@ -170,10 +155,6 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.CppNoConstructor-class.html">pybindgen.cppmethod.CppNoConstructor</a></strong>:
-      <em class="summary">Class that generates a constructor that raises an exception 
-        saying that the class has no constructor.</em>
-    </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppattribute.PyGetter-class.html">pybindgen.cppattribute.PyGetter</a></strong>:
       <em class="summary">generates a getter, for use in a PyGetSetDef table</em>
     <ul>
@@ -184,6 +165,10 @@
       <em class="summary">A getter for a C++ class static attribute.</em>
     </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.CppNoConstructor-class.html">pybindgen.cppmethod.CppNoConstructor</a></strong>:
+      <em class="summary">Class that generates a constructor that raises an exception 
+        saying that the class has no constructor.</em>
     </li>
     </ul>
     </li>
@@ -202,26 +187,11 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.NullTypeTransformation-class.html">pybindgen.typehandlers.base.NullTypeTransformation</a></strong>:
-      <em class="summary">Null type transformation, returns everything unchanged.</em>
+    <li> <strong class="uidlink"><a href="pybindgen.cppattribute.PyMetaclass-class.html">pybindgen.cppattribute.PyMetaclass</a></strong>:
+      <em class="summary">Class that generates a Python metaclass</em>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.ctypeparser.tokenizer.Token-class.html">pybindgen.typehandlers.ctypeparser.tokenizer.Token</a></strong>:
       <em class="summary">Data container to represent a C++ token.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.CodeSink-class.html">pybindgen.typehandlers.codesink.CodeSink</a></strong>:
-      <em class="summary">Abstract base class for code sinks</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.FileCodeSink-class.html">pybindgen.typehandlers.codesink.FileCodeSink</a></strong>:
-      <em class="summary">A code sink that writes to a file-like object</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.MemoryCodeSink-class.html">pybindgen.typehandlers.codesink.MemoryCodeSink</a></strong>:
-      <em class="summary">A code sink that keeps the code in memory, and can later flush 
-        the code to another code sink</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.NullCodeSink-class.html">pybindgen.typehandlers.codesink.NullCodeSink</a></strong>:
-      <em class="summary">A code sink that discards all content.</em>
-    </li>
-    </ul>
     </li>
     <li> <strong class="uidlink">exceptions.BaseException</strong>:
       <em class="summary">Common base class for all exceptions</em>
@@ -278,17 +248,22 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppattribute.PyMetaclass-class.html">pybindgen.cppattribute.PyMetaclass</a></strong>:
-      <em class="summary">Class that generates a Python metaclass</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser_flymake.AnnotationsScanner-class.html">pybindgen.gccxmlparser_flymake.AnnotationsScanner</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.TypeTransformation-class.html">pybindgen.typehandlers.base.TypeTransformation</a></strong>:
+      <em class="summary">Type transformations are used to register handling of special 
+        types that are simple transformation over another type that is 
+        already registered.</em>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.enum.Enum-class.html">pybindgen.enum.Enum</a></strong>:
       <em class="summary">Class that adds support for a C/C++ enum type</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.ParseTupleParameters-class.html">pybindgen.typehandlers.base.ParseTupleParameters</a></strong>:
-      <em class="summary">Object to keep track of PyArg_ParseTuple (or similar) 
-        parameters</em>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.PygenSection-class.html">pybindgen.gccxmlparser.PygenSection</a></strong>:
+      <em class="summary">Class to hold information about a python generation section</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.settings.ErrorHandler-class.html">pybindgen.settings.ErrorHandler</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.ErrorHandler-class.html">pybindgen.gccxmlparser.ErrorHandler</a></strong>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink">type</strong>:
       <em class="summary">type(object) -&gt; the object's type type(name, bases, dict) 
@@ -304,33 +279,43 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser_flymake.ModuleParser-class.html">pybindgen.gccxmlparser_flymake.ModuleParser</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.CodeSink-class.html">pybindgen.typehandlers.codesink.CodeSink</a></strong>:
+      <em class="summary">Abstract base class for code sinks</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.FileCodeSink-class.html">pybindgen.typehandlers.codesink.FileCodeSink</a></strong>:
+      <em class="summary">A code sink that writes to a file-like object</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser_flymake.GccXmlTypeRegistry-class.html">pybindgen.gccxmlparser_flymake.GccXmlTypeRegistry</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.MemoryCodeSink-class.html">pybindgen.typehandlers.codesink.MemoryCodeSink</a></strong>:
+      <em class="summary">A code sink that keeps the code in memory, and can later flush 
+        the code to another code sink</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.CodeBlock.CleanupHandle-class.html">pybindgen.typehandlers.base.CodeBlock.CleanupHandle</a></strong>:
-      <em class="summary">Handle for some cleanup code</em>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink.NullCodeSink-class.html">pybindgen.typehandlers.codesink.NullCodeSink</a></strong>:
+      <em class="summary">A code sink that discards all content.</em>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.CodeBlock-class.html">pybindgen.typehandlers.base.CodeBlock</a></strong>:
-      <em class="summary">An intelligent code block that keeps track of cleanup 
-        actions.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.AnnotationsScanner-class.html">pybindgen.gccxmlparser.AnnotationsScanner</a></strong>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.GccXmlTypeRegistry-class.html">pybindgen.gccxmlparser.GccXmlTypeRegistry</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.ctypeparser.CType-class.html">pybindgen.typehandlers.ctypeparser.CType</a></strong>:
-      <em class="summary">A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
-        class="link">CType</a> represents a C/C++ type as a list of 
-        items.</em>
+    <li> <strong class="uidlink"><a href="pybindgen.cppattribute.PyGetSetDef-class.html">pybindgen.cppattribute.PyGetSetDef</a></strong>:
+      <em class="summary">Class that generates a PyGetSet table</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.overloading.OverloadedWrapper-class.html">pybindgen.overloading.OverloadedWrapper</a></strong>:
+      <em class="summary">An object that aggregates a set of wrapper objects; it generates
+        a single python wrapper wrapper that supports overloading, i.e.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="pybindgen.function.OverloadedFunction-class.html">pybindgen.function.OverloadedFunction</a></strong>:
+      <em class="summary">Adds support for overloaded functions</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.CppOverloadedConstructor-class.html">pybindgen.cppmethod.CppOverloadedConstructor</a></strong>:
+      <em class="summary">Support class for overloaded constructors</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.CppOverloadedMethod-class.html">pybindgen.cppmethod.CppOverloadedMethod</a></strong>:
+      <em class="summary">Support class for overloaded methods</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.DeclarationsScope-class.html">pybindgen.typehandlers.base.DeclarationsScope</a></strong>:
       <em class="summary">Manages variable declarations in a given scope.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.module.MultiSectionFactory-class.html">pybindgen.module.MultiSectionFactory</a></strong>:
-      <em class="summary">Abstract base class for objects providing support for 
-        multi-section code generation, i.e., splitting the generated C/C++ 
-        code into multiple files.</em>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.module._SinkManager-class.html">pybindgen.module._SinkManager</a></strong>:
       <em class="summary">Internal abstract base class for bridging differences between 
@@ -345,11 +330,34 @@
     </li>
     </ul>
     </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.NullTypeTransformation-class.html">pybindgen.typehandlers.base.NullTypeTransformation</a></strong>:
+      <em class="summary">Null type transformation, returns everything unchanged.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.ParseTupleParameters-class.html">pybindgen.typehandlers.base.ParseTupleParameters</a></strong>:
+      <em class="summary">Object to keep track of PyArg_ParseTuple (or similar) 
+        parameters</em>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.AnnotationsScanner-class.html">pybindgen.gccxmlparser.AnnotationsScanner</a></strong>
+    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.Parameter-class.html">pybindgen.typehandlers.base.Parameter</a></strong>:
       <em class="summary">Abstract base class for all classes dedicated to handle specific
         parameter types</em>
     <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoubleRefParam-class.html">pybindgen.typehandlers.doubletype.DoubleRefParam</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.LongLongParam-class.html">pybindgen.typehandlers.inttype.LongLongParam</a></strong>
+    <ul>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.LongLongRefParam-class.html">pybindgen.typehandlers.inttype.LongLongRefParam</a></strong>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.StdStringParam-class.html">pybindgen.typehandlers.stringtype.StdStringParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.pyobjecttype.PyObjectParam-class.html">pybindgen.typehandlers.pyobjecttype.PyObjectParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolRefParam-class.html">pybindgen.typehandlers.booltype.BoolRefParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.StdStringRefParam-class.html">pybindgen.typehandlers.stringtype.StdStringRefParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.CharParam-class.html">pybindgen.typehandlers.stringtype.CharParam</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.PointerParameter-class.html">pybindgen.typehandlers.base.PointerParameter</a></strong>:
       <em class="summary">Base class for all pointer-to-something handlers</em>
@@ -359,17 +367,37 @@
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.Int8PtrParam-class.html">pybindgen.typehandlers.inttype.Int8PtrParam</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedIntPtrParam-class.html">pybindgen.typehandlers.inttype.UnsignedIntPtrParam</a></strong>
-    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntPtrParam-class.html">pybindgen.typehandlers.inttype.IntPtrParam</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt8PtrParam-class.html">pybindgen.typehandlers.inttype.UInt8PtrParam</a></strong>
     </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedIntPtrParam-class.html">pybindgen.typehandlers.inttype.UnsignedIntPtrParam</a></strong>
+    </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedIntParam-class.html">pybindgen.typehandlers.inttype.UnsignedIntParam</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.Int16Param-class.html">pybindgen.typehandlers.inttype.Int16Param</a></strong>
     </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.DummyParameter-class.html">pybindgen.cppmethod.DummyParameter</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoublePtrParam-class.html">pybindgen.typehandlers.doubletype.DoublePtrParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolParam-class.html">pybindgen.typehandlers.booltype.BoolParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt16Param-class.html">pybindgen.typehandlers.inttype.UInt16Param</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntParam-class.html">pybindgen.typehandlers.inttype.IntParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntRefParam-class.html">pybindgen.typehandlers.inttype.IntRefParam</a></strong>
+    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoubleParam-class.html">pybindgen.typehandlers.doubletype.DoubleParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatRefParam-class.html">pybindgen.typehandlers.floattype.FloatRefParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatParam-class.html">pybindgen.typehandlers.floattype.FloatParam</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatPtrParam-class.html">pybindgen.typehandlers.floattype.FloatPtrParam</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedLongLongParam-class.html">pybindgen.typehandlers.inttype.UnsignedLongLongParam</a></strong>
     <ul>
@@ -377,37 +405,9 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedIntParam-class.html">pybindgen.typehandlers.inttype.UnsignedIntParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.StdStringParam-class.html">pybindgen.typehandlers.stringtype.StdStringParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoublePtrParam-class.html">pybindgen.typehandlers.doubletype.DoublePtrParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.LongLongParam-class.html">pybindgen.typehandlers.inttype.LongLongParam</a></strong>
-    <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.LongLongRefParam-class.html">pybindgen.typehandlers.inttype.LongLongRefParam</a></strong>
-    </li>
-    </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolPtrParam-class.html">pybindgen.typehandlers.booltype.BoolPtrParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.CharParam-class.html">pybindgen.typehandlers.stringtype.CharParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.StdStringRefParam-class.html">pybindgen.typehandlers.stringtype.StdStringRefParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.DummyParameter-class.html">pybindgen.cppmethod.DummyParameter</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatParam-class.html">pybindgen.typehandlers.floattype.FloatParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntRefParam-class.html">pybindgen.typehandlers.inttype.IntRefParam</a></strong>
-    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt8Param-class.html">pybindgen.typehandlers.inttype.UInt8Param</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolRefParam-class.html">pybindgen.typehandlers.booltype.BoolRefParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatPtrParam-class.html">pybindgen.typehandlers.floattype.FloatPtrParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.pyobjecttype.PyObjectParam-class.html">pybindgen.typehandlers.pyobjecttype.PyObjectParam</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoubleRefParam-class.html">pybindgen.typehandlers.doubletype.DoubleRefParam</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppclass.CppClassParameterBase-class.html">pybindgen.cppclass.CppClassParameterBase</a></strong>:
       <em class="summary">Base class for all C++ Class parameter handlers</em>
@@ -423,24 +423,14 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatRefParam-class.html">pybindgen.typehandlers.floattype.FloatRefParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt16Param-class.html">pybindgen.typehandlers.inttype.UInt16Param</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolParam-class.html">pybindgen.typehandlers.booltype.BoolParam</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntParam-class.html">pybindgen.typehandlers.inttype.IntParam</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolPtrParam-class.html">pybindgen.typehandlers.booltype.BoolPtrParam</a></strong>
     </li>
     </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.gccxmlparser.PygenClassifier-class.html">pybindgen.gccxmlparser.PygenClassifier</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.ReturnValue-class.html">pybindgen.typehandlers.base.ReturnValue</a></strong>:
       <em class="summary">Abstract base class for all classes dedicated to handle specific
         return value types</em>
     <ul>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoubleReturn-class.html">pybindgen.typehandlers.doubletype.DoubleReturn</a></strong>
-    </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppclass.CppClassReturnValueBase-class.html">pybindgen.cppclass.CppClassReturnValueBase</a></strong>:
       <em class="summary">Class return handlers -- base class</em>
     <ul>
@@ -452,9 +442,25 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue-class.html">pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatReturn-class.html">pybindgen.typehandlers.floattype.FloatReturn</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedLongLongReturn-class.html">pybindgen.typehandlers.inttype.UnsignedLongLongReturn</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt16Return-class.html">pybindgen.typehandlers.inttype.UInt16Return</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolReturn-class.html">pybindgen.typehandlers.booltype.BoolReturn</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.voidtype.VoidReturn-class.html">pybindgen.typehandlers.voidtype.VoidReturn</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.DummyReturnValue-class.html">pybindgen.cppmethod.DummyReturnValue</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.CharReturn-class.html">pybindgen.typehandlers.stringtype.CharReturn</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntReturn-class.html">pybindgen.typehandlers.inttype.IntReturn</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.StdStringReturn-class.html">pybindgen.typehandlers.stringtype.StdStringReturn</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.LongLongReturn-class.html">pybindgen.typehandlers.inttype.LongLongReturn</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base.PointerReturnValue-class.html">pybindgen.typehandlers.base.PointerReturnValue</a></strong>:
       <em class="summary">Base class for all pointer-to-something handlers</em>
@@ -464,29 +470,15 @@
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.voidtype.VoidReturn-class.html">pybindgen.typehandlers.voidtype.VoidReturn</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.floattype.FloatReturn-class.html">pybindgen.typehandlers.floattype.FloatReturn</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.IntReturn-class.html">pybindgen.typehandlers.inttype.IntReturn</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt8Return-class.html">pybindgen.typehandlers.inttype.UInt8Return</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.cppmethod.DummyReturnValue-class.html">pybindgen.cppmethod.DummyReturnValue</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.LongLongReturn-class.html">pybindgen.typehandlers.inttype.LongLongReturn</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue-class.html">pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue</a></strong>
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.Int16Return-class.html">pybindgen.typehandlers.inttype.Int16Return</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt16Return-class.html">pybindgen.typehandlers.inttype.UInt16Return</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype.BoolReturn-class.html">pybindgen.typehandlers.booltype.BoolReturn</a></strong>
-    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedIntReturn-class.html">pybindgen.typehandlers.inttype.UnsignedIntReturn</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UnsignedLongLongReturn-class.html">pybindgen.typehandlers.inttype.UnsignedLongLongReturn</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.doubletype.DoubleReturn-class.html">pybindgen.typehandlers.doubletype.DoubleReturn</a></strong>
     </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.stringtype.CharReturn-class.html">pybindgen.typehandlers.stringtype.CharReturn</a></strong>
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.inttype.UInt8Return-class.html">pybindgen.typehandlers.inttype.UInt8Return</a></strong>
     </li>
     </ul>
     </li>
@@ -519,7 +511,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:20:10 2008
+    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:37:36 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
