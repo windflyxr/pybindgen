@@ -46,8 +46,6 @@
     <td>
       <table cellpadding="0" cellspacing="0">
         <!-- hide/show private -->
-        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
-    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
         <tr><td align="right"><span class="options"
             >[<a href="frames.html" target="_top">frames</a
             >]&nbsp;|&nbsp;<a href="pybindgen.typehandlers.base.ForwardWrapperBase-class.html"
@@ -59,33 +57,33 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class ForwardWrapperBase</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase">source&nbsp;code</a></span><br /><br />
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_60" name="uml_class_diagram_for_pybindge_60">
-<area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html" title="Class that generates a wrapper to a C++ class constructor." alt="" coords="367,248,537,274"/>
-<area shape="rect" href="pybindgen.cppmethod.CustomCppConstructorWrapper&#45;class.html" title="Adds a custom constructor wrapper." alt="" coords="16,304,283,330"/>
-<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html" title="Class that generates a wrapper to a C/C++ function that appears as a contructor." alt="" coords="333,304,571,330"/>
-<area shape="rect" href="pybindgen.function.Function&#45;class.html" title="Class that generates a wrapper to a C function." alt="" coords="668,248,780,274"/>
-<area shape="rect" href="pybindgen.function.CustomFunctionWrapper&#45;class.html" title="Adds a custom function wrapper." alt="" coords="621,304,827,330"/>
-<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html" title="A getter for a C++ class static attribute." alt="" coords="877,304,1104,330"/>
-<area shape="rect" href="pybindgen.cppmethod.CppNoConstructor&#45;class.html" title="Class that generates a constructor that raises an exception saying that the class has no constructor." alt="" coords="831,248,1017,274"/>
-<area shape="rect" href="pybindgen.cppattribute.PyGetter&#45;class.html" title="generates a getter, for use in a PyGetSetDef table" alt="" coords="1068,248,1207,274"/>
-<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html" title="A getter for a C++ instance attribute." alt="" coords="1155,304,1397,330"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#PARSE_TUPLE" title="pybindgen.typehandlers.base.ForwardWrapperBase.PARSE_TUPLE" alt="" coords="532,28,1316,46"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#PARSE_TUPLE_AND_KEYWORDS" title="pybindgen.typehandlers.base.ForwardWrapperBase.PARSE_TUPLE_AND_KEYWORDS" alt="" coords="532,46,1316,65"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#reset_code_generation_state" title="pybindgen.typehandlers.base.ForwardWrapperBase.reset_code_generation_state" alt="" coords="532,68,1316,86"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_close_wrapper" title="pybindgen.typehandlers.base.ForwardWrapperBase.write_close_wrapper" alt="" coords="532,86,1316,105"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_open_wrapper" title="pybindgen.typehandlers.base.ForwardWrapperBase.write_open_wrapper" alt="" coords="532,105,1316,124"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#set_parse_error_return" title="pybindgen.typehandlers.base.ForwardWrapperBase.set_parse_error_return" alt="" coords="532,124,1316,142"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="Generate the wrapper function body code_sink &#45;&#45; a CodeSink object that will receive the code" alt="" coords="532,142,1316,161"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#get_py_method_def_flags" title="Get a list of PyMethodDef flags that should be used for this wrapper." alt="" coords="532,161,1316,180"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_call" title="Generates the code (into self.before_call) to call into Python, storing the result in the variable &#39;py_retval&#39;; should also check for call error." alt="" coords="532,180,1316,198"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#__init__" title="Base constructor" alt="" coords="532,198,1316,217"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html" title="Generic base for all forward wrapper generators." alt="" coords="531,10,1317,218"/>
-<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html" title="Class that generates a wrapper to a C++ class method" alt="" coords="1629,248,1776,274"/>
-<area shape="rect" href="pybindgen.cppmethod.CustomCppMethodWrapper&#45;class.html" title="Adds a custom method wrapper." alt="" coords="1448,304,1691,330"/>
-<area shape="rect" href="pybindgen.cppmethod.CppDummyMethod&#45;class.html" title="A &#39;dummy&#39; method; cannot be generated due to incomple or incorrect parameters, but is added to the class to model the missing method." alt="" coords="1741,304,1933,330"/>
-<area shape="rect" href="pybindgen.cppmethod.CppVirtualMethodParentCaller&#45;class.html" title="Class that generates a wrapper that calls a virtual method default implementation in a parent base class." alt="" coords="1984,304,2240,330"/>
+<center>  <map id="uml_class_diagram_for_pybindge_57" name="uml_class_diagram_for_pybindge_57">
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#PARSE_TUPLE" title="pybindgen.typehandlers.base.ForwardWrapperBase.PARSE_TUPLE" alt="" coords="1171,28,1955,46"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#PARSE_TUPLE_AND_KEYWORDS" title="pybindgen.typehandlers.base.ForwardWrapperBase.PARSE_TUPLE_AND_KEYWORDS" alt="" coords="1171,46,1955,65"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#reset_code_generation_state" title="pybindgen.typehandlers.base.ForwardWrapperBase.reset_code_generation_state" alt="" coords="1171,68,1955,86"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_close_wrapper" title="pybindgen.typehandlers.base.ForwardWrapperBase.write_close_wrapper" alt="" coords="1171,86,1955,105"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_open_wrapper" title="pybindgen.typehandlers.base.ForwardWrapperBase.write_open_wrapper" alt="" coords="1171,105,1955,124"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#set_parse_error_return" title="pybindgen.typehandlers.base.ForwardWrapperBase.set_parse_error_return" alt="" coords="1171,124,1955,142"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="Generate the wrapper function body code_sink &#45;&#45; a CodeSink object that will receive the code" alt="" coords="1171,142,1955,161"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#get_py_method_def_flags" title="Get a list of PyMethodDef flags that should be used for this wrapper." alt="" coords="1171,161,1955,180"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_call" title="Generates the code (into self.before_call) to call into Python, storing the result in the variable &#39;py_retval&#39;; should also check for call error." alt="" coords="1171,180,1955,198"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#__init__" title="Base constructor" alt="" coords="1171,198,1955,217"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html" title="Generic base for all forward wrapper generators." alt="" coords="1169,10,1956,218"/>
+<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html" title="Class that generates a wrapper to a C++ class method" alt="" coords="464,248,611,274"/>
+<area shape="rect" href="pybindgen.cppattribute.PyGetter&#45;class.html" title="generates a getter, for use in a PyGetSetDef table" alt="" coords="1188,248,1327,274"/>
+<area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html" title="Class that generates a wrapper to a C++ class constructor." alt="" coords="1477,248,1648,274"/>
+<area shape="rect" href="pybindgen.function.Function&#45;class.html" title="Class that generates a wrapper to a C function." alt="" coords="1699,248,1811,274"/>
+<area shape="rect" href="pybindgen.cppmethod.CppNoConstructor&#45;class.html" title="Class that generates a constructor that raises an exception saying that the class has no constructor." alt="" coords="1861,248,2048,274"/>
+<area shape="rect" href="pybindgen.cppmethod.CppDummyMethod&#45;class.html" title="A &#39;dummy&#39; method; cannot be generated due to incomple or incorrect parameters, but is added to the class to model the missing method." alt="" coords="16,304,208,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CppVirtualMethodParentCaller&#45;class.html" title="Class that generates a wrapper that calls a virtual method default implementation in a parent base class." alt="" coords="259,304,515,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CustomCppMethodWrapper&#45;class.html" title="Adds a custom method wrapper." alt="" coords="565,304,808,330"/>
+<area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html" title="A getter for a C++ class static attribute." alt="" coords="859,304,1085,330"/>
+<area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html" title="A getter for a C++ instance attribute." alt="" coords="1136,304,1379,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CustomCppConstructorWrapper&#45;class.html" title="Adds a custom constructor wrapper." alt="" coords="1429,304,1696,330"/>
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html" title="Class that generates a wrapper to a C/C++ function that appears as a contructor." alt="" coords="1747,304,1984,330"/>
+<area shape="rect" href="pybindgen.function.CustomFunctionWrapper&#45;class.html" title="Adds a custom function wrapper." alt="" coords="2035,304,2240,330"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_60.gif" alt='' usemap="#uml_class_diagram_for_pybindge_60" ismap="ismap" class="graph-without-title" />
+  <img src="uml_class_diagram_for_pybindge_57.gif" alt='' usemap="#uml_class_diagram_for_pybindge_57" ismap="ismap" class="graph-without-title" />
 </center></center>
 <hr />
 <p>Generic base for all forward wrapper generators.</p>
@@ -144,17 +142,8 @@
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Instance Methods</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-InstanceMethods"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
@@ -173,13 +162,13 @@
       Base constructor</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.__init__">source&nbsp;code</a></span>
-            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___43-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___41-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
           </td>
         </tr>
       </table>
-      <div style="display:none" id="call_graph_for___init___43-summary-div"><center>
+      <div style="display:none" id="call_graph_for___init___41-summary-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
-  <tr><td><center>  <map id="call_graph_for___init___43" name="call_graph_for___init___43">
+  <tr><td><center>  <map id="call_graph_for___init___41" name="call_graph_for___init___41">
 <area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html#__init__" title="cppattribute.CppInstanceAttributeGetter.__init__()" alt="" coords="5,62,405,94"/>
 <area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#__init__" title="__init__()" alt="" coords="453,146,549,178"/>
 <area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html#__init__" title="cppattribute.CppStaticAttributeGetter.__init__()" alt="" coords="16,118,395,150"/>
@@ -192,7 +181,7 @@
 <area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#reserve_variable" title="DeclarationsScope.reserve_variable()" alt="" coords="597,230,896,262"/>
 <area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#__init__" title="ParseTupleParameters.__init__()" alt="" coords="613,286,880,318"/>
 </map>
-  <img src="call_graph_for___init___43.gif" alt='' usemap="#call_graph_for___init___43" ismap="ismap" class="graph-without-title" />
+  <img src="call_graph_for___init___41.gif" alt='' usemap="#call_graph_for___init___41" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
   <tr><th>Call Graph</th></tr>
 </table><br />
@@ -279,37 +268,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-<tr class="private">
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="pybindgen.typehandlers.base.ForwardWrapperBase-class.html#_before_return_hook" class="summary-sig-name">_before_return_hook</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Optional hook that lets subclasses add code after all parameters 
-      are parsed and after the function C return value is processed, but 
-      after the python wrapper return value (py_ret) is built and 
-      returned.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase._before_return_hook">source&nbsp;code</a></span>
-            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__before_return__4-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
-          </td>
-        </tr>
-      </table>
-      <div style="display:none" id="call_graph_for__before_return__4-summary-div"><center>
-<table border="0" cellpadding="0" cellspacing="0">
-  <tr><td><center>  <map id="call_graph_for__before_return__4" name="call_graph_for__before_return__4">
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#_before_return_hook" title="_before_return_hook()" alt="" coords="197,6,389,38"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="generate_body()" alt="" coords="5,6,149,38"/>
-</map>
-  <img src="call_graph_for__before_return__4.gif" alt='' usemap="#call_graph_for__before_return__4" ismap="ismap" class="graph-without-title" />
-</center></td></tr>
-  <tr><th>Call Graph</th></tr>
-</table><br />
-</center></div>
-
     </td>
   </tr>
 <tr>
@@ -503,17 +461,8 @@
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Class Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-ClassVariables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
@@ -535,17 +484,8 @@
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Properties</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Properties"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
 </tr>
   <tr>
     <td colspan="2" class="summary">
@@ -560,17 +500,8 @@
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Method Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-MethodDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
 </tr>
 </table>
 <a name="__init__"></a>
@@ -592,11 +523,11 @@
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase.__init__">source&nbsp;code</a></span>&nbsp;
-    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___43-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___41-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
   </table>
-  <div style="display:none" id="call_graph_for___init___43-div"><center>
+  <div style="display:none" id="call_graph_for___init___41-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
-  <tr><td><center>  <map id="call_graph_for___init___43" name="call_graph_for___init___43">
+  <tr><td><center>  <map id="call_graph_for___init___41" name="call_graph_for___init___41">
 <area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html#__init__" title="cppattribute.CppInstanceAttributeGetter.__init__()" alt="" coords="5,62,405,94"/>
 <area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#__init__" title="__init__()" alt="" coords="453,146,549,178"/>
 <area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html#__init__" title="cppattribute.CppStaticAttributeGetter.__init__()" alt="" coords="16,118,395,150"/>
@@ -609,7 +540,7 @@
 <area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#reserve_variable" title="DeclarationsScope.reserve_variable()" alt="" coords="597,230,896,262"/>
 <area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#__init__" title="ParseTupleParameters.__init__()" alt="" coords="613,286,880,318"/>
 </map>
-  <img src="call_graph_for___init___43.gif" alt='' usemap="#call_graph_for___init___43" ismap="ismap" class="graph-without-title" />
+  <img src="call_graph_for___init___41.gif" alt='' usemap="#call_graph_for___init___41" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
   <tr><th>Call Graph</th></tr>
 </table><br />
@@ -632,40 +563,6 @@
     <dt>Overrides:
       object.__init__
     </dt>
-  </dl>
-</td></tr></table>
-</div>
-<a name="_before_return_hook"></a>
-<div class="private">
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_before_return_hook</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#ForwardWrapperBase._before_return_hook">source&nbsp;code</a></span>&nbsp;
-    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for__before_return__4-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
-  <div style="display:none" id="call_graph_for__before_return__4-div"><center>
-<table border="0" cellpadding="0" cellspacing="0">
-  <tr><td><center>  <map id="call_graph_for__before_return__4" name="call_graph_for__before_return__4">
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#_before_return_hook" title="_before_return_hook()" alt="" coords="197,6,389,38"/>
-<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="generate_body()" alt="" coords="5,6,149,38"/>
-</map>
-  <img src="call_graph_for__before_return__4.gif" alt='' usemap="#call_graph_for__before_return__4" ismap="ismap" class="graph-without-title" />
-</center></td></tr>
-  <tr><th>Call Graph</th></tr>
-</table><br />
-</center></div>
-
-  Optional hook that lets subclasses add code after all parameters are 
-  parsed and after the function C return value is processed, but after the 
-  python wrapper return value (py_ret) is built and returned.  Subclasses 
-  may add code to self.after_call, which will be placed before py_ret is 
-  created.
-  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -696,7 +593,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:37:51 2008
+    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:58:49 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
