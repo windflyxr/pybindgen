@@ -60,7 +60,14 @@
 <h1 class="epydoc">Class PointerParameter</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#PointerParameter">source&nbsp;code</a></span><br /><br />
 <center>
 <center>  <map id="uml_class_diagram_for_pybindge_70" name="uml_class_diagram_for_pybindge_70">
-<area shape="rect" href="pybindgen.typehandlers.inttype.Int8PtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.Int8PtrParam" alt="" coords="16,336,149,362"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html#CTYPES" title="pybindgen.typehandlers.base.PointerParameter.CTYPES" alt="" coords="180,265,783,284"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html#__init__" title="Creates a parameter object" alt="" coords="180,286,783,305"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html" title="Base class for all pointer&#45;to&#45;something handlers" alt="" coords="179,248,784,306"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8PtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.UInt8PtrParam" alt="" coords="16,336,157,362"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.Int8PtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.Int8PtrParam" alt="" coords="208,336,341,362"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.UnsignedIntPtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.UnsignedIntPtrParam" alt="" coords="392,336,571,362"/>
+<area shape="rect" href="pybindgen.typehandlers.stringtype.CStringParam&#45;class.html" title="pybindgen.typehandlers.stringtype.CStringParam" alt="" coords="621,336,776,362"/>
+<area shape="rect" href="pybindgen.typehandlers.inttype.IntPtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.IntPtrParam" alt="" coords="827,336,952,362"/>
 <area shape="rect" href="pybindgen.typehandlers.base.Parameter.__metaclass__&#45;class.html" title="Metaclass for automatically registering parameter type handlers" alt="" coords="305,28,657,46"/>
 <area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTIONS" title="pybindgen.typehandlers.base.Parameter.DIRECTIONS" alt="" coords="305,46,657,65"/>
 <area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_INOUT" title="pybindgen.typehandlers.base.Parameter.DIRECTION_INOUT" alt="" coords="305,65,657,84"/>
@@ -72,13 +79,6 @@
 <area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#convert_c_to_python" title="Write some code before calling the Python method." alt="" coords="305,180,657,198"/>
 <area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#convert_python_to_c" title="Write some code before calling the C method." alt="" coords="305,198,657,217"/>
 <area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html" title="Abstract base class for all classes dedicated to handle specific parameter types" alt="" coords="304,10,659,218"/>
-<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html#CTYPES" title="pybindgen.typehandlers.base.PointerParameter.CTYPES" alt="" coords="180,265,783,284"/>
-<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html#__init__" title="Creates a parameter object" alt="" coords="180,286,783,305"/>
-<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html" title="Base class for all pointer&#45;to&#45;something handlers" alt="" coords="179,248,784,306"/>
-<area shape="rect" href="pybindgen.typehandlers.inttype.UInt8PtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.UInt8PtrParam" alt="" coords="200,336,341,362"/>
-<area shape="rect" href="pybindgen.typehandlers.inttype.UnsignedIntPtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.UnsignedIntPtrParam" alt="" coords="392,336,571,362"/>
-<area shape="rect" href="pybindgen.typehandlers.stringtype.CStringParam&#45;class.html" title="pybindgen.typehandlers.stringtype.CStringParam" alt="" coords="621,336,776,362"/>
-<area shape="rect" href="pybindgen.typehandlers.inttype.IntPtrParam&#45;class.html" title="pybindgen.typehandlers.inttype.IntPtrParam" alt="" coords="827,336,952,362"/>
 </map>
   <img src="uml_class_diagram_for_pybindge_70.gif" alt='' usemap="#uml_class_diagram_for_pybindge_70" ismap="ismap" class="graph-without-title" />
 </center></center>
@@ -143,11 +143,23 @@ Base class for all pointer-to-something handlers<br /><br />
       Creates a parameter object</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#PointerParameter.__init__">source&nbsp;code</a></span>
-            
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___50-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
           </td>
         </tr>
       </table>
-      
+      <div style="display:none" id="call_graph_for___init___50-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___50" name="call_graph_for___init___50">
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#__init__" title="Parameter.__init__()" alt="" coords="339,6,512,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#new" title="Parameter.new()" alt="" coords="5,6,147,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html#__init__" title="__init__()" alt="" coords="195,6,291,38"/>
+</map>
+  <img src="call_graph_for___init___50.gif" alt='' usemap="#call_graph_for___init___50" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
     </td>
   </tr>
   <tr>
@@ -296,9 +308,21 @@ Base class for all pointer-to-something handlers<br /><br />
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#PointerParameter.__init__">source&nbsp;code</a></span>&nbsp;
-    </td>
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___50-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
   </table>
-  
+  <div style="display:none" id="call_graph_for___init___50-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___50" name="call_graph_for___init___50">
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#__init__" title="Parameter.__init__()" alt="" coords="339,6,512,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#new" title="Parameter.new()" alt="" coords="5,6,147,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.PointerParameter&#45;class.html#__init__" title="__init__()" alt="" coords="195,6,291,38"/>
+</map>
+  <img src="call_graph_for___init___50.gif" alt='' usemap="#call_graph_for___init___50" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
   <p>Creates a parameter object</p>
   Keywork Arguments:
   <dl class="fields">
@@ -336,7 +360,7 @@ Base class for all pointer-to-something handlers<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:51 2008
+    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:20:27 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

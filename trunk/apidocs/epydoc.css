@@ -310,3 +310,7 @@ p.log                       { font-weight: bold; margin: .5em 0 .5em 0; }
 tr.opt-changed              { color: #000000; font-weight: bold; }
 tr.opt-default              { color: #606060; }
 pre.log                     { margin: 0; padding: 0; padding-left: 1em; }
+
+pre.literalblock {  padding: .5em; margin: 1em;
+                    background: #e8f0f8; color: #000000;
+                    border: 1px solid #708890; }
