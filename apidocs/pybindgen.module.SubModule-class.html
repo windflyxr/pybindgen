@@ -64,18 +64,18 @@
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#current_section" title="pybindgen.module.ModuleBase.current_section" alt="" coords="61,364,376,383"/>
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#name" title="pybindgen.module.ModuleBase.name" alt="" coords="61,383,376,402"/>
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_strip_prefix" title="Sets the prefix string to be used when transforming a C function name into  the python function name; the given prefix string is removed from the C  function name." alt="" coords="61,404,376,423"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_c_function_name_transformer" title="Sets the function to be used when transforming a C function name into the  python function name; the given given function is called like this:" alt="" coords="61,423,376,442"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_module_path" title="Get the full [module, submodule, submodule,...] path" alt="" coords="61,442,376,460"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_enum" title="Add an enumeration to the module." alt="" coords="61,460,376,479"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_namespace_path" title="Get the full [root_namespace, namespace, namespace,...] path (C++)" alt="" coords="61,479,376,498"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="pybindgen.module.ModuleBase.get_current_section" alt="" coords="61,498,376,516"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#declare_one_time_definition" title="Internal helper method for code geneneration to coordinate generation of  code that can only be defined once per compilation unit" alt="" coords="61,516,376,535"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="Add a class to the module." alt="" coords="61,535,376,554"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="Adds an additional include directive, needed to compile this python module" alt="" coords="61,554,376,572"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_cpp_namespace" title="Add a nested module namespace corresponding to a C++ namespace." alt="" coords="61,572,376,591"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#generate_forward_declarations" title="(internal) generate forward declarations for types" alt="" coords="61,591,376,610"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#begin_section" title="Declare that types and functions registered with the module in the future  belong to the section given by that section_name parameter, until a  matching end_section() is called." alt="" coords="61,610,376,628"/>
-<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_custom_function_wrapper" title="Add a function, using custom wrapper code, to the module/namespace." alt="" coords="61,628,376,647"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_struct" title="Add a struct to the module." alt="" coords="61,423,376,442"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#set_c_function_name_transformer" title="Sets the function to be used when transforming a C function name into the  python function name; the given given function is called like this:" alt="" coords="61,442,376,460"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_module_path" title="Get the full [module, submodule, submodule,...] path" alt="" coords="61,460,376,479"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_enum" title="Add an enumeration to the module." alt="" coords="61,479,376,498"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_namespace_path" title="Get the full [root_namespace, namespace, namespace,...] path (C++)" alt="" coords="61,498,376,516"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#get_current_section" title="pybindgen.module.ModuleBase.get_current_section" alt="" coords="61,516,376,535"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#declare_one_time_definition" title="Internal helper method for code geneneration to coordinate generation of  code that can only be defined once per compilation unit" alt="" coords="61,535,376,554"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_class" title="Add a class to the module." alt="" coords="61,554,376,572"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="Adds an additional include directive, needed to compile this python module" alt="" coords="61,572,376,591"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_cpp_namespace" title="Add a nested module namespace corresponding to a C++ namespace." alt="" coords="61,591,376,610"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#generate_forward_declarations" title="(internal) generate forward declarations for types" alt="" coords="61,610,376,628"/>
+<area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#begin_section" title="Declare that types and functions registered with the module in the future  belong to the section given by that section_name parameter, until a  matching end_section() is called." alt="" coords="61,628,376,647"/>
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#do_generate" title="(internal) Generates the module." alt="" coords="61,666,376,684"/>
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html" title="ModuleBase objects can be indexed dictionary style to access contained types." alt="" coords="60,347,377,686"/>
 <area shape="rect" href="javascript: void(0);" title="Returns:  an iterator over the (key, value) items of D" alt="" coords="160,36,277,55"/>
@@ -158,6 +158,7 @@
       <code><a href="pybindgen.module.ModuleBase-class.html#add_enum">add_enum</a></code>,
       <code><a href="pybindgen.module.ModuleBase-class.html#add_function">add_function</a></code>,
       <code><a href="pybindgen.module.ModuleBase-class.html#add_include">add_include</a></code>,
+      <code><a href="pybindgen.module.ModuleBase-class.html#add_struct">add_struct</a></code>,
       <code><a href="pybindgen.module.ModuleBase-class.html#begin_section">begin_section</a></code>,
       <code><a href="pybindgen.module.ModuleBase-class.html#declare_one_time_definition">declare_one_time_definition</a></code>,
       <code><a href="pybindgen.module.ModuleBase-class.html#do_generate">do_generate</a></code>,
@@ -347,7 +348,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:48 2008
+    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:20:23 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

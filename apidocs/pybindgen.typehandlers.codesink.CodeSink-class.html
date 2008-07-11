@@ -60,14 +60,14 @@
 <h1 class="epydoc">Class CodeSink</h1><span class="codelink"><a href="pybindgen.typehandlers.codesink-pysrc.html#CodeSink">source&nbsp;code</a></span><br /><br />
 <center>
 <center>  <map id="uml_class_diagram_for_pybindge_83" name="uml_class_diagram_for_pybindge_83">
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="Revert indentation level to the value before last indent() call" alt="" coords="157,36,275,55"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="Add a certain ammount of indentation to all lines written from now on and  until unindent() is called" alt="" coords="157,55,275,74"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#writeln" title="Write one or more lines of code" alt="" coords="157,74,275,92"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#__init__" title="Constructor" alt="" coords="157,92,275,111"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html" title="Abstract base class for code sinks" alt="" coords="156,11,276,112"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="Revert indentation level to the value before last indent() call" alt="" coords="144,36,261,55"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="Add a certain ammount of indentation to all lines written from now on and  until unindent() is called" alt="" coords="144,55,261,74"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#writeln" title="Write one or more lines of code" alt="" coords="144,74,261,92"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#__init__" title="Constructor" alt="" coords="144,92,261,111"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html" title="Abstract base class for code sinks" alt="" coords="143,11,263,112"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html" title="A code sink that writes to a file&#45;like object" alt="" coords="16,142,107,168"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html" title="A code sink that keeps the code in memory, and can later flush the code to another code sink" alt="" coords="157,142,275,168"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.NullCodeSink&#45;class.html" title="A code sink that discards all content." alt="" coords="325,142,416,168"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.NullCodeSink&#45;class.html" title="A code sink that discards all content." alt="" coords="157,142,248,168"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.MemoryCodeSink&#45;class.html" title="A code sink that keeps the code in memory, and can later flush the code to another code sink" alt="" coords="299,142,416,168"/>
 </map>
   <img src="uml_class_diagram_for_pybindge_83.gif" alt='' usemap="#uml_class_diagram_for_pybindge_83" ismap="ismap" class="graph-without-title" />
 </center></center>
@@ -190,7 +190,7 @@ Abstract base class for code sinks<br /><br />
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_indent_2" name="call_graph_for_indent_2">
 <area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeGetter.generate()" alt="" coords="43,6,440,38"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="indent()" alt="" coords="527,482,604,514"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="indent()" alt="" coords="527,538,604,570"/>
 <area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="44,62,439,94"/>
 <area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeGetter.generate()" alt="" coords="52,118,431,150"/>
 <area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="53,174,429,206"/>
@@ -208,6 +208,8 @@ Abstract base class for code sinks<br /><br />
 <area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#generate" title="overloading.OverloadedWrapper.generate()" alt="" coords="71,846,412,878"/>
 <area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#indent" title="base.CodeBlock.indent()" alt="" coords="137,902,345,934"/>
 <area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="base.CodeBlock.write_error_check()" alt="" coords="92,958,391,990"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_open_wrapper" title="base.ForwardWrapperBase.write_open_wrapper()" alt="" coords="44,1014,439,1046"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReverseWrapperBase&#45;class.html#generate" title="base.ReverseWrapperBase.generate()" alt="" coords="92,1070,391,1102"/>
 </map>
   <img src="call_graph_for_indent_2.gif" alt='' usemap="#call_graph_for_indent_2" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -236,7 +238,7 @@ Abstract base class for code sinks<br /><br />
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_unindent_2" name="call_graph_for_unindent_2">
 <area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeGetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeGetter.generate()" alt="" coords="43,6,440,38"/>
-<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="unindent()" alt="" coords="525,454,621,486"/>
+<area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="unindent()" alt="" coords="525,510,621,542"/>
 <area shape="rect" href="pybindgen.cppattribute.CppInstanceAttributeSetter&#45;class.html#generate" title="cppattribute.CppInstanceAttributeSetter.generate()" alt="" coords="44,62,439,94"/>
 <area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeGetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeGetter.generate()" alt="" coords="52,118,431,150"/>
 <area shape="rect" href="pybindgen.cppattribute.CppStaticAttributeSetter&#45;class.html#generate" title="cppattribute.CppStaticAttributeSetter.generate()" alt="" coords="53,174,429,206"/>
@@ -253,6 +255,8 @@ Abstract base class for code sinks<br /><br />
 <area shape="rect" href="pybindgen.overloading.OverloadedWrapper&#45;class.html#generate" title="overloading.OverloadedWrapper.generate()" alt="" coords="71,790,412,822"/>
 <area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#unindent" title="base.CodeBlock.unindent()" alt="" coords="129,846,353,878"/>
 <area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_error_check" title="base.CodeBlock.write_error_check()" alt="" coords="92,902,391,934"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#write_close_wrapper" title="base.ForwardWrapperBase.write_close_wrapper()" alt="" coords="43,958,440,990"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReverseWrapperBase&#45;class.html#generate" title="base.ReverseWrapperBase.generate()" alt="" coords="92,1014,391,1046"/>
 </map>
   <img src="call_graph_for_unindent_2.gif" alt='' usemap="#call_graph_for_unindent_2" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -404,7 +408,7 @@ Abstract base class for code sinks<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Wed Jul  9 19:05:52 2008
+    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:20:29 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

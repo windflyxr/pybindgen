@@ -700,6 +700,7 @@ pybindgen.gccxmlparser_flymake.ModuleParser._apply_class_annotations	pybindgen.g
 pybindgen.module.Module	pybindgen.module.Module-class.html
 pybindgen.module.ModuleBase._add_function_obj	pybindgen.module.ModuleBase-class.html#_add_function_obj
 pybindgen.module.ModuleBase.set_strip_prefix	pybindgen.module.ModuleBase-class.html#set_strip_prefix
+pybindgen.module.ModuleBase.add_struct	pybindgen.module.ModuleBase-class.html#add_struct
 pybindgen.module.Module.__init__	pybindgen.module.Module-class.html#__init__
 pybindgen.module.ModuleBase.set_c_function_name_transformer	pybindgen.module.ModuleBase-class.html#set_c_function_name_transformer
 pybindgen.module.ModuleBase.current_section	pybindgen.module.ModuleBase-class.html#current_section
@@ -730,6 +731,7 @@ pybindgen.module.ModuleBase.do_generate	pybindgen.module.ModuleBase-class.html#d
 pybindgen.module.ModuleBase	pybindgen.module.ModuleBase-class.html
 pybindgen.module.ModuleBase._add_function_obj	pybindgen.module.ModuleBase-class.html#_add_function_obj
 pybindgen.module.ModuleBase.set_strip_prefix	pybindgen.module.ModuleBase-class.html#set_strip_prefix
+pybindgen.module.ModuleBase.add_struct	pybindgen.module.ModuleBase-class.html#add_struct
 pybindgen.module.ModuleBase.__init__	pybindgen.module.ModuleBase-class.html#__init__
 pybindgen.module.ModuleBase.set_c_function_name_transformer	pybindgen.module.ModuleBase-class.html#set_c_function_name_transformer
 pybindgen.module.ModuleBase.current_section	pybindgen.module.ModuleBase-class.html#current_section
@@ -764,6 +766,7 @@ pybindgen.module.MultiSectionFactory.get_common_header_code_sink	pybindgen.modul
 pybindgen.module.SubModule	pybindgen.module.SubModule-class.html
 pybindgen.module.ModuleBase._add_function_obj	pybindgen.module.ModuleBase-class.html#_add_function_obj
 pybindgen.module.ModuleBase.set_strip_prefix	pybindgen.module.ModuleBase-class.html#set_strip_prefix
+pybindgen.module.ModuleBase.add_struct	pybindgen.module.ModuleBase-class.html#add_struct
 pybindgen.module.SubModule.__init__	pybindgen.module.SubModule-class.html#__init__
 pybindgen.module.ModuleBase.set_c_function_name_transformer	pybindgen.module.ModuleBase-class.html#set_c_function_name_transformer
 pybindgen.module.ModuleBase.current_section	pybindgen.module.ModuleBase-class.html#current_section
