@@ -1,6 +1,6 @@
 #summary PyBindGen code
 
-This project uses the [http://bazaar-vcs.org/ Bazaar Version Control System], and [https://launchpad.net/ launchpad.net] for code hosting.  You can find the PyBindGen repositories here: https://code.launchpad.net/pybindgen
+This project uses the [http://bazaar-vcs.org/ Bazaar Version Control System], and [https://launchpad.net/ launchpad.net] for code hosting.  You can find the PyBindGen repositories here: [https://code.launchpad.net/pybindgen].
 
 The code.google.com subversion repository is used just for online documentation.
 
