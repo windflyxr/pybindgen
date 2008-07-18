@@ -21,4 +21,4 @@
 = Notable features NOT (yet) implemented =
   * Handling of C++ exceptions;
   * Multiple inheritance;
-  * Callbacks.
+  * Callbacks (not automatically, custom callback handling code can be written, though).
