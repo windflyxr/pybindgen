@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.cppclass_typehandlers.CppClassPtrReturnValue</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.cppclass_typehandlers-module.html">Module&nbsp;cppclass_typehandlers</a> ::
+        Class&nbsp;CppClassPtrReturnValue
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CppClassPtrReturnValue</h1><span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_19" name="uml_class_diagram_for_pybindge_19">
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#cpp_class" title="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.cpp_class" alt="" coords="17,215,489,233"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#CTYPES" title="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.CTYPES" alt="" coords="17,233,489,252"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#SUPPORTS_TRANSFORMATIONS" title="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.SUPPORTS_TRANSFORMATIONS" alt="" coords="17,252,489,271"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#convert_c_to_python" title="See ReturnValue.convert_c_to_python" alt="" coords="17,273,489,292"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#get_c_error_return" title="See ReturnValue.get_c_error_return" alt="" coords="17,292,489,311"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#__init__" title="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.__init__" alt="" coords="17,311,489,329"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#convert_python_to_c" title="See ReturnValue.convert_python_to_c" alt="" coords="17,329,489,348"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html" title="Class* return handler" alt="" coords="16,197,491,349"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassReturnValueBase&#45;class.html" title="Class return handlers &#45;&#45; base class" alt="" coords="173,136,333,168"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue.__metaclass__&#45;class.html" title="Metaclass for automatically registering parameter type handlers" alt="" coords="77,28,429,47"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#REQUIRES_ASSIGNMENT_CONSTRUCTOR" title="pybindgen.typehandlers.base.ReturnValue.REQUIRES_ASSIGNMENT_CONSTRUCTOR" alt="" coords="77,47,429,65"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#set_tranformation" title="Set the type transformation to use in this type handler" alt="" coords="77,68,429,87"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#new" title="pybindgen.typehandlers.base.ReturnValue.new" alt="" coords="77,87,429,105"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html" title="Abstract base class for all classes dedicated to handle specific return value types" alt="" coords="76,11,431,107"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_19.gif" alt='' usemap="#uml_class_diagram_for_pybindge_19" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+Class* return handler<br /><br />
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Nested Classes</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">typehandlers.base.ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue.__metaclass__-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ctype</span>,
+        <span class="summary-sig-arg">caller_owns_return</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">custodian</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">is_const</span>=<span class="summary-sig-default">False</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.__init__">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___15-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for___init___15-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___15" name="call_graph_for___init___15">
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#__init__" title="__init__()" alt="" coords="349,6,445,38"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassReturnValueBase&#45;class.html#__init__" title="CppClassReturnValueBase.__init__()" alt="" coords="495,6,793,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#new" title="typehandlers.base.ReturnValue.new()" alt="" coords="5,6,301,38"/>
+</map>
+  <img src="call_graph_for___init___15.gif" alt='' usemap="#call_graph_for___init___15" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue-class.html#get_c_error_return" class="summary-sig-name">get_c_error_return</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      See ReturnValue.get_c_error_return</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.get_c_error_return">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue-class.html#convert_c_to_python" class="summary-sig-name">convert_c_to_python</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span><br />
+      See ReturnValue.convert_c_to_python</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.convert_c_to_python">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_convert_c_to_py_3-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_convert_c_to_py_3-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_convert_c_to_py_3" name="call_graph_for_convert_c_to_py_3">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_pystruct" title="cppclass.CppClass.get_pystruct()" alt="" coords="837,6,1112,38"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#convert_c_to_python" title="convert_c_to_python()" alt="" coords="505,230,700,262"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers&#45;module.html#_add_ward" title="_add_ward()" alt="" coords="916,62,1033,94"/>
+<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html#get_class" title="cppmethod.CppMethod.get_class()" alt="" coords="831,118,1119,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.BuildValueParameters&#45;class.html#add_parameter" title="typehandlers.base.BuildValueParameters.add_parameter()" alt="" coords="751,174,1199,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#indent" title="typehandlers.base.CodeBlock.indent()" alt="" coords="821,230,1128,262"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#unindent" title="typehandlers.base.CodeBlock.unindent()" alt="" coords="813,286,1136,318"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="803,342,1147,374"/>
+<area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#declare_variable" title="typehandlers.base.DeclarationsScope.declare_variable()" alt="" coords="757,398,1192,430"/>
+<area shape="rect" href="pybindgen.typehandlers.base.NullTypeTransformation&#45;class.html#untransform" title="typehandlers.base.NullTypeTransformation.untransform()" alt="" coords="751,454,1199,486"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="typehandlers.base.ForwardWrapperBase.generate_body()" alt="" coords="5,230,456,262"/>
+</map>
+  <img src="call_graph_for_convert_c_to_py_3.gif" alt='' usemap="#call_graph_for_convert_c_to_py_3" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue-class.html#convert_python_to_c" class="summary-sig-name">convert_python_to_c</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span><br />
+      See ReturnValue.convert_python_to_c</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.convert_python_to_c">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">typehandlers.base.ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#set_tranformation">set_tranformation</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Methods</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">typehandlers.base.ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#new">new</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CTYPES"></a><span class="summary-name">CTYPES</span> = <code title="[]">[]</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SUPPORTS_TRANSFORMATIONS"></a><span class="summary-name">SUPPORTS_TRANSFORMATIONS</span> = <code title="True">True</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="cpp_class"></a><span class="summary-name">cpp_class</span> = <code title="&lt;pybindgen.CppClass None&gt;">&lt;pybindgen.CppClass None&gt;</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html">typehandlers.base.ReturnValue</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.ReturnValue-class.html#REQUIRES_ASSIGNMENT_CONSTRUCTOR">REQUIRES_ASSIGNMENT_CONSTRUCTOR</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ctype</span>,
+        <span class="sig-arg">caller_owns_return</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">custodian</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">is_const</span>=<span class="sig-default">False</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.__init__">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___15-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for___init___15-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___15" name="call_graph_for___init___15">
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#__init__" title="__init__()" alt="" coords="349,6,445,38"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassReturnValueBase&#45;class.html#__init__" title="CppClassReturnValueBase.__init__()" alt="" coords="495,6,793,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReturnValue&#45;class.html#new" title="typehandlers.base.ReturnValue.new()" alt="" coords="5,6,301,38"/>
+</map>
+  <img src="call_graph_for___init___15.gif" alt='' usemap="#call_graph_for___init___15" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ctype</code></strong> - C type, normally 'MyClass*'</li>
+        <li><strong class="pname"><code>caller_owns_return</code></strong> - if true, ownership of the object pointer is transferred to the
+          caller; should be omitted when custodian is given.</li>
+        <li><strong class="pname"><code>custodian</code></strong> - the object (custodian) that becomes responsible for managing 
+          the life cycle of the return value. Possible values are:
+          <ul>
+            <li>
+              None: no object is custodian;
+            </li>
+            <li>
+              0: the instance of the method in which
+            </li>
+          </ul>
+          the ReturnValue is being used will become the custodian;
+          <ul>
+            <li>
+              integer &gt; 0: parameter number, starting at 1
+            </li>
+          </ul>
+          (i.e. not counting the self/this parameter), whose object will
+          be used as custodian.</li>
+    </ul></dd>
+    <dt>Overrides:
+      <a href="pybindgen.cppclass_typehandlers.CppClassReturnValueBase-class.html#__init__">CppClassReturnValueBase.__init__</a>
+    </dt>
+  </dl>
+<div class="fields">      <p><strong>Note:</strong>
+        only arguments which are instances of C++ classes wrapped by 
+        PyBindGen can be used as custodians.
+      </p>
+</div></td></tr></table>
+</div>
+<a name="get_c_error_return"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_c_error_return</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.get_c_error_return">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  See ReturnValue.get_c_error_return
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.typehandlers.base.ReturnValue-class.html#get_c_error_return">typehandlers.base.ReturnValue.get_c_error_return</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="convert_c_to_python"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convert_c_to_python</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">wrapper</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.convert_c_to_python">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_convert_c_to_py_3-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_convert_c_to_py_3-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_convert_c_to_py_3" name="call_graph_for_convert_c_to_py_3">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#get_pystruct" title="cppclass.CppClass.get_pystruct()" alt="" coords="837,6,1112,38"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrReturnValue&#45;class.html#convert_c_to_python" title="convert_c_to_python()" alt="" coords="505,230,700,262"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers&#45;module.html#_add_ward" title="_add_ward()" alt="" coords="916,62,1033,94"/>
+<area shape="rect" href="pybindgen.cppmethod.CppMethod&#45;class.html#get_class" title="cppmethod.CppMethod.get_class()" alt="" coords="831,118,1119,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.BuildValueParameters&#45;class.html#add_parameter" title="typehandlers.base.BuildValueParameters.add_parameter()" alt="" coords="751,174,1199,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#indent" title="typehandlers.base.CodeBlock.indent()" alt="" coords="821,230,1128,262"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#unindent" title="typehandlers.base.CodeBlock.unindent()" alt="" coords="813,286,1136,318"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="803,342,1147,374"/>
+<area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#declare_variable" title="typehandlers.base.DeclarationsScope.declare_variable()" alt="" coords="757,398,1192,430"/>
+<area shape="rect" href="pybindgen.typehandlers.base.NullTypeTransformation&#45;class.html#untransform" title="typehandlers.base.NullTypeTransformation.untransform()" alt="" coords="751,454,1199,486"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="typehandlers.base.ForwardWrapperBase.generate_body()" alt="" coords="5,230,456,262"/>
+</map>
+  <img src="call_graph_for_convert_c_to_py_3.gif" alt='' usemap="#call_graph_for_convert_c_to_py_3" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  See ReturnValue.convert_c_to_python
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.typehandlers.base.ReturnValue-class.html#convert_c_to_python">typehandlers.base.ReturnValue.convert_c_to_python</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="convert_python_to_c"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convert_python_to_c</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">wrapper</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass_typehandlers-pysrc.html#CppClassPtrReturnValue.convert_python_to_c">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  See ReturnValue.convert_python_to_c
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.typehandlers.base.ReturnValue-class.html#convert_python_to_c">typehandlers.base.ReturnValue.convert_python_to_c</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:00 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

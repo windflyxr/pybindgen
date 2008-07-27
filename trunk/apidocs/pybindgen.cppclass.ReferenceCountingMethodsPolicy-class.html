@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.cppclass.ReferenceCountingMethodsPolicy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.cppclass-module.html">Module&nbsp;cppclass</a> ::
+        Class&nbsp;ReferenceCountingMethodsPolicy
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ReferenceCountingMethodsPolicy</h1><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy">source&nbsp;code</a></span><br /><br />
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_14" name="uml_class_diagram_for_pybindge_14">
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#write_decref" title="Write code to decrease the reference code of an object of this class (the  real C++ class, not the wrapper)." alt="" coords="17,159,415,177"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#write_incref" title="Write code to increase the reference code of an object of this class (the  real C++ class, not the wrapper)." alt="" coords="17,177,415,196"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#get_free_code" title="Return a code statement to free an underlying C/C++ object." alt="" coords="17,196,415,215"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#__repr__" title="repr(x)" alt="" coords="17,215,415,233"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,233,415,252"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html" title="pybindgen.cppclass.ReferenceCountingMethodsPolicy" alt="" coords="16,133,416,253"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingPolicy&#45;class.html" title="pybindgen.cppclass.ReferenceCountingPolicy" alt="" coords="143,72,289,104"/>
+<area shape="rect" href="pybindgen.cppclass.MemoryPolicy&#45;class.html" title="memory management policy for a C++ class or C/C++ struct" alt="" coords="173,11,259,43"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_14.gif" alt='' usemap="#uml_class_diagram_for_pybindge_14" ismap="ismap" class="graph-without-title" />
+</center></center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">incref_method</span>,
+        <span class="summary-sig-arg">decref_method</span>,
+        <span class="summary-sig-arg">peekref_method</span>=<span class="summary-sig-default">None</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for 
+      signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.__init__">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___12-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for___init___12-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___12" name="call_graph_for___init___12">
+<area shape="rect" href="pybindgen.cppclass.MemoryPolicy&#45;class.html#__init__" title="MemoryPolicy.__init__()" alt="" coords="639,6,847,38"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#__init__" title="__init__()" alt="" coords="493,6,589,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_apply_class_annotations" title="gccxmlparser.ModuleParser._apply_class_annotations()" alt="" coords="7,6,444,38"/>
+</map>
+  <img src="call_graph_for___init___12.gif" alt='' usemap="#call_graph_for___init___12" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html#write_incref" class="summary-sig-name">write_incref</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_block</span>,
+        <span class="summary-sig-arg">obj_expr</span>)</span><br />
+      Write code to increase the reference code of an object of this 
+      class (the real C++ class, not the wrapper).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.write_incref">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_incref_2-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_write_incref_2-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_incref_2" name="call_graph_for_write_incref_2">
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#write_incref" title="write_incref()" alt="" coords="599,6,719,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="768,6,1112,38"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrParameter&#45;class.html#convert_python_to_c" title="cppclass_typehandlers.CppClassPtrParameter.convert_python_to_c()" alt="" coords="5,6,549,38"/>
+</map>
+  <img src="call_graph_for_write_incref_2.gif" alt='' usemap="#call_graph_for_write_incref_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html#write_decref" class="summary-sig-name">write_decref</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">code_block</span>,
+        <span class="summary-sig-arg">obj_expr</span>)</span><br />
+      Write code to decrease the reference code of an object of this 
+      class (the real C++ class, not the wrapper).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.write_decref">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html#get_free_code" class="summary-sig-name">get_free_code</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">obj_expr</span>)</span><br />
+      Return a code statement to free an underlying C/C++ object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.get_free_code">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_free_code_4-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_get_free_code_4-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_free_code_4" name="call_graph_for_get_free_code_4">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_get_delete_code" title="CppClass._get_delete_code()" alt="" coords="7,6,249,38"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#get_free_code" title="get_free_code()" alt="" coords="300,6,439,38"/>
+</map>
+  <img src="call_graph_for_get_free_code_4.gif" alt='' usemap="#call_graph_for_get_free_code_4" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      repr(x)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.__repr__">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___repr___4-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for___repr___4-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___repr___4" name="call_graph_for___repr___4">
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#__repr__" title="__repr__()" alt="" coords="309,6,413,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser&#45;module.html#_pygen_kwargs" title="gccxmlparser._pygen_kwargs()" alt="" coords="7,6,260,38"/>
+</map>
+  <img src="call_graph_for___repr___4.gif" alt='' usemap="#call_graph_for___repr___4" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">incref_method</span>,
+        <span class="sig-arg">decref_method</span>,
+        <span class="sig-arg">peekref_method</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.__init__">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___12-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for___init___12-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___12" name="call_graph_for___init___12">
+<area shape="rect" href="pybindgen.cppclass.MemoryPolicy&#45;class.html#__init__" title="MemoryPolicy.__init__()" alt="" coords="639,6,847,38"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#__init__" title="__init__()" alt="" coords="493,6,589,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_apply_class_annotations" title="gccxmlparser.ModuleParser._apply_class_annotations()" alt="" coords="7,6,444,38"/>
+</map>
+  <img src="call_graph_for___init___12.gif" alt='' usemap="#call_graph_for___init___12" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.cppclass.MemoryPolicy-class.html#__init__">MemoryPolicy.__init__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="write_incref"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">write_incref</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">code_block</span>,
+        <span class="sig-arg">obj_expr</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.write_incref">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_write_incref_2-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_write_incref_2-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_write_incref_2" name="call_graph_for_write_incref_2">
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#write_incref" title="write_incref()" alt="" coords="599,6,719,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="768,6,1112,38"/>
+<area shape="rect" href="pybindgen.cppclass_typehandlers.CppClassPtrParameter&#45;class.html#convert_python_to_c" title="cppclass_typehandlers.CppClassPtrParameter.convert_python_to_c()" alt="" coords="5,6,549,38"/>
+</map>
+  <img src="call_graph_for_write_incref_2.gif" alt='' usemap="#call_graph_for_write_incref_2" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Write code to increase the reference code of an object of this class 
+  (the real C++ class, not the wrapper).  Should only be called if the 
+  class supports reference counting, as reported by the attribute 
+  `has_reference_counting'.
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.cppclass.ReferenceCountingPolicy-class.html#write_incref">ReferenceCountingPolicy.write_incref</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="write_decref"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">write_decref</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">code_block</span>,
+        <span class="sig-arg">obj_expr</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.write_decref">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Write code to decrease the reference code of an object of this class 
+  (the real C++ class, not the wrapper).  Should only be called if the 
+  class supports reference counting, as reported by the attribute 
+  `has_reference_counting'.
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.cppclass.ReferenceCountingPolicy-class.html#write_decref">ReferenceCountingPolicy.write_decref</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_free_code"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_free_code</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">obj_expr</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.get_free_code">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_get_free_code_4-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for_get_free_code_4-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_get_free_code_4" name="call_graph_for_get_free_code_4">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#_get_delete_code" title="CppClass._get_delete_code()" alt="" coords="7,6,249,38"/>
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#get_free_code" title="get_free_code()" alt="" coords="300,6,439,38"/>
+</map>
+  <img src="call_graph_for_get_free_code_4.gif" alt='' usemap="#call_graph_for_get_free_code_4" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Return a code statement to free an underlying C/C++ object.
+  <dl class="fields">
+    <dt>Overrides:
+      <a href="pybindgen.cppclass.MemoryPolicy-class.html#get_free_code">MemoryPolicy.get_free_code</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__repr__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.cppclass-pysrc.html#ReferenceCountingMethodsPolicy.__repr__">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___repr___4-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </table>
+  <div style="display:none" id="call_graph_for___repr___4-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___repr___4" name="call_graph_for___repr___4">
+<area shape="rect" href="pybindgen.cppclass.ReferenceCountingMethodsPolicy&#45;class.html#__repr__" title="__repr__()" alt="" coords="309,6,413,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser&#45;module.html#_pygen_kwargs" title="gccxmlparser._pygen_kwargs()" alt="" coords="7,6,260,38"/>
+</map>
+  <img src="call_graph_for___repr___4.gif" alt='' usemap="#call_graph_for___repr___4" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  repr(x)
+  <dl class="fields">
+    <dt>Overrides:
+      object.__repr__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:00 2008
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>
