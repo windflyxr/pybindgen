@@ -56,19 +56,19 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class ModuleParser</h1><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser">source&nbsp;code</a></span><br /><br />
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_39" name="uml_class_diagram_for_pybindge_39">
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parses a set of header files and returns a pybindgen Module instance." alt="" coords="17,36,764,55"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#__init__" title="Creates an object that will be able parse header files and create a  pybindgen module definition." alt="" coords="17,55,764,73"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_pre_scan_hook" title="Add a function to be called right before converting a gccxml definition to  a PyBindGen wrapper object." alt="" coords="17,73,764,92"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_types" title="pybindgen.gccxmlparser.ModuleParser.scan_types" alt="" coords="17,92,764,111"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_methods" title="pybindgen.gccxmlparser.ModuleParser.scan_methods" alt="" coords="17,111,764,129"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_functions" title="pybindgen.gccxmlparser.ModuleParser.scan_functions" alt="" coords="17,129,764,148"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="Prepares to parse a set of header files." alt="" coords="17,148,764,167"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_finalize" title="pybindgen.gccxmlparser.ModuleParser.parse_finalize" alt="" coords="17,167,764,185"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_post_scan_hook" title="Add a function to be called right after converting a gccxml definition to a PyBindGen wrapper object." alt="" coords="17,185,764,204"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html" title="pybindgen.gccxmlparser.ModuleParser" alt="" coords="16,11,765,205"/>
+<center>  <map id="uml_class_diagram_for_pybindge_44" name="uml_class_diagram_for_pybindge_44">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parses a set of header files and returns a pybindgen Module instance." alt="" coords="17,36,903,55"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#__init__" title="Creates an object that will be able parse header files and create a  pybindgen module definition." alt="" coords="17,55,903,73"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_pre_scan_hook" title="Add a function to be called right before converting a gccxml definition to  a PyBindGen wrapper object." alt="" coords="17,73,903,92"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_types" title="pybindgen.gccxmlparser.ModuleParser.scan_types" alt="" coords="17,92,903,111"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_methods" title="pybindgen.gccxmlparser.ModuleParser.scan_methods" alt="" coords="17,111,903,129"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_functions" title="pybindgen.gccxmlparser.ModuleParser.scan_functions" alt="" coords="17,129,903,148"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="Prepares to parse a set of header files." alt="" coords="17,148,903,167"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_finalize" title="pybindgen.gccxmlparser.ModuleParser.parse_finalize" alt="" coords="17,167,903,185"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_post_scan_hook" title="Add a function to be called right after converting a gccxml definition to a PyBindGen wrapper object." alt="" coords="17,185,903,204"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html" title="pybindgen.gccxmlparser.ModuleParser" alt="" coords="16,11,904,205"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_39.gif" alt='' usemap="#uml_class_diagram_for_pybindge_39" ismap="ismap" class="graph-without-title" />
+  <img src="uml_class_diagram_for_pybindge_44.gif" alt='' usemap="#uml_class_diagram_for_pybindge_44" ismap="ismap" class="graph-without-title" />
 </center></center>
 <hr />
 <!-- ==================== INSTANCE METHODS ==================== -->
@@ -188,7 +188,8 @@
         <span class="summary-sig-arg">whitelist_paths</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">includes</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>,
         <span class="summary-sig-arg">pygen_sink</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">pygen_classifier</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">pygen_classifier</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">gccxml_options</span>=<span class="summary-sig-default">None</span>)</span><br />
       Prepares to parse a set of header files.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.parse_init">source&nbsp;code</a></span>
@@ -580,7 +581,8 @@
         <span class="sig-arg">whitelist_paths</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">includes</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>,
         <span class="sig-arg">pygen_sink</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">pygen_classifier</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">pygen_classifier</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">gccxml_options</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.parse_init">source&nbsp;code</a></span>&nbsp;
@@ -628,7 +630,8 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>header_files</code></strong> (list of string) - header files to parse</li>
-        <li><strong class="pname"><code>include_paths</code></strong> (list of string) - list of include paths</li>
+        <li><strong class="pname"><code>include_paths</code></strong> (list of string) - (deprecated, use the parameter gccxml_options) list of include
+          paths</li>
         <li><strong class="pname"><code>whitelist_paths</code></strong> (list of string) - additional directories for definitions to be included Normally
           the module parser filters out API definitions that have been 
           defined outside one of the header files indicated for parsing.  
@@ -660,6 +663,11 @@
             </li>
           </ol></li>
         <li><strong class="pname"><code>pygen_classifier</code></strong> - the classifier to use when pygen is given and is a dict</li>
+        <li><strong class="pname"><code>gccxml_options</code></strong> (dict) - extra options to pass into the gccxml_configuration_t object 
+          as keyword arguments (see <a 
+          href="http://www.language-binding.net/pyplusplus/documentation/apidocs/pygccxml.parser.config.gccxml_configuration_t-class.html"
+          target="_top">pygccxml API documentation</a> for more 
+          information).</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -691,7 +699,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:58:44 2008
+    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:05 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>

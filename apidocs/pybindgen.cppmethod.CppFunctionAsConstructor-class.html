@@ -56,9 +56,9 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class CppFunctionAsConstructor</h1><span class="codelink"><a href="pybindgen.cppmethod-pysrc.html#CppFunctionAsConstructor">source&nbsp;code</a></span><br /><br />
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_20" name="uml_class_diagram_for_pybindge_20">
+<center>  <map id="uml_class_diagram_for_pybindge_25" name="uml_class_diagram_for_pybindge_25">
 <area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#generate_call" title="virtual method implementation; do not call" alt="" coords="17,380,492,398"/>
-<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#__init__" title="parameters &#45;&#45; the constructor parameters" alt="" coords="17,398,492,417"/>
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#__init__" title="Base constructor" alt="" coords="17,398,492,417"/>
 <area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html" title="Class that generates a wrapper to a C/C++ function that appears as a contructor." alt="" coords="16,354,493,418"/>
 <area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html#class_" title="Get the class wrapper object (CppClass)" alt="" coords="37,228,472,246"/>
 <area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html#get_class" title="Get the class wrapper object (CppClass)" alt="" coords="37,249,472,268"/>
@@ -76,7 +76,7 @@
 <area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#get_py_method_def_flags" title="Get a list of PyMethodDef flags that should be used for this wrapper." alt="" coords="93,161,416,180"/>
 <area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html" title="Generic base for all forward wrapper generators." alt="" coords="92,10,417,181"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_20.gif" alt='' usemap="#uml_class_diagram_for_pybindge_20" ismap="ismap" class="graph-without-title" />
+  <img src="uml_class_diagram_for_pybindge_25.gif" alt='' usemap="#uml_class_diagram_for_pybindge_25" ismap="ismap" class="graph-without-title" />
 </center></center>
 <hr />
 Class that generates a wrapper to a C/C++ function that appears as a 
@@ -101,14 +101,27 @@ Class that generates a wrapper to a C/C++ function that appears as a
         <span class="summary-sig-arg">return_value</span>,
         <span class="summary-sig-arg">parameters</span>,
         <span class="summary-sig-arg">unblock_threads</span>=<span class="summary-sig-default">None</span>)</span><br />
-      parameters -- the constructor parameters</td>
+      Base constructor</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.cppmethod-pysrc.html#CppFunctionAsConstructor.__init__">source&nbsp;code</a></span>
-            
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___21-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
           </td>
         </tr>
       </table>
-      
+      <div style="display:none" id="call_graph_for___init___21-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___21" name="call_graph_for___init___21">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#add_function_as_constructor" title="cppclass.CppClass.add_function_as_constructor()" alt="" coords="7,34,409,66"/>
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#__init__" title="__init__()" alt="" coords="459,34,555,66"/>
+<area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html#__init__" title="CppConstructor.__init__()" alt="" coords="604,6,825,38"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#eval_param" title="utils.eval_param()" alt="" coords="639,62,791,94"/>
+</map>
+  <img src="call_graph_for___init___21.gif" alt='' usemap="#call_graph_for___init___21" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
     </td>
   </tr>
 <tr>
@@ -122,11 +135,23 @@ Class that generates a wrapper to a C/C++ function that appears as a
       virtual method implementation; do not call</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.cppmethod-pysrc.html#CppFunctionAsConstructor.generate_call">source&nbsp;code</a></span>
-            
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_generate_call_5-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
           </td>
         </tr>
       </table>
-      
+      <div style="display:none" id="call_graph_for_generate_call_5-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_generate_call_5" name="call_graph_for_generate_call_5">
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#generate_call" title="generate_call()" alt="" coords="505,6,633,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="683,6,1027,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="typehandlers.base.ForwardWrapperBase.generate_body()" alt="" coords="5,6,456,38"/>
+</map>
+  <img src="call_graph_for_generate_call_5.gif" alt='' usemap="#call_graph_for_generate_call_5" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
     </td>
   </tr>
   <tr>
@@ -220,10 +245,23 @@ Class that generates a wrapper to a C/C++ function that appears as a
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.cppmethod-pysrc.html#CppFunctionAsConstructor.__init__">source&nbsp;code</a></span>&nbsp;
-    </td>
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___21-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
   </table>
-  
-  parameters -- the constructor parameters
+  <div style="display:none" id="call_graph_for___init___21-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for___init___21" name="call_graph_for___init___21">
+<area shape="rect" href="pybindgen.cppclass.CppClass&#45;class.html#add_function_as_constructor" title="cppclass.CppClass.add_function_as_constructor()" alt="" coords="7,34,409,66"/>
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#__init__" title="__init__()" alt="" coords="459,34,555,66"/>
+<area shape="rect" href="pybindgen.cppmethod.CppConstructor&#45;class.html#__init__" title="CppConstructor.__init__()" alt="" coords="604,6,825,38"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#eval_param" title="utils.eval_param()" alt="" coords="639,62,791,94"/>
+</map>
+  <img src="call_graph_for___init___21.gif" alt='' usemap="#call_graph_for___init___21" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  Base constructor
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -254,9 +292,21 @@ Class that generates a wrapper to a C/C++ function that appears as a
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.cppmethod-pysrc.html#CppFunctionAsConstructor.generate_call">source&nbsp;code</a></span>&nbsp;
-    </td>
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_generate_call_5-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
   </table>
-  
+  <div style="display:none" id="call_graph_for_generate_call_5-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_generate_call_5" name="call_graph_for_generate_call_5">
+<area shape="rect" href="pybindgen.cppmethod.CppFunctionAsConstructor&#45;class.html#generate_call" title="generate_call()" alt="" coords="505,6,633,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="683,6,1027,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="typehandlers.base.ForwardWrapperBase.generate_body()" alt="" coords="5,6,456,38"/>
+</map>
+  <img src="call_graph_for_generate_call_5.gif" alt='' usemap="#call_graph_for_generate_call_5" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
   virtual method implementation; do not call
   <dl class="fields">
     <dt>Overrides:
@@ -292,7 +342,7 @@ Class that generates a wrapper to a C/C++ function that appears as a
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Fri Jul 11 12:58:42 2008
+    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:02 2008
     </td>
     <td align="right" class="footer">
       <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
