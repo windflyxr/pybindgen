@@ -22,3 +22,5 @@
   * Handling of C++ exceptions;
   * Multiple inheritance;
   * Callbacks (not automatically, custom callback handling code can be written, though).
+
+More features not implemented or known problems can be found by [https://bugs.launchpad.net/pybindgen/+bugs? searching the bug tracker].
