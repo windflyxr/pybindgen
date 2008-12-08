@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.container.ContainerParameter</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        <a href="pybindgen.container-module.html">Module&nbsp;container</a> ::
+        Class&nbsp;ContainerParameter
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.container.ContainerParameter-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ContainerParameter</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.container-pysrc.html#ContainerParameter">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_pybindge_2" name="uml_class_diagram_for_pybindge_2">
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#CTYPES" title="pybindgen.container.ContainerParameter.CTYPES" alt="" coords="139,372,344,391"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#container_type" title="pybindgen.container.ContainerParameter.container_type" alt="" coords="139,391,344,409"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#DIRECTIONS" title="pybindgen.container.ContainerParameter.DIRECTIONS" alt="" coords="139,409,344,428"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#convert_python_to_c" title="parses python args to get C++ value" alt="" coords="139,431,344,449"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#convert_c_to_python" title="Write some code before calling the Python method." alt="" coords="139,449,344,468"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html" title="Container handlers" alt="" coords="137,355,345,469"/>
+<area shape="rect" href="pybindgen.container.ContainerParameterBase&#45;class.html#__init__" title="ctype &#45;&#45; C type, normally &#39;MyClass*&#39; name &#45;&#45; parameter name" alt="" coords="17,305,465,324"/>
+<area shape="rect" href="pybindgen.container.ContainerParameterBase&#45;class.html" title="Base class for all C++ Class parameter handlers" alt="" coords="16,280,467,325"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#ctype_no_const" title="pybindgen.typehandlers.base.TypeHandler.ctype_no_const" alt="" coords="61,28,421,47"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#set_tranformation" title="pybindgen.typehandlers.base.TypeHandler.set_tranformation" alt="" coords="61,49,421,68"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#set_transformation" title="Set the type transformation to use in this type handler" alt="" coords="61,68,421,87"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html" title="pybindgen.typehandlers.base.TypeHandler" alt="" coords="60,11,423,88"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_IN" title="pybindgen.typehandlers.base.Parameter.DIRECTION_IN" alt="" coords="136,135,347,153"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_OUT" title="pybindgen.typehandlers.base.Parameter.DIRECTION_OUT" alt="" coords="136,153,347,172"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#DIRECTION_INOUT" title="pybindgen.typehandlers.base.Parameter.DIRECTION_INOUT" alt="" coords="136,172,347,191"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#SUPPORTS_TRANSFORMATIONS" title="pybindgen.typehandlers.base.Parameter.SUPPORTS_TRANSFORMATIONS" alt="" coords="136,191,347,209"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter.__metaclass__&#45;class.html" title="Metaclass for automatically registering parameter type handlers" alt="" coords="136,209,347,228"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html#new" title="pybindgen.typehandlers.base.Parameter.new" alt="" coords="136,231,347,249"/>
+<area shape="rect" href="pybindgen.typehandlers.base.Parameter&#45;class.html" title="Abstract base class for all classes dedicated to handle specific parameter types" alt="" coords="135,117,348,251"/>
+</map>
+  <img src="uml_class_diagram_for_pybindge_2.gif" alt='' usemap="#uml_class_diagram_for_pybindge_2" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Container handlers</p>
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Nested Classes</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.Parameter-class.html">typehandlers.base.Parameter</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.Parameter.__metaclass__-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.container.ContainerParameter-class.html#convert_python_to_c" class="summary-sig-name">convert_python_to_c</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span><br />
+      parses python args to get C++ value</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.container-pysrc.html#ContainerParameter.convert_python_to_c">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_convert_python_-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_convert_python_-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_convert_python_" name="call_graph_for_convert_python_">
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#convert_python_to_c" title="convert_python_to_c()" alt="" coords="508,34,703,66"/>
+<area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#declare_variable" title="typehandlers.base.DeclarationsScope.declare_variable()" alt="" coords="761,6,1196,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#add_parameter" title="typehandlers.base.ParseTupleParameters.add_parameter()" alt="" coords="752,62,1205,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="typehandlers.base.ForwardWrapperBase.generate_body()" alt="" coords="7,34,457,66"/>
+</map>
+  <img src="call_graph_for_convert_python_.gif" alt='' usemap="#call_graph_for_convert_python_" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pybindgen.container.ContainerParameter-class.html#convert_c_to_python" class="summary-sig-name">convert_c_to_python</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">wrapper</span>)</span><br />
+      Write some code before calling the Python method.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.container-pysrc.html#ContainerParameter.convert_c_to_python">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_convert_c_to_py-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_convert_c_to_py-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_convert_c_to_py" name="call_graph_for_convert_c_to_py">
+<area shape="rect" href="pybindgen.container.Container&#45;class.html#get_pystruct" title="Container.get_pystruct()" alt="" coords="821,6,1024,38"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#convert_c_to_python" title="convert_c_to_python()" alt="" coords="455,90,649,122"/>
+<area shape="rect" href="pybindgen.typehandlers.base.BuildValueParameters&#45;class.html#add_parameter" title="typehandlers.base.BuildValueParameters.add_parameter()" alt="" coords="699,62,1147,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="751,118,1095,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#declare_variable" title="typehandlers.base.DeclarationsScope.declare_variable()" alt="" coords="705,174,1140,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReverseWrapperBase&#45;class.html#generate" title="typehandlers.base.ReverseWrapperBase.generate()" alt="" coords="7,90,404,122"/>
+</map>
+  <img src="call_graph_for_convert_c_to_py.gif" alt='' usemap="#call_graph_for_convert_c_to_py" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.container.ContainerParameterBase-class.html">ContainerParameterBase</a></code></b>:
+      <code><a href="pybindgen.container.ContainerParameterBase-class.html#__init__">__init__</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.TypeHandler-class.html">typehandlers.base.TypeHandler</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.TypeHandler-class.html#set_tranformation">set_tranformation</a></code>,
+      <code><a href="pybindgen.typehandlers.base.TypeHandler-class.html#set_transformation">set_transformation</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Methods</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.Parameter-class.html">typehandlers.base.Parameter</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.Parameter-class.html#new">new</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CTYPES"></a><span class="summary-name">CTYPES</span> = <code title="[]">[]</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="container_type"></a><span class="summary-name">container_type</span> = <code title="&lt;pybindgen.Container None&gt;">&lt;pybindgen.Container None&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DIRECTIONS"></a><span class="summary-name">DIRECTIONS</span> = <code title="[Parameter.DIRECTION_IN]">[Parameter.DIRECTION_IN]</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.Parameter-class.html">typehandlers.base.Parameter</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.Parameter-class.html#DIRECTION_IN">DIRECTION_IN</a></code>,
+      <code><a href="pybindgen.typehandlers.base.Parameter-class.html#DIRECTION_INOUT">DIRECTION_INOUT</a></code>,
+      <code><a href="pybindgen.typehandlers.base.Parameter-class.html#DIRECTION_OUT">DIRECTION_OUT</a></code>,
+      <code><a href="pybindgen.typehandlers.base.Parameter-class.html#SUPPORTS_TRANSFORMATIONS">SUPPORTS_TRANSFORMATIONS</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pybindgen.typehandlers.base.TypeHandler-class.html">typehandlers.base.TypeHandler</a></code></b>:
+      <code><a href="pybindgen.typehandlers.base.TypeHandler-class.html#ctype_no_const">ctype_no_const</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="convert_python_to_c"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convert_python_to_c</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">wrapper</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.container-pysrc.html#ContainerParameter.convert_python_to_c">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_convert_python_-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </tr></table>
+  <div style="display:none" id="call_graph_for_convert_python_-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_convert_python_" name="call_graph_for_convert_python_">
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#convert_python_to_c" title="convert_python_to_c()" alt="" coords="508,34,703,66"/>
+<area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#declare_variable" title="typehandlers.base.DeclarationsScope.declare_variable()" alt="" coords="761,6,1196,38"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ParseTupleParameters&#45;class.html#add_parameter" title="typehandlers.base.ParseTupleParameters.add_parameter()" alt="" coords="752,62,1205,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ForwardWrapperBase&#45;class.html#generate_body" title="typehandlers.base.ForwardWrapperBase.generate_body()" alt="" coords="7,34,457,66"/>
+</map>
+  <img src="call_graph_for_convert_python_.gif" alt='' usemap="#call_graph_for_convert_python_" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  <p>parses python args to get C++ value</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pybindgen.typehandlers.base.Parameter-class.html#convert_python_to_c">typehandlers.base.Parameter.convert_python_to_c</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="convert_c_to_python"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convert_c_to_python</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">wrapper</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pybindgen.container-pysrc.html#ContainerParameter.convert_c_to_python">source&nbsp;code</a></span>&nbsp;
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_convert_c_to_py-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </tr></table>
+  <div style="display:none" id="call_graph_for_convert_c_to_py-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_convert_c_to_py" name="call_graph_for_convert_c_to_py">
+<area shape="rect" href="pybindgen.container.Container&#45;class.html#get_pystruct" title="Container.get_pystruct()" alt="" coords="821,6,1024,38"/>
+<area shape="rect" href="pybindgen.container.ContainerParameter&#45;class.html#convert_c_to_python" title="convert_c_to_python()" alt="" coords="455,90,649,122"/>
+<area shape="rect" href="pybindgen.typehandlers.base.BuildValueParameters&#45;class.html#add_parameter" title="typehandlers.base.BuildValueParameters.add_parameter()" alt="" coords="699,62,1147,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.CodeBlock&#45;class.html#write_code" title="typehandlers.base.CodeBlock.write_code()" alt="" coords="751,118,1095,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.DeclarationsScope&#45;class.html#declare_variable" title="typehandlers.base.DeclarationsScope.declare_variable()" alt="" coords="705,174,1140,206"/>
+<area shape="rect" href="pybindgen.typehandlers.base.ReverseWrapperBase&#45;class.html#generate" title="typehandlers.base.ReverseWrapperBase.generate()" alt="" coords="7,90,404,122"/>
+</map>
+  <img src="call_graph_for_convert_c_to_py.gif" alt='' usemap="#call_graph_for_convert_c_to_py" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  <p>Write some code before calling the Python method.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pybindgen.typehandlers.base.Parameter-class.html#convert_c_to_python">typehandlers.base.Parameter.convert_c_to_python</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:35 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

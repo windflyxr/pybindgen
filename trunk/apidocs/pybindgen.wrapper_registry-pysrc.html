@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pybindgen.wrapper_registry</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pybindgen-module.html">Package&nbsp;pybindgen</a> ::
+        Module&nbsp;wrapper_registry
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pybindgen.wrapper_registry-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pybindgen.wrapper_registry-module.html">Module pybindgen.wrapper_registry</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">The class that generates code to keep track of existing python</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">wrappers for a given root class.</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pybindgen.typehandlers=pybindgen.typehandlers-module.html"><a title="pybindgen.typehandlers" class="py-name" href="#" onclick="return doclink('link-0', 'typehandlers', 'link-0');">typehandlers</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module pybindgen.typehandlers.base=pybindgen.typehandlers.base-module.html"><a title="pybindgen.typehandlers.base" class="py-name" href="#" onclick="return doclink('link-1', 'base', 'link-1');">base</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class pybindgen.typehandlers.base.NotSupportedError=pybindgen.typehandlers.base.NotSupportedError-class.html"><a title="pybindgen.typehandlers.base.NotSupportedError" class="py-name" href="#" onclick="return doclink('link-2', 'NotSupportedError', 'link-2');">NotSupportedError</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="WrapperRegistry"></a><div id="WrapperRegistry-def"><a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="WrapperRegistry-toggle" onclick="return toggle('WrapperRegistry');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html">WrapperRegistry</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="WrapperRegistry-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    Abstract base class for wrapepr registries.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="WrapperRegistry.__init__"></a><div id="WrapperRegistry.__init__-def"><a name="L14"></a><tt class="py-lineno"> 14</tt> <a class="py-toggle" href="#" id="WrapperRegistry.__init__-toggle" onclick="return toggle('WrapperRegistry.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">base_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="WrapperRegistry.__init__-expanded"><a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">base_name</tt> <tt class="py-op">=</tt> <tt class="py-name">base_name</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="WrapperRegistry.generate_forward_declarations"></a><div id="WrapperRegistry.generate_forward_declarations-def"><a name="L17"></a><tt class="py-lineno"> 17</tt> <a class="py-toggle" href="#" id="WrapperRegistry.generate_forward_declarations-toggle" onclick="return toggle('WrapperRegistry.generate_forward_declarations');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html#generate_forward_declarations">generate_forward_declarations</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_sink</tt><tt class="py-op">,</tt> <tt class="py-param">module</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry.generate_forward_declarations-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="WrapperRegistry.generate_forward_declarations-expanded"><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="WrapperRegistry.generate"></a><div id="WrapperRegistry.generate-def"><a name="L20"></a><tt class="py-lineno"> 20</tt> <a class="py-toggle" href="#" id="WrapperRegistry.generate-toggle" onclick="return toggle('WrapperRegistry.generate');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html#generate">generate</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_sink</tt><tt class="py-op">,</tt> <tt class="py-param">module</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry.generate-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="WrapperRegistry.generate-expanded"><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="WrapperRegistry.write_register_new_wrapper"></a><div id="WrapperRegistry.write_register_new_wrapper-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="WrapperRegistry.write_register_new_wrapper-toggle" onclick="return toggle('WrapperRegistry.write_register_new_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html#write_register_new_wrapper">write_register_new_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry.write_register_new_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="WrapperRegistry.write_register_new_wrapper-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">         </tt>
+<a name="WrapperRegistry.write_lookup_wrapper"></a><div id="WrapperRegistry.write_lookup_wrapper-def"><a name="L26"></a><tt class="py-lineno"> 26</tt> <a class="py-toggle" href="#" id="WrapperRegistry.write_lookup_wrapper-toggle" onclick="return toggle('WrapperRegistry.write_lookup_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html#write_lookup_wrapper">write_lookup_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_type</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry.write_lookup_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="WrapperRegistry.write_lookup_wrapper-expanded"><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="WrapperRegistry.write_unregister_wrapper"></a><div id="WrapperRegistry.write_unregister_wrapper-def"><a name="L29"></a><tt class="py-lineno"> 29</tt> <a class="py-toggle" href="#" id="WrapperRegistry.write_unregister_wrapper-toggle" onclick="return toggle('WrapperRegistry.write_unregister_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.WrapperRegistry-class.html#write_unregister_wrapper">write_unregister_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="WrapperRegistry.write_unregister_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="WrapperRegistry.write_unregister_wrapper-expanded"><a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt> </tt>
+</div></div><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">     </tt>
+<a name="NullWrapperRegistry"></a><div id="NullWrapperRegistry-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry-toggle" onclick="return toggle('NullWrapperRegistry');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html">NullWrapperRegistry</a><tt class="py-op">(</tt><tt class="py-base-class">WrapperRegistry</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="NullWrapperRegistry-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">    A 'null' wrapper registry class.  It produces no code, and does</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">    not guarantee that more than one wrapper cannot be created for</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">    each object.  Use this class to disable wrapper registries entirely.</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="NullWrapperRegistry.__init__"></a><div id="NullWrapperRegistry.__init__-def"><a name="L40"></a><tt class="py-lineno"> 40</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry.__init__-toggle" onclick="return toggle('NullWrapperRegistry.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">base_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NullWrapperRegistry.__init__-expanded"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-3" class="py-name" targets="Class pybindgen.wrapper_registry.NullWrapperRegistry=pybindgen.wrapper_registry.NullWrapperRegistry-class.html"><a title="pybindgen.wrapper_registry.NullWrapperRegistry" class="py-name" href="#" onclick="return doclink('link-3', 'NullWrapperRegistry', 'link-3');">NullWrapperRegistry</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method pybindgen.container.Container.__init__()=pybindgen.container.Container-class.html#__init__,Method pybindgen.container.ContainerParameterBase.__init__()=pybindgen.container.ContainerParameterBase-class.html#__init__,Method pybindgen.container.ContainerReturnValue.__init__()=pybindgen.container.ContainerReturnValue-class.html#__init__,Method pybindgen.container.ContainerReturnValueBase.__init__()=pybindgen.container.ContainerReturnValueBase-class.html#__init__,Method pybindgen.container.ContainerTraits.__init__()=pybindgen.container.ContainerTraits-class.html#__init__,Method pybindgen.container.IterNextWrapper.__init__()=pybindgen.container.IterNextWrapper-class.html#__init__,Method pybindgen.converter_functions.CToPythonConverter.__init__()=pybindgen.converter_functions.CToPythonConverter-class.html#__init__,Method pybindgen.converter_functions.PythonToCConverter.__init__()=pybindgen.converter_functions.PythonToCConverter-class.html#__init__,Method pybindgen.cppattribute.CppInstanceAttributeGetter.__init__()=pybindgen.cppattribute.CppInstanceAttributeGetter-class.html#__init__,Method pybindgen.cppattribute.CppInstanceAttributeSetter.__init__()=pybindgen.cppattribute.CppInstanceAttributeSetter-class.html#__init__,Method pybindgen.cppattribute.CppStaticAttributeGetter.__init__()=pybindgen.cppattribute.CppStaticAttributeGetter-class.html#__init__,Method pybindgen.cppattribute.CppStaticAttributeSetter.__init__()=pybindgen.cppattribute.CppStaticAttributeSetter-class.html#__init__,Method pybindgen.cppattribute.PyGetSetDef.__init__()=pybindgen.cppattribute.PyGetSetDef-class.html#__init__,Method pybindgen.cppattribute.PyMetaclass.__init__()=pybindgen.cppattribute.PyMetaclass-class.html#__init__,Method pybindgen.cppclass.CppClass.__init__()=pybindgen.cppclass.CppClass-class.html#__init__,Method pybindgen.cppclass.CppHelperClass.__init__()=pybindgen.cppclass.CppHelperClass-class.html#__init__,Method pybindgen.cppclass.FreeFunctionPolicy.__init__()=pybindgen.cppclass.FreeFunctionPolicy-class.html#__init__,Method pybindgen.cppclass.MemoryPolicy.__init__()=pybindgen.cppclass.MemoryPolicy-class.html#__init__,Method pybindgen.cppclass.ReferenceCountingFunctionsPolicy.__init__()=pybindgen.cppclass.ReferenceCountingFunctionsPolicy-class.html#__init__,Method pybindgen.cppclass.ReferenceCountingMethodsPolicy.__init__()=pybindgen.cppclass.ReferenceCountingMethodsPolicy-class.html#__init__,Method pybindgen.cppclass_typehandlers.CppClassParameterBase.__init__()=pybindgen.cppclass_typehandlers.CppClassParameterBase-class.html#__init__,Method pybindgen.cppclass_typehandlers.CppClassPtrParameter.__init__()=pybindgen.cppclass_typehandlers.CppClassPtrParameter-class.html#__init__,Method pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.__init__()=pybindgen.cppclass_typehandlers.CppClassPtrReturnValue-class.html#__init__,Method pybindgen.cppclass_typehandlers.CppClassRefParameter.__init__()=pybindgen.cppclass_typehandlers.CppClassRefParameter-class.html#__init__,Method pybindgen.cppclass_typehandlers.CppClassReturnValue.__init__()=pybindgen.cppclass_typehandlers.CppClassReturnValue-class.html#__init__,Method pybindgen.cppclass_typehandlers.CppClassReturnValueBase.__init__()=pybindgen.cppclass_typehandlers.CppClassReturnValueBase-class.html#__init__,Method pybindgen.cppmethod.CppConstructor.__init__()=pybindgen.cppmethod.CppConstructor-class.html#__init__,Method pybindgen.cppmethod.CppDummyMethod.__init__()=pybindgen.cppmethod.CppDummyMethod-class.html#__init__,Method pybindgen.cppmethod.CppFunctionAsConstructor.__init__()=pybindgen.cppmethod.CppFunctionAsConstructor-class.html#__init__,Method pybindgen.cppmethod.CppMethod.__init__()=pybindgen.cppmethod.CppMethod-class.html#__init__,Method pybindgen.cppmethod.CppNoConstructor.__init__()=pybindgen.cppmethod.CppNoConstructor-class.html#__init__,Method pybindgen.cppmethod.CppVirtualMethodParentCaller.__init__()=pybindgen.cppmethod.CppVirtualMethodParentCaller-class.html#__init__,Method pybindgen.cppmethod.CppVirtualMethodProxy.__init__()=pybindgen.cppmethod.CppVirtualMethodProxy-class.html#__init__,Method pybindgen.cppmethod.CustomCppConstructorWrapper.__init__()=pybindgen.cppmethod.CustomCppConstructorWrapper-class.html#__init__,Method pybindgen.cppmethod.CustomCppMethodWrapper.__init__()=pybindgen.cppmethod.CustomCppMethodWrapper-class.html#__init__,Method pybindgen.cppmethod.DummyParameter.__init__()=pybindgen.cppmethod.DummyParameter-class.html#__init__,Method pybindgen.cppmethod.DummyReturnValue.__init__()=pybindgen.cppmethod.DummyReturnValue-class.html#__init__,Method pybindgen.enum.Enum.__init__()=pybindgen.enum.Enum-class.html#__init__,Method pybindgen.function.CustomFunctionWrapper.__init__()=pybindgen.function.CustomFunctionWrapper-class.html#__init__,Method pybindgen.function.Function.__init__()=pybindgen.function.Function-class.html#__init__,Method pybindgen.gccxmlparser.AnnotationsScanner.__init__()=pybindgen.gccxmlparser.AnnotationsScanner-class.html#__init__,Method pybindgen.gccxmlparser.GccXmlTypeRegistry.__init__()=pybindgen.gccxmlparser.GccXmlTypeRegistry-class.html#__init__,Method pybindgen.gccxmlparser.ModuleParser.__init__()=pybindgen.gccxmlparser.ModuleParser-class.html#__init__,Method pybindgen.gccxmlparser.PygenSection.__init__()=pybindgen.gccxmlparser.PygenSection-class.html#__init__,Method pybindgen.module.Module.__init__()=pybindgen.module.Module-class.html#__init__,Method pybindgen.module.ModuleBase.__init__()=pybindgen.module.ModuleBase-class.html#__init__,Method pybindgen.module.SubModule.__init__()=pybindgen.module.SubModule-class.html#__init__,Method pybindgen.overloading.OverloadedWrapper.__init__()=pybindgen.overloading.OverloadedWrapper-class.html#__init__,Method pybindgen.pytypeobject.PyNumberMethods.__init__()=pybindgen.pytypeobject.PyNumberMethods-class.html#__init__,Method pybindgen.pytypeobject.PyTypeObject.__init__()=pybindgen.pytypeobject.PyTypeObject-class.html#__init__,Method pybindgen.typehandlers.base.BuildValueParameters.__init__()=pybindgen.typehandlers.base.BuildValueParameters-class.html#__init__,Method pybindgen.typehandlers.base.CodeBlock.CleanupHandle.__init__()=pybindgen.typehandlers.base.CodeBlock.CleanupHandle-class.html#__init__,Method pybindgen.typehandlers.base.CodeBlock.__init__()=pybindgen.typehandlers.base.CodeBlock-class.html#__init__,Method pybindgen.typehandlers.base.DeclarationsScope.__init__()=pybindgen.typehandlers.base.DeclarationsScope-class.html#__init__,Method pybindgen.typehandlers.base.ForwardWrapperBase.__init__()=pybindgen.typehandlers.base.ForwardWrapperBase-class.html#__init__,Method pybindgen.typehandlers.base.Parameter.__init__()=pybindgen.typehandlers.base.Parameter-class.html#__init__,Method pybindgen.typehandlers.base.Parameter.__metaclass__.__init__()=pybindgen.typehandlers.base.Parameter.__metaclass__-class.html#__init__,Method pybindgen.typehandlers.base.ParseTupleParameters.__init__()=pybindgen.typehandlers.base.ParseTupleParameters-class.html#__init__,Method pybindgen.typehandlers.base.PointerParameter.__init__()=pybindgen.typehandlers.base.PointerParameter-class.html#__init__,Method pybindgen.typehandlers.base.PointerReturnValue.__init__()=pybindgen.typehandlers.base.PointerReturnValue-class.html#__init__,Method pybindgen.typehandlers.base.ReturnValue.__init__()=pybindgen.typehandlers.base.ReturnValue-class.html#__init__,Method pybindgen.typehandlers.base.ReturnValue.__metaclass__.__init__()=pybindgen.typehandlers.base.ReturnValue.__metaclass__-class.html#__init__,Method pybindgen.typehandlers.base.ReverseWrapperBase.__init__()=pybindgen.typehandlers.base.ReverseWrapperBase-class.html#__init__,Method pybindgen.typehandlers.base.TypeHandler.__init__()=pybindgen.typehandlers.base.TypeHandler-class.html#__init__,Method pybindgen.typehandlers.base.TypeMatcher.__init__()=pybindgen.typehandlers.base.TypeMatcher-class.html#__init__,Method pybindgen.typehandlers.codesink.CodeSink.__init__()=pybindgen.typehandlers.codesink.CodeSink-class.html#__init__,Method pybindgen.typehandlers.codesink.FileCodeSink.__init__()=pybindgen.typehandlers.codesink.FileCodeSink-class.html#__init__,Method pybindgen.typehandlers.codesink.MemoryCodeSink.__init__()=pybindgen.typehandlers.codesink.MemoryCodeSink-class.html#__init__,Method pybindgen.typehandlers.codesink.NullCodeSink.__init__()=pybindgen.typehandlers.codesink.NullCodeSink-class.html#__init__,Method pybindgen.typehandlers.ctypeparser.CType.__init__()=pybindgen.typehandlers.ctypeparser.CType-class.html#__init__,Method pybindgen.typehandlers.ctypeparser.TypeTraits.__init__()=pybindgen.typehandlers.ctypeparser.TypeTraits-class.html#__init__,Method pybindgen.typehandlers.ctypeparser.tokenizer.Token.__init__()=pybindgen.typehandlers.ctypeparser.tokenizer.Token-class.html#__init__,Method pybindgen.typehandlers.floattype.FloatPtrParam.__init__()=pybindgen.typehandlers.floattype.FloatPtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.Int8PtrParam.__init__()=pybindgen.typehandlers.inttype.Int8PtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.IntPtrParam.__init__()=pybindgen.typehandlers.inttype.IntPtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.UInt8PtrParam.__init__()=pybindgen.typehandlers.inttype.UInt8PtrParam-class.html#__init__,Method pybindgen.typehandlers.inttype.UnsignedIntPtrParam.__init__()=pybindgen.typehandlers.inttype.UnsignedIntPtrParam-class.html#__init__,Method pybindgen.typehandlers.pyobjecttype.PyObjectParam.__init__()=pybindgen.typehandlers.pyobjecttype.PyObjectParam-class.html#__init__,Method pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.__init__()=pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue-class.html#__init__,Method pybindgen.wrapper_registry.NullWrapperRegistry.__init__()=pybindgen.wrapper_registry.NullWrapperRegistry-class.html#__init__,Method pybindgen.wrapper_registry.StdMapWrapperRegistry.__init__()=pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#__init__,Method pybindgen.wrapper_registry.WrapperRegistry.__init__()=pybindgen.wrapper_registry.WrapperRegistry-class.html#__init__"><a title="pybindgen.container.Container.__init__
+pybindgen.container.ContainerParameterBase.__init__
+pybindgen.container.ContainerReturnValue.__init__
+pybindgen.container.ContainerReturnValueBase.__init__
+pybindgen.container.ContainerTraits.__init__
+pybindgen.container.IterNextWrapper.__init__
+pybindgen.converter_functions.CToPythonConverter.__init__
+pybindgen.converter_functions.PythonToCConverter.__init__
+pybindgen.cppattribute.CppInstanceAttributeGetter.__init__
+pybindgen.cppattribute.CppInstanceAttributeSetter.__init__
+pybindgen.cppattribute.CppStaticAttributeGetter.__init__
+pybindgen.cppattribute.CppStaticAttributeSetter.__init__
+pybindgen.cppattribute.PyGetSetDef.__init__
+pybindgen.cppattribute.PyMetaclass.__init__
+pybindgen.cppclass.CppClass.__init__
+pybindgen.cppclass.CppHelperClass.__init__
+pybindgen.cppclass.FreeFunctionPolicy.__init__
+pybindgen.cppclass.MemoryPolicy.__init__
+pybindgen.cppclass.ReferenceCountingFunctionsPolicy.__init__
+pybindgen.cppclass.ReferenceCountingMethodsPolicy.__init__
+pybindgen.cppclass_typehandlers.CppClassParameterBase.__init__
+pybindgen.cppclass_typehandlers.CppClassPtrParameter.__init__
+pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.__init__
+pybindgen.cppclass_typehandlers.CppClassRefParameter.__init__
+pybindgen.cppclass_typehandlers.CppClassReturnValue.__init__
+pybindgen.cppclass_typehandlers.CppClassReturnValueBase.__init__
+pybindgen.cppmethod.CppConstructor.__init__
+pybindgen.cppmethod.CppDummyMethod.__init__
+pybindgen.cppmethod.CppFunctionAsConstructor.__init__
+pybindgen.cppmethod.CppMethod.__init__
+pybindgen.cppmethod.CppNoConstructor.__init__
+pybindgen.cppmethod.CppVirtualMethodParentCaller.__init__
+pybindgen.cppmethod.CppVirtualMethodProxy.__init__
+pybindgen.cppmethod.CustomCppConstructorWrapper.__init__
+pybindgen.cppmethod.CustomCppMethodWrapper.__init__
+pybindgen.cppmethod.DummyParameter.__init__
+pybindgen.cppmethod.DummyReturnValue.__init__
+pybindgen.enum.Enum.__init__
+pybindgen.function.CustomFunctionWrapper.__init__
+pybindgen.function.Function.__init__
+pybindgen.gccxmlparser.AnnotationsScanner.__init__
+pybindgen.gccxmlparser.GccXmlTypeRegistry.__init__
+pybindgen.gccxmlparser.ModuleParser.__init__
+pybindgen.gccxmlparser.PygenSection.__init__
+pybindgen.module.Module.__init__
+pybindgen.module.ModuleBase.__init__
+pybindgen.module.SubModule.__init__
+pybindgen.overloading.OverloadedWrapper.__init__
+pybindgen.pytypeobject.PyNumberMethods.__init__
+pybindgen.pytypeobject.PyTypeObject.__init__
+pybindgen.typehandlers.base.BuildValueParameters.__init__
+pybindgen.typehandlers.base.CodeBlock.CleanupHandle.__init__
+pybindgen.typehandlers.base.CodeBlock.__init__
+pybindgen.typehandlers.base.DeclarationsScope.__init__
+pybindgen.typehandlers.base.ForwardWrapperBase.__init__
+pybindgen.typehandlers.base.Parameter.__init__
+pybindgen.typehandlers.base.Parameter.__metaclass__.__init__
+pybindgen.typehandlers.base.ParseTupleParameters.__init__
+pybindgen.typehandlers.base.PointerParameter.__init__
+pybindgen.typehandlers.base.PointerReturnValue.__init__
+pybindgen.typehandlers.base.ReturnValue.__init__
+pybindgen.typehandlers.base.ReturnValue.__metaclass__.__init__
+pybindgen.typehandlers.base.ReverseWrapperBase.__init__
+pybindgen.typehandlers.base.TypeHandler.__init__
+pybindgen.typehandlers.base.TypeMatcher.__init__
+pybindgen.typehandlers.codesink.CodeSink.__init__
+pybindgen.typehandlers.codesink.FileCodeSink.__init__
+pybindgen.typehandlers.codesink.MemoryCodeSink.__init__
+pybindgen.typehandlers.codesink.NullCodeSink.__init__
+pybindgen.typehandlers.ctypeparser.CType.__init__
+pybindgen.typehandlers.ctypeparser.TypeTraits.__init__
+pybindgen.typehandlers.ctypeparser.tokenizer.Token.__init__
+pybindgen.typehandlers.floattype.FloatPtrParam.__init__
+pybindgen.typehandlers.inttype.Int8PtrParam.__init__
+pybindgen.typehandlers.inttype.IntPtrParam.__init__
+pybindgen.typehandlers.inttype.UInt8PtrParam.__init__
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.__init__
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.__init__
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.__init__
+pybindgen.wrapper_registry.NullWrapperRegistry.__init__
+pybindgen.wrapper_registry.StdMapWrapperRegistry.__init__
+pybindgen.wrapper_registry.WrapperRegistry.__init__" class="py-name" href="#" onclick="return doclink('link-4', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">base_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="NullWrapperRegistry.generate_forward_declarations"></a><div id="NullWrapperRegistry.generate_forward_declarations-def"><a name="L43"></a><tt class="py-lineno"> 43</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry.generate_forward_declarations-toggle" onclick="return toggle('NullWrapperRegistry.generate_forward_declarations');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html#generate_forward_declarations">generate_forward_declarations</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_sink</tt><tt class="py-op">,</tt> <tt class="py-param">module</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry.generate_forward_declarations-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NullWrapperRegistry.generate_forward_declarations-expanded"><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="NullWrapperRegistry.generate"></a><div id="NullWrapperRegistry.generate-def"><a name="L46"></a><tt class="py-lineno"> 46</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry.generate-toggle" onclick="return toggle('NullWrapperRegistry.generate');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html#generate">generate</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_sink</tt><tt class="py-op">,</tt> <tt class="py-param">module</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry.generate-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NullWrapperRegistry.generate-expanded"><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="NullWrapperRegistry.write_register_new_wrapper"></a><div id="NullWrapperRegistry.write_register_new_wrapper-def"><a name="L49"></a><tt class="py-lineno"> 49</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry.write_register_new_wrapper-toggle" onclick="return toggle('NullWrapperRegistry.write_register_new_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html#write_register_new_wrapper">write_register_new_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry.write_register_new_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NullWrapperRegistry.write_register_new_wrapper-expanded"><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">         </tt>
+<a name="NullWrapperRegistry.write_lookup_wrapper"></a><div id="NullWrapperRegistry.write_lookup_wrapper-def"><a name="L52"></a><tt class="py-lineno"> 52</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry.write_lookup_wrapper-toggle" onclick="return toggle('NullWrapperRegistry.write_lookup_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html#write_lookup_wrapper">write_lookup_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_type</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry.write_lookup_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NullWrapperRegistry.write_lookup_wrapper-expanded"><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt id="link-5" class="py-name"><a title="pybindgen.typehandlers.base.NotSupportedError" class="py-name" href="#" onclick="return doclink('link-5', 'NotSupportedError', 'link-2');">NotSupportedError</a></tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="NullWrapperRegistry.write_unregister_wrapper"></a><div id="NullWrapperRegistry.write_unregister_wrapper-def"><a name="L55"></a><tt class="py-lineno"> 55</tt> <a class="py-toggle" href="#" id="NullWrapperRegistry.write_unregister_wrapper-toggle" onclick="return toggle('NullWrapperRegistry.write_unregister_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.NullWrapperRegistry-class.html#write_unregister_wrapper">write_unregister_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="NullWrapperRegistry.write_unregister_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="NullWrapperRegistry.write_unregister_wrapper-expanded"><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div></div><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="StdMapWrapperRegistry"></a><div id="StdMapWrapperRegistry-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry-toggle" onclick="return toggle('StdMapWrapperRegistry');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html">StdMapWrapperRegistry</a><tt class="py-op">(</tt><tt class="py-base-class">WrapperRegistry</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="StdMapWrapperRegistry-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">    A wrapper registry that uses std::map as implementation.  Do not</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">    use this if generating pure C wrapping code, else the code will</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">    not compile.</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"> </tt>
+<a name="StdMapWrapperRegistry.__init__"></a><div id="StdMapWrapperRegistry.__init__-def"><a name="L66"></a><tt class="py-lineno"> 66</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry.__init__-toggle" onclick="return toggle('StdMapWrapperRegistry.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">base_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StdMapWrapperRegistry.__init__-expanded"><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name" targets="Class pybindgen.wrapper_registry.StdMapWrapperRegistry=pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html"><a title="pybindgen.wrapper_registry.StdMapWrapperRegistry" class="py-name" href="#" onclick="return doclink('link-6', 'StdMapWrapperRegistry', 'link-6');">StdMapWrapperRegistry</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="pybindgen.container.Container.__init__
+pybindgen.container.ContainerParameterBase.__init__
+pybindgen.container.ContainerReturnValue.__init__
+pybindgen.container.ContainerReturnValueBase.__init__
+pybindgen.container.ContainerTraits.__init__
+pybindgen.container.IterNextWrapper.__init__
+pybindgen.converter_functions.CToPythonConverter.__init__
+pybindgen.converter_functions.PythonToCConverter.__init__
+pybindgen.cppattribute.CppInstanceAttributeGetter.__init__
+pybindgen.cppattribute.CppInstanceAttributeSetter.__init__
+pybindgen.cppattribute.CppStaticAttributeGetter.__init__
+pybindgen.cppattribute.CppStaticAttributeSetter.__init__
+pybindgen.cppattribute.PyGetSetDef.__init__
+pybindgen.cppattribute.PyMetaclass.__init__
+pybindgen.cppclass.CppClass.__init__
+pybindgen.cppclass.CppHelperClass.__init__
+pybindgen.cppclass.FreeFunctionPolicy.__init__
+pybindgen.cppclass.MemoryPolicy.__init__
+pybindgen.cppclass.ReferenceCountingFunctionsPolicy.__init__
+pybindgen.cppclass.ReferenceCountingMethodsPolicy.__init__
+pybindgen.cppclass_typehandlers.CppClassParameterBase.__init__
+pybindgen.cppclass_typehandlers.CppClassPtrParameter.__init__
+pybindgen.cppclass_typehandlers.CppClassPtrReturnValue.__init__
+pybindgen.cppclass_typehandlers.CppClassRefParameter.__init__
+pybindgen.cppclass_typehandlers.CppClassReturnValue.__init__
+pybindgen.cppclass_typehandlers.CppClassReturnValueBase.__init__
+pybindgen.cppmethod.CppConstructor.__init__
+pybindgen.cppmethod.CppDummyMethod.__init__
+pybindgen.cppmethod.CppFunctionAsConstructor.__init__
+pybindgen.cppmethod.CppMethod.__init__
+pybindgen.cppmethod.CppNoConstructor.__init__
+pybindgen.cppmethod.CppVirtualMethodParentCaller.__init__
+pybindgen.cppmethod.CppVirtualMethodProxy.__init__
+pybindgen.cppmethod.CustomCppConstructorWrapper.__init__
+pybindgen.cppmethod.CustomCppMethodWrapper.__init__
+pybindgen.cppmethod.DummyParameter.__init__
+pybindgen.cppmethod.DummyReturnValue.__init__
+pybindgen.enum.Enum.__init__
+pybindgen.function.CustomFunctionWrapper.__init__
+pybindgen.function.Function.__init__
+pybindgen.gccxmlparser.AnnotationsScanner.__init__
+pybindgen.gccxmlparser.GccXmlTypeRegistry.__init__
+pybindgen.gccxmlparser.ModuleParser.__init__
+pybindgen.gccxmlparser.PygenSection.__init__
+pybindgen.module.Module.__init__
+pybindgen.module.ModuleBase.__init__
+pybindgen.module.SubModule.__init__
+pybindgen.overloading.OverloadedWrapper.__init__
+pybindgen.pytypeobject.PyNumberMethods.__init__
+pybindgen.pytypeobject.PyTypeObject.__init__
+pybindgen.typehandlers.base.BuildValueParameters.__init__
+pybindgen.typehandlers.base.CodeBlock.CleanupHandle.__init__
+pybindgen.typehandlers.base.CodeBlock.__init__
+pybindgen.typehandlers.base.DeclarationsScope.__init__
+pybindgen.typehandlers.base.ForwardWrapperBase.__init__
+pybindgen.typehandlers.base.Parameter.__init__
+pybindgen.typehandlers.base.Parameter.__metaclass__.__init__
+pybindgen.typehandlers.base.ParseTupleParameters.__init__
+pybindgen.typehandlers.base.PointerParameter.__init__
+pybindgen.typehandlers.base.PointerReturnValue.__init__
+pybindgen.typehandlers.base.ReturnValue.__init__
+pybindgen.typehandlers.base.ReturnValue.__metaclass__.__init__
+pybindgen.typehandlers.base.ReverseWrapperBase.__init__
+pybindgen.typehandlers.base.TypeHandler.__init__
+pybindgen.typehandlers.base.TypeMatcher.__init__
+pybindgen.typehandlers.codesink.CodeSink.__init__
+pybindgen.typehandlers.codesink.FileCodeSink.__init__
+pybindgen.typehandlers.codesink.MemoryCodeSink.__init__
+pybindgen.typehandlers.codesink.NullCodeSink.__init__
+pybindgen.typehandlers.ctypeparser.CType.__init__
+pybindgen.typehandlers.ctypeparser.TypeTraits.__init__
+pybindgen.typehandlers.ctypeparser.tokenizer.Token.__init__
+pybindgen.typehandlers.floattype.FloatPtrParam.__init__
+pybindgen.typehandlers.inttype.Int8PtrParam.__init__
+pybindgen.typehandlers.inttype.IntPtrParam.__init__
+pybindgen.typehandlers.inttype.UInt8PtrParam.__init__
+pybindgen.typehandlers.inttype.UnsignedIntPtrParam.__init__
+pybindgen.typehandlers.pyobjecttype.PyObjectParam.__init__
+pybindgen.typehandlers.pyobjecttype.PyObjectReturnValue.__init__
+pybindgen.wrapper_registry.NullWrapperRegistry.__init__
+pybindgen.wrapper_registry.StdMapWrapperRegistry.__init__
+pybindgen.wrapper_registry.WrapperRegistry.__init__" class="py-name" href="#" onclick="return doclink('link-7', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">base_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt> <tt class="py-op">=</tt> <tt class="py-string">"%s_wrapper_registry"</tt> <tt class="py-op">%</tt> <tt class="py-name">base_name</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="StdMapWrapperRegistry.generate_forward_declarations"></a><div id="StdMapWrapperRegistry.generate_forward_declarations-def"><a name="L70"></a><tt class="py-lineno"> 70</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry.generate_forward_declarations-toggle" onclick="return toggle('StdMapWrapperRegistry.generate_forward_declarations');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#generate_forward_declarations">generate_forward_declarations</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_sink</tt><tt class="py-op">,</tt> <tt class="py-param">module</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry.generate_forward_declarations-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StdMapWrapperRegistry.generate_forward_declarations-expanded"><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-comment">#module.add_include("&lt;map&gt;")</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-name">code_sink</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pybindgen.typehandlers.codesink.CodeSink.writeln()=pybindgen.typehandlers.codesink.CodeSink-class.html#writeln,Method pybindgen.typehandlers.codesink.FileCodeSink.writeln()=pybindgen.typehandlers.codesink.FileCodeSink-class.html#writeln,Method pybindgen.typehandlers.codesink.MemoryCodeSink.writeln()=pybindgen.typehandlers.codesink.MemoryCodeSink-class.html#writeln,Method pybindgen.typehandlers.codesink.NullCodeSink.writeln()=pybindgen.typehandlers.codesink.NullCodeSink-class.html#writeln"><a title="pybindgen.typehandlers.codesink.CodeSink.writeln
+pybindgen.typehandlers.codesink.FileCodeSink.writeln
+pybindgen.typehandlers.codesink.MemoryCodeSink.writeln
+pybindgen.typehandlers.codesink.NullCodeSink.writeln" class="py-name" href="#" onclick="return doclink('link-8', 'writeln', 'link-8');">writeln</a></tt><tt class="py-op">(</tt><tt class="py-string">"#include &lt;map&gt;"</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">code_sink</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="pybindgen.typehandlers.codesink.CodeSink.writeln
+pybindgen.typehandlers.codesink.FileCodeSink.writeln
+pybindgen.typehandlers.codesink.MemoryCodeSink.writeln
+pybindgen.typehandlers.codesink.NullCodeSink.writeln" class="py-name" href="#" onclick="return doclink('link-9', 'writeln', 'link-8');">writeln</a></tt><tt class="py-op">(</tt><tt class="py-string">"#include &lt;iostream&gt;"</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">code_sink</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="pybindgen.typehandlers.codesink.CodeSink.writeln
+pybindgen.typehandlers.codesink.FileCodeSink.writeln
+pybindgen.typehandlers.codesink.MemoryCodeSink.writeln
+pybindgen.typehandlers.codesink.NullCodeSink.writeln" class="py-name" href="#" onclick="return doclink('link-10', 'writeln', 'link-8');">writeln</a></tt><tt class="py-op">(</tt><tt class="py-string">"extern std::map&lt;void*, PyObject*&gt; %s;"</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="StdMapWrapperRegistry.generate"></a><div id="StdMapWrapperRegistry.generate-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry.generate-toggle" onclick="return toggle('StdMapWrapperRegistry.generate');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#generate">generate</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_sink</tt><tt class="py-op">,</tt> <tt class="py-param">dummy_module</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry.generate-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StdMapWrapperRegistry.generate-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-name">code_sink</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="pybindgen.typehandlers.codesink.CodeSink.writeln
+pybindgen.typehandlers.codesink.FileCodeSink.writeln
+pybindgen.typehandlers.codesink.MemoryCodeSink.writeln
+pybindgen.typehandlers.codesink.NullCodeSink.writeln" class="py-name" href="#" onclick="return doclink('link-11', 'writeln', 'link-8');">writeln</a></tt><tt class="py-op">(</tt><tt class="py-string">"std::map&lt;void*, PyObject*&gt; %s;"</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="StdMapWrapperRegistry.write_register_new_wrapper"></a><div id="StdMapWrapperRegistry.write_register_new_wrapper-def"><a name="L79"></a><tt class="py-lineno"> 79</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry.write_register_new_wrapper-toggle" onclick="return toggle('StdMapWrapperRegistry.write_register_new_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#write_register_new_wrapper">write_register_new_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry.write_register_new_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StdMapWrapperRegistry.write_register_new_wrapper-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt id="link-12" class="py-name" targets="Variable pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block=pybindgen.typehandlers.base.CodeBlock.CleanupHandle-class.html#code_block"><a title="pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block" class="py-name" href="#" onclick="return doclink('link-12', 'code_block', 'link-12');">code_block</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.write_code()=pybindgen.typehandlers.base.CodeBlock-class.html#write_code"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-13', 'write_code', 'link-13');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"%s[(void *) %s] = (PyObject *) %s;"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt><tt class="py-op">,</tt> <tt class="py-name">object_rvalue</tt><tt class="py-op">,</tt> <tt class="py-name">wrapper_lvalue</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-comment">#code_block.write_code('std::cerr &lt;&lt; "Register Wrapper: obj=" &lt;&lt;(void *) %s &lt;&lt; ", wrapper=" &lt;&lt; %s &lt;&lt; std::endl;'</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-comment">#                      % (object_rvalue, wrapper_lvalue))</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-comment"></tt>         </tt>
+<a name="StdMapWrapperRegistry.write_lookup_wrapper"></a><div id="StdMapWrapperRegistry.write_lookup_wrapper-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry.write_lookup_wrapper-toggle" onclick="return toggle('StdMapWrapperRegistry.write_lookup_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#write_lookup_wrapper">write_lookup_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_type</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry.write_lookup_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StdMapWrapperRegistry.write_lookup_wrapper-expanded"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-name">iterator</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block" class="py-name" href="#" onclick="return doclink('link-14', 'code_block', 'link-12');">code_block</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method pybindgen.typehandlers.base.CodeBlock.declare_variable()=pybindgen.typehandlers.base.CodeBlock-class.html#declare_variable,Method pybindgen.typehandlers.base.DeclarationsScope.declare_variable()=pybindgen.typehandlers.base.DeclarationsScope-class.html#declare_variable"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-15', 'declare_variable', 'link-15');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-string">"std::map&lt;void*, PyObject*&gt;::const_iterator"</tt><tt class="py-op">,</tt> <tt class="py-string">"wrapper_lookup_iter"</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-comment">#code_block.write_code('std::cerr &lt;&lt; "Lookup Wrapper: obj=" &lt;&lt;(void *) %s &lt;&lt; " map size: " &lt;&lt; %s.size() &lt;&lt; std::endl;'</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-comment">#                      % (object_rvalue, self.map_name))</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt id="link-16" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block" class="py-name" href="#" onclick="return doclink('link-16', 'code_block', 'link-12');">code_block</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-17', 'write_code', 'link-13');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"%s = %s.find((void *) %s);"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">iterator</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt><tt class="py-op">,</tt> <tt class="py-name">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt id="link-18" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block" class="py-name" href="#" onclick="return doclink('link-18', 'code_block', 'link-12');">code_block</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-19', 'write_code', 'link-13');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"if (%(ITER)s == %(MAP)s.end()) {\n"</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                              <tt class="py-string">"    %(WRAPPER)s = NULL;\n"</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                              <tt class="py-string">"} else {\n"</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                              <tt class="py-string">"    %(WRAPPER)s = (%(TYPE)s *) %(ITER)s-&gt;second;\n"</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                              <tt class="py-string">"    Py_INCREF(%(WRAPPER)s);\n"</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                              <tt class="py-string">"}\n"</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                              <tt class="py-op">%</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">ITER</tt><tt class="py-op">=</tt><tt class="py-name">iterator</tt><tt class="py-op">,</tt> <tt class="py-name">MAP</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt><tt class="py-op">,</tt> <tt class="py-name">WRAPPER</tt><tt class="py-op">=</tt><tt class="py-name">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-name">TYPE</tt><tt class="py-op">=</tt><tt class="py-name">wrapper_type</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">         </tt>
+<a name="StdMapWrapperRegistry.write_unregister_wrapper"></a><div id="StdMapWrapperRegistry.write_unregister_wrapper-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="StdMapWrapperRegistry.write_unregister_wrapper-toggle" onclick="return toggle('StdMapWrapperRegistry.write_unregister_wrapper');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pybindgen.wrapper_registry.StdMapWrapperRegistry-class.html#write_unregister_wrapper">write_unregister_wrapper</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">code_block</tt><tt class="py-op">,</tt> <tt class="py-param">wrapper_lvalue</tt><tt class="py-op">,</tt> <tt class="py-param">object_rvalue</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StdMapWrapperRegistry.write_unregister_wrapper-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StdMapWrapperRegistry.write_unregister_wrapper-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-comment">#code_block.write_code('std::cerr &lt;&lt; "Erase Wrapper: obj=" &lt;&lt;(void *) %s &lt;&lt; std::endl;'</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-comment">#                      % (object_rvalue))</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt class="py-name">iterator</tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block" class="py-name" href="#" onclick="return doclink('link-20', 'code_block', 'link-12');">code_block</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.declare_variable
+pybindgen.typehandlers.base.DeclarationsScope.declare_variable" class="py-name" href="#" onclick="return doclink('link-21', 'declare_variable', 'link-15');">declare_variable</a></tt><tt class="py-op">(</tt><tt class="py-string">"std::map&lt;void*, PyObject*&gt;::iterator"</tt><tt class="py-op">,</tt> <tt class="py-string">"wrapper_lookup_iter"</tt><tt class="py-op">)</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt id="link-22" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.CleanupHandle.code_block" class="py-name" href="#" onclick="return doclink('link-22', 'code_block', 'link-12');">code_block</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="pybindgen.typehandlers.base.CodeBlock.write_code" class="py-name" href="#" onclick="return doclink('link-23', 'write_code', 'link-13');">write_code</a></tt><tt class="py-op">(</tt><tt class="py-string">"%(ITER)s = %(MAP)s.find((void *) %(WRAPPER)s-&gt;obj);\n"</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                              <tt class="py-string">"if (%(ITER)s != %(MAP)s.end()) {\n"</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                              <tt class="py-string">"    %(MAP)s.erase(%(ITER)s);\n"</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                              <tt class="py-string">"}\n"</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                              <tt class="py-op">%</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt class="py-name">ITER</tt><tt class="py-op">=</tt><tt class="py-name">iterator</tt><tt class="py-op">,</tt> <tt class="py-name">MAP</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">map_name</tt><tt class="py-op">,</tt> <tt class="py-name">WRAPPER</tt><tt class="py-op">=</tt><tt class="py-name">wrapper_lvalue</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pybindgen-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:51:10 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

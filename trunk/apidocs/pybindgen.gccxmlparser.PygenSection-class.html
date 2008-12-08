@@ -54,16 +54,17 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class PygenSection</h1><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#PygenSection">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class PygenSection</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#PygenSection">source&nbsp;code</a></span></p>
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_48" name="uml_class_diagram_for_pybindge_48">
+<center>  <map id="uml_class_diagram_for_pybindge_58" name="uml_class_diagram_for_pybindge_58">
 <area shape="rect" href="pybindgen.gccxmlparser.PygenSection&#45;class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,36,420,55"/>
 <area shape="rect" href="pybindgen.gccxmlparser.PygenSection&#45;class.html" title="Class to hold information about a python generation section" alt="" coords="16,11,421,56"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_48.gif" alt='' usemap="#uml_class_diagram_for_pybindge_48" ismap="ismap" class="graph-without-title" />
-</center></center>
+  <img src="uml_class_diagram_for_pybindge_58.gif" alt='' usemap="#uml_class_diagram_for_pybindge_58" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
 <hr />
-Class to hold information about a python generation section<br /><br />
+<p>Class to hold information about a python generation section</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -83,8 +84,7 @@ Class to hold information about a python generation section<br /><br />
         <span class="summary-sig-arg">name</span>,
         <span class="summary-sig-arg">code_sink</span>,
         <span class="summary-sig-arg">local_customizations_module</span>=<span class="summary-sig-default">None</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for 
-      signature</td>
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#PygenSection.__init__">source&nbsp;code</a></span>
             
@@ -151,29 +151,28 @@ Class to hold information about a python generation section<br /><br />
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#PygenSection.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (str) - section name; this name should be a valid python module name; 
-          the special name '__main__' is used to denote the main section, 
-          which comprises the main script itself</li>
+        <li><strong class="pname"><code>name</code></strong> (str) - section name; this name should be a valid python module name; the
+          special name '__main__' is used to denote the main section, which
+          comprises the main script itself</li>
         <li><strong class="pname"><code>code_sink</code></strong> (<a href="pybindgen.typehandlers.codesink.CodeSink-class.html" 
-          class="link">CodeSink</a>) - code sink that will receive the generated code for the 
-          section.  Normally the code sink should write to a file with the 
-          name of the section and a .py extension, to allow importing it as
-          module.</li>
-        <li><strong class="pname"><code>local_customizations_module</code></strong> (str) - name of the python module that may contain local 
-          customizations for the section, or None.  If not None, PyBindGen 
-          will generate code that tries to import that module in the 
-          respective section and call functions on it, or ignore it if the 
-          module does not exist.</li>
+          class="link">CodeSink</a>) - code sink that will receive the generated code for the section.  
+          Normally the code sink should write to a file with the name of 
+          the section and a .py extension, to allow importing it as module.</li>
+        <li><strong class="pname"><code>local_customizations_module</code></strong> (str) - name of the python module that may contain local customizations 
+          for the section, or None.  If not None, PyBindGen will generate 
+          code that tries to import that module in the respective section 
+          and call functions on it, or ignore it if the module does not 
+          exist.</li>
     </ul></dd>
     <dt>Overrides:
-      object.__init__
+        object.__init__
     </dt>
   </dl>
 </td></tr></table>
@@ -205,10 +204,11 @@ Class to hold information about a python generation section<br /><br />
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:06 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:50 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -219,9 +219,8 @@ Class to hold information about a python generation section<br /><br />
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

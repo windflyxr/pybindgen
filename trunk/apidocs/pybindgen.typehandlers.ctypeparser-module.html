@@ -54,7 +54,7 @@
   </tr>
 </table>
 <!-- ==================== PACKAGE DESCRIPTION ==================== -->
-<h1 class="epydoc">Package ctypeparser</h1><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Package ctypeparser</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html">source&nbsp;code</a></span></p>
 <!-- ==================== SUBMODULES ==================== -->
 <a name="section-Submodules"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -84,8 +84,15 @@
     </td><td class="summary">
         <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" class="summary-name">CType</a><br />
       A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
-        class="link">CType</a> represents a C/C++ type as a list of 
-        items.
+        class="link">CType</a> represents a C/C++ type as a list of items.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pybindgen.typehandlers.ctypeparser.TypeTraits-class.html" class="summary-name">TypeTraits</a><br />
+      Parse a C type and gather some interesting properties.
     </td>
   </tr>
 </table>
@@ -114,9 +121,10 @@
       <div style="display:none" id="call_graph_for_parse_type-summary-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_parse_type" name="call_graph_for_parse_type">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="416,6,619,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="5,34,203,66"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="13,6,195,38"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="252,34,367,66"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="416,6,619,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="5,62,203,94"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer&#45;module.html#GetTokens" title="tokenizer.GetTokens()" alt="" coords="424,62,611,94"/>
 </map>
   <img src="call_graph_for_parse_type.gif" alt='' usemap="#call_graph_for_parse_type" ismap="ismap" class="graph-without-title" />
@@ -145,11 +153,11 @@
       <div style="display:none" id="call_graph_for_normalize_type_-summary-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_normalize_type_" name="call_graph_for_normalize_type_">
-<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#lookup" title="base.TypeMatcher.lookup()" alt="" coords="7,6,233,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="283,34,480,66"/>
-<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#register" title="base.TypeMatcher.register()" alt="" coords="5,62,235,94"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="CType.__str__()" alt="" coords="529,6,676,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="545,62,660,94"/>
+<area shape="rect" href="pybindgen.gccxmlparser&#45;module.html#normalize_name" title="gccxmlparser.normalize_name()" alt="" coords="7,6,263,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="312,34,509,66"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#register" title="base.TypeMatcher.register()" alt="" coords="20,62,249,94"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="CType.__str__()" alt="" coords="559,6,705,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="575,62,689,94"/>
 </map>
   <img src="call_graph_for_normalize_type_.gif" alt='' usemap="#call_graph_for_normalize_type_" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -197,13 +205,14 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#parse_type">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_parse_type-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for_parse_type-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_parse_type" name="call_graph_for_parse_type">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="416,6,619,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="5,34,203,66"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="13,6,195,38"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="252,34,367,66"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="416,6,619,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="5,62,203,94"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer&#45;module.html#GetTokens" title="tokenizer.GetTokens()" alt="" coords="424,62,611,94"/>
 </map>
   <img src="call_graph_for_parse_type.gif" alt='' usemap="#call_graph_for_parse_type" ismap="ismap" class="graph-without-title" />
@@ -212,15 +221,14 @@
 </table><br />
 </center></div>
 
-  Parse a C type string.
+  <p>Parse a C type string.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>type_string</code></strong> - C type expression</li>
     </ul></dd>
     <dt>Returns:</dt>
-        <dd>a <a 
-          href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
+        <dd>a <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
           class="link">CType</a> object representing the type</dd>
   </dl>
 </td></tr></table>
@@ -237,15 +245,15 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#normalize_type_string">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_normalize_type_-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for_normalize_type_-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_normalize_type_" name="call_graph_for_normalize_type_">
-<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#lookup" title="base.TypeMatcher.lookup()" alt="" coords="7,6,233,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="283,34,480,66"/>
-<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#register" title="base.TypeMatcher.register()" alt="" coords="5,62,235,94"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="CType.__str__()" alt="" coords="529,6,676,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="545,62,660,94"/>
+<area shape="rect" href="pybindgen.gccxmlparser&#45;module.html#normalize_name" title="gccxmlparser.normalize_name()" alt="" coords="7,6,263,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="312,34,509,66"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#register" title="base.TypeMatcher.register()" alt="" coords="20,62,249,94"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="CType.__str__()" alt="" coords="559,6,705,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="575,62,689,94"/>
 </map>
   <img src="call_graph_for_normalize_type_.gif" alt='' usemap="#call_graph_for_normalize_type_" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -253,17 +261,17 @@
 </table><br />
 </center></div>
 
-  Return a type string in a canonical format, with deterministic 
+  <p>Return a type string in a canonical format, with deterministic 
   placement of modifiers and spacing.  Useful to make sure two type strings
   match regardless of small variations of representation that do not change
-  the meaning.
+  the meaning.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>type_string</code></strong> - C type expression</li>
     </ul></dd>
     <dt>Returns:</dt>
-        <dd>another string representing the same C type but in a canonical
+        <dd>another string representing the same C type but in a canonical 
           format
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span>normalize_type_string(<span class="py-string">'char *'</span>)
@@ -271,7 +279,7 @@
 <span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>normalize_type_string(<span class="py-string">'const foo::bar&lt;const char*, zbr&amp;&gt;*'</span>)
 <span class="py-output">'foo::bar&lt; char const *, zbr &amp; &gt; const *'</span>
 <span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>normalize_type_string(<span class="py-string">'const ::bar*'</span>)
-<span class="py-output">'::bar const *'</span>
+<span class="py-output">'bar const *'</span>
 <span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>normalize_type_string(<span class="py-string">'const char*const'</span>)
 <span class="py-output">'char const * const'</span>
 <span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>normalize_type_string(<span class="py-string">'const char*const*const'</span>)
@@ -308,10 +316,11 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:55:55 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:33 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -322,9 +331,8 @@
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

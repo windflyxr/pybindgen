@@ -54,38 +54,38 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class MultiSectionFactory</h1><span class="codelink"><a href="pybindgen.module-pysrc.html#MultiSectionFactory">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class MultiSectionFactory</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.module-pysrc.html#MultiSectionFactory">source&nbsp;code</a></span></p>
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_52" name="uml_class_diagram_for_pybindge_52">
-<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_main_code_sink" title="Create and/or return a code sink for the main file." alt="" coords="17,36,273,55"/>
-<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_common_header_include" title="Return the argument for an #include directive to include the common header." alt="" coords="17,55,273,74"/>
-<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_section_code_sink" title="Create and/or return a code sink for a given section." alt="" coords="17,74,273,92"/>
-<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_common_header_code_sink" title="Create and/or return a code sink for the common header." alt="" coords="17,92,273,111"/>
+<center>  <map id="uml_class_diagram_for_pybindge_62" name="uml_class_diagram_for_pybindge_62">
+<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_section_code_sink" title="Create and/or return a code sink for a given section." alt="" coords="17,36,273,55"/>
+<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_main_code_sink" title="Create and/or return a code sink for the main file." alt="" coords="17,55,273,74"/>
+<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_common_header_code_sink" title="Create and/or return a code sink for the common header." alt="" coords="17,74,273,92"/>
+<area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html#get_common_header_include" title="Return the argument for an #include directive to include the common header." alt="" coords="17,92,273,111"/>
 <area shape="rect" href="pybindgen.module.MultiSectionFactory&#45;class.html" title="Abstract base class for objects providing support for multi&#45;section code generation, i.e., splitting the generated C/C++ code into multiple files." alt="" coords="16,11,275,112"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_52.gif" alt='' usemap="#uml_class_diagram_for_pybindge_52" ismap="ismap" class="graph-without-title" />
-</center></center>
+  <img src="uml_class_diagram_for_pybindge_62.gif" alt='' usemap="#uml_class_diagram_for_pybindge_62" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
 <hr />
-Abstract base class for objects providing support for multi-section 
+<p>Abstract base class for objects providing support for multi-section 
   code generation, i.e., splitting the generated C/C++ code into multiple 
   files.  The generated code will generally have the following 
-  structure:
+  structure:</p>
   <ol start="1">
     <li>
-      For each section there is one source file specific to that 
-      section;
+      For each section there is one source file specific to that section;
     </li>
     <li>
-      There is a <i>main</i> source file, e.g. 
-      <code>foomodule.cc</code>.  Code that does not belong to any section 
-      will be included in this main file;
+      There is a <i>main</i> source file, e.g. <code>foomodule.cc</code>.  
+      Code that does not belong to any section will be included in this 
+      main file;
     </li>
     <li>
-      Finally, there is a common header file, (e.g. foomodule.h), which 
-      is included by the main file and section files alike. Typically this 
+      Finally, there is a common header file, (e.g. foomodule.h), which is 
+      included by the main file and section files alike. Typically this 
       header file contains function prototypes and type definitions.
     </li>
-  </ol><br /><br />
+  </ol>
 
 <hr />
 <div class="fields">      <p><strong>See Also:</strong>
@@ -159,8 +159,8 @@ Abstract base class for objects providing support for multi-section
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="pybindgen.module.MultiSectionFactory-class.html#get_common_header_include" class="summary-sig-name">get_common_header_include</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Return the argument for an #include directive to include the 
-      common header.</td>
+      Return the argument for an #include directive to include the common 
+      header.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.module-pysrc.html#MultiSectionFactory.get_common_header_include">source&nbsp;code</a></span>
             
@@ -225,17 +225,16 @@ Abstract base class for objects providing support for multi-section
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.module-pysrc.html#MultiSectionFactory.get_section_code_sink">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Create and/or return a code sink for a given section.
+  <p>Create and/or return a code sink for a given section.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>section_name</code></strong> - name of the section</li>
     </ul></dd>
     <dt>Returns:</dt>
-        <dd>a <a 
-          href="pybindgen.typehandlers.codesink.CodeSink-class.html" 
+        <dd>a <a href="pybindgen.typehandlers.codesink.CodeSink-class.html" 
           class="link">CodeSink</a> object that will receive generated code
           belonging to the section <code>section_name</code></dd>
   </dl>
@@ -253,15 +252,14 @@ Abstract base class for objects providing support for multi-section
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.module-pysrc.html#MultiSectionFactory.get_common_header_include">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Return the argument for an #include directive to include the common 
-  header.
+  <p>Return the argument for an #include directive to include the common 
+  header.</p>
   <dl class="fields">
     <dt>Returns:</dt>
-        <dd>a string with the header name, including surrounding 
-          &quot;&quot; or &lt;&gt;.  For example, 
-          '&quot;foomodule.h&quot;'.</dd>
+        <dd>a string with the header name, including surrounding &quot;&quot;
+          or &lt;&gt;.  For example, '&quot;foomodule.h&quot;'.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -292,10 +290,11 @@ Abstract base class for objects providing support for multi-section
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:07 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:52 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -306,9 +305,8 @@ Abstract base class for objects providing support for multi-section
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>
