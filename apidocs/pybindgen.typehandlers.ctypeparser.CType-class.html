@@ -55,27 +55,30 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class CType</h1><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class CType</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType">source&nbsp;code</a></span></p>
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_85" name="uml_class_diagram_for_pybindge_85">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#tokens" title="pybindgen.typehandlers.ctypeparser.CType.tokens" alt="" coords="17,28,151,47"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="str(x)" alt="" coords="17,49,151,68"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#remove_modifiers" title="Remove modifiers from the toplevel type." alt="" coords="17,68,151,87"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,87,151,105"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#reorder_modifiers" title="Reoder const modifiers, as rightward as possible without changing the  meaning of the type." alt="" coords="17,105,151,124"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html" title="A CType represents a C/C++ type as a list of items." alt="" coords="16,11,152,125"/>
+<center>  <map id="uml_class_diagram_for_pybindge_98" name="uml_class_diagram_for_pybindge_98">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#tokens" title="pybindgen.typehandlers.ctypeparser.CType.tokens" alt="" coords="17,28,233,46"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="x.__init__(...) initializes x; see x.__class__.__doc__ for signature" alt="" coords="17,49,233,68"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#clone" title="pybindgen.typehandlers.ctypeparser.CType.clone" alt="" coords="17,68,233,86"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#reorder_modifiers" title="Reoder const modifiers, as rightward as possible without changing the &#160;meaning of the type." alt="" coords="17,86,233,105"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#remove_modifiers" title="Remove modifiers from the toplevel type." alt="" coords="17,105,233,124"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#remove_outer_modifier" title="Remove the given modifier from the type, but only from the outer part and &#160;only until a first * or &amp; is found, from right to left." alt="" coords="17,124,233,142"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="str(x)" alt="" coords="17,142,233,161"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html" title="A CType represents a C/C++ type as a list of items." alt="" coords="16,10,235,162"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_85.gif" alt='' usemap="#uml_class_diagram_for_pybindge_85" ismap="ismap" class="graph-without-title" />
-</center></center>
+  <img src="uml_class_diagram_for_pybindge_98.gif" alt='' usemap="#uml_class_diagram_for_pybindge_98" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
 <hr />
-A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
+<p>A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
   class="link">CType</a> represents a C/C++ type as a list of items.  
   Generally the items are <a 
   href="pybindgen.typehandlers.ctypeparser.tokenizer.Token-class.html" 
   class="link">Token</a>s, but some times they can be other <a 
   href="pybindgen.typehandlers.ctypeparser.CType-class.html" 
   class="link">CType</a>s (arguments of templated types, function pointer 
-  name and parameters).<br /><br />
+  name and parameters).</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -91,22 +94,52 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="pybindgen.typehandlers.ctypeparser.CType-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for 
-      signature</td>
+          <td><span class="summary-sig"><a href="pybindgen.typehandlers.ctypeparser.CType-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tokens</span>=<span class="summary-sig-default">None</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.__init__">source&nbsp;code</a></span>
-            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___59-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___70-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
           </td>
         </tr>
       </table>
-      <div style="display:none" id="call_graph_for___init___59-summary-div"><center>
+      <div style="display:none" id="call_graph_for___init___70-summary-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
-  <tr><td><center>  <map id="call_graph_for___init___59" name="call_graph_for___init___59">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="__init__()" alt="" coords="256,6,352,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="5,6,208,38"/>
+  <tr><td><center>  <map id="call_graph_for___init___70" name="call_graph_for___init___70">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="__init__()" alt="" coords="256,62,352,94"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#clone" title="clone()" alt="" coords="71,6,143,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="16,62,197,94"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="5,118,208,150"/>
 </map>
-  <img src="call_graph_for___init___59.gif" alt='' usemap="#call_graph_for___init___59" ismap="ismap" class="graph-without-title" />
+  <img src="call_graph_for___init___70.gif" alt='' usemap="#call_graph_for___init___70" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clone"></a><span class="summary-sig-name">clone</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.clone">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_clone_5-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_clone_5-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_clone_5" name="call_graph_for_clone_5">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="__init__()" alt="" coords="357,6,453,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#clone" title="clone()" alt="" coords="236,6,308,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="5,6,187,38"/>
+</map>
+  <img src="call_graph_for_clone_5.gif" alt='' usemap="#call_graph_for_clone_5" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
   <tr><th>Call Graph</th></tr>
 </table><br />
@@ -121,8 +154,8 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="pybindgen.typehandlers.ctypeparser.CType-class.html#reorder_modifiers" class="summary-sig-name">reorder_modifiers</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Reoder const modifiers, as rightward as possible without changing 
-      the meaning of the type.</td>
+      Reoder const modifiers, as rightward as possible without changing the
+      meaning of the type.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.reorder_modifiers">source&nbsp;code</a></span>
             <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_reorder_modifie-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
@@ -133,7 +166,7 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_reorder_modifie" name="call_graph_for_reorder_modifie">
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#_reorder_modifier" title="_reorder_modifier()" alt="" coords="473,6,641,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#reorder_modifiers" title="reorder_modifiers()" alt="" coords="257,6,423,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#reorder_modifiers" title="reorder_modifiers()" alt="" coords="256,6,424,38"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="5,6,208,38"/>
 </map>
   <img src="call_graph_for_reorder_modifie.gif" alt='' usemap="#call_graph_for_reorder_modifie" ismap="ismap" class="graph-without-title" />
@@ -154,11 +187,53 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
       Remove modifiers from the toplevel type.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.remove_modifiers">source&nbsp;code</a></span>
-            
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_remove_modifier-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
           </td>
         </tr>
       </table>
-      
+      <div style="display:none" id="call_graph_for_remove_modifier-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_remove_modifier" name="call_graph_for_remove_modifier">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#_remove_modifier" title="_remove_modifier()" alt="" coords="451,6,621,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#remove_modifiers" title="remove_modifiers()" alt="" coords="235,6,403,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="5,6,187,38"/>
+</map>
+  <img src="call_graph_for_remove_modifier.gif" alt='' usemap="#call_graph_for_remove_modifier" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="remove_outer_modifier"></a><span class="summary-sig-name">remove_outer_modifier</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">modifier</span>)</span><br />
+      Remove the given modifier from the type, but only from the outer part
+      and only until a first * or &amp; is found, from right to left.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.remove_outer_modifier">source&nbsp;code</a></span>
+            <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_remove_outer_mo-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
+          </td>
+        </tr>
+      </table>
+      <div style="display:none" id="call_graph_for_remove_outer_mo-summary-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_remove_outer_mo" name="call_graph_for_remove_outer_mo">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#remove_outer_modifier" title="remove_outer_modifier()" alt="" coords="235,6,443,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="5,6,187,38"/>
+</map>
+  <img src="call_graph_for_remove_outer_mo.gif" alt='' usemap="#call_graph_for_remove_outer_mo" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
     </td>
   </tr>
 <tr>
@@ -178,8 +253,12 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
       <div style="display:none" id="call_graph_for___str___2-summary-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for___str___2" name="call_graph_for___str___2">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="__str__()" alt="" coords="252,30,343,62"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="5,30,203,62"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_class_methods" title="gccxmlparser.ModuleParser._scan_class_methods()" alt="" coords="5,6,416,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="__str__()" alt="" coords="465,118,556,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#__init__" title="base.TypeHandler.__init__()" alt="" coords="93,62,328,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#_get_ctype_no_const" title="base.TypeHandler._get_ctype_no_const()" alt="" coords="43,118,379,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#lookup" title="base.TypeMatcher.lookup()" alt="" coords="97,174,324,206"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="112,230,309,262"/>
 </map>
   <img src="call_graph_for___str___2.gif" alt='' usemap="#call_graph_for___str___2" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -243,30 +322,33 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tokens</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.__init__">source&nbsp;code</a></span>&nbsp;
-    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___59-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
-  <div style="display:none" id="call_graph_for___init___59-div"><center>
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___init___70-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </tr></table>
+  <div style="display:none" id="call_graph_for___init___70-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
-  <tr><td><center>  <map id="call_graph_for___init___59" name="call_graph_for___init___59">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="__init__()" alt="" coords="256,6,352,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="5,6,208,38"/>
+  <tr><td><center>  <map id="call_graph_for___init___70" name="call_graph_for___init___70">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__init__" title="__init__()" alt="" coords="256,62,352,94"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#clone" title="clone()" alt="" coords="71,6,143,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="16,62,197,94"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="5,118,208,150"/>
 </map>
-  <img src="call_graph_for___init___59.gif" alt='' usemap="#call_graph_for___init___59" ismap="ismap" class="graph-without-title" />
+  <img src="call_graph_for___init___70.gif" alt='' usemap="#call_graph_for___init___70" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
   <tr><th>Call Graph</th></tr>
 </table><br />
 </center></div>
 
-  x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
   <dl class="fields">
     <dt>Overrides:
-      object.__init__
+        object.__init__
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -284,12 +366,12 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.reorder_modifiers">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_reorder_modifie-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for_reorder_modifie-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_reorder_modifie" name="call_graph_for_reorder_modifie">
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#_reorder_modifier" title="_reorder_modifier()" alt="" coords="473,6,641,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#reorder_modifiers" title="reorder_modifiers()" alt="" coords="257,6,423,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#reorder_modifiers" title="reorder_modifiers()" alt="" coords="256,6,424,38"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#_parse_type_recursive" title="_parse_type_recursive()" alt="" coords="5,6,208,38"/>
 </map>
   <img src="call_graph_for_reorder_modifie.gif" alt='' usemap="#call_graph_for_reorder_modifie" ismap="ismap" class="graph-without-title" />
@@ -298,9 +380,9 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
 </table><br />
 </center></div>
 
-  Reoder const modifiers, as rightward as possible without changing the 
+  <p>Reoder const modifiers, as rightward as possible without changing the 
   meaning of the type.  I.e., move modifiers to the right until a * or 
-  &amp; is found.
+  &amp; is found.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -316,11 +398,23 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.remove_modifiers">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </table>
-  
-  Remove modifiers from the toplevel type.  Return a set of modifiers 
-  removed.
+    <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_remove_modifier-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
+  </tr></table>
+  <div style="display:none" id="call_graph_for_remove_modifier-div"><center>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr><td><center>  <map id="call_graph_for_remove_modifier" name="call_graph_for_remove_modifier">
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#_remove_modifier" title="_remove_modifier()" alt="" coords="451,6,621,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#remove_modifiers" title="remove_modifiers()" alt="" coords="235,6,403,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.TypeTraits&#45;class.html#__init__" title="TypeTraits.__init__()" alt="" coords="5,6,187,38"/>
+</map>
+  <img src="call_graph_for_remove_modifier.gif" alt='' usemap="#call_graph_for_remove_modifier" ismap="ismap" class="graph-without-title" />
+</center></td></tr>
+  <tr><th>Call Graph</th></tr>
+</table><br />
+</center></div>
+
+  <p>Remove modifiers from the toplevel type.  Return a set of modifiers 
+  removed.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -338,12 +432,16 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser-pysrc.html#CType.__str__">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for___str___2-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for___str___2-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for___str___2" name="call_graph_for___str___2">
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="__str__()" alt="" coords="252,30,343,62"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="5,30,203,62"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_class_methods" title="gccxmlparser.ModuleParser._scan_class_methods()" alt="" coords="5,6,416,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.CType&#45;class.html#__str__" title="__str__()" alt="" coords="465,118,556,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#__init__" title="base.TypeHandler.__init__()" alt="" coords="93,62,328,94"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeHandler&#45;class.html#_get_ctype_no_const" title="base.TypeHandler._get_ctype_no_const()" alt="" coords="43,118,379,150"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeMatcher&#45;class.html#lookup" title="base.TypeMatcher.lookup()" alt="" coords="97,174,324,206"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#normalize_type_string" title="normalize_type_string()" alt="" coords="112,230,309,262"/>
 </map>
   <img src="call_graph_for___str___2.gif" alt='' usemap="#call_graph_for___str___2" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -351,10 +449,10 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
 </table><br />
 </center></div>
 
-  str(x)
+  <p>str(x)</p>
   <dl class="fields">
     <dt>Overrides:
-      object.__str__
+        object.__str__
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -387,10 +485,11 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:14 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:51:03 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -401,9 +500,8 @@ A <a href="pybindgen.typehandlers.ctypeparser.CType-class.html"
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

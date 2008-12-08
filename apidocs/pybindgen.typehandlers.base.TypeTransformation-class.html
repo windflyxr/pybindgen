@@ -55,25 +55,26 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class TypeTransformation</h1><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class TypeTransformation</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation">source&nbsp;code</a></span></p>
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_76" name="uml_class_diagram_for_pybindge_76">
-<area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#untransform" title="Transforms a value expression of the transformed type to an equivalent  value expression in the original type." alt="" coords="17,36,391,55"/>
+<center>  <map id="uml_class_diagram_for_pybindge_89" name="uml_class_diagram_for_pybindge_89">
+<area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#get_untransformed_name" title="Given a transformed named, get the original C type name." alt="" coords="17,36,391,55"/>
 <area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#create_type_handler" title="Given a type_handler class, create an instance with proper customization." alt="" coords="17,55,391,74"/>
-<area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#transform" title="Transforms a value expression of the original type to an equivalent value  expression in the transformed type." alt="" coords="17,74,391,92"/>
-<area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#get_untransformed_name" title="Given a transformed named, get the original C type name." alt="" coords="17,92,391,111"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#transform" title="Transforms a value expression of the original type to an equivalent value &#160;expression in the transformed type." alt="" coords="17,74,391,92"/>
+<area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html#untransform" title="Transforms a value expression of the transformed type to an equivalent &#160;value expression in the original type." alt="" coords="17,92,391,111"/>
 <area shape="rect" href="pybindgen.typehandlers.base.TypeTransformation&#45;class.html" title="Type transformations are used to register handling of special types that are simple transformation over another type that is already registered." alt="" coords="16,11,392,112"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_76.gif" alt='' usemap="#uml_class_diagram_for_pybindge_76" ismap="ismap" class="graph-without-title" />
-</center></center>
+  <img src="uml_class_diagram_for_pybindge_89.gif" alt='' usemap="#uml_class_diagram_for_pybindge_89" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
 <hr />
 <p>Type transformations are used to register handling of special types 
   that are simple transformation over another type that is already 
   registered.  This way, only the original type is registered, and the type
   transformation only does the necessary adjustments over the original type
   handler to make it handle the transformed type as well.</p>
-  This is typically used to get smart pointer templated types 
-  working.<br /><br />
+  <p>This is typically used to get smart pointer templated types 
+  working.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -133,8 +134,8 @@
         <span class="summary-sig-arg">declarations</span>,
         <span class="summary-sig-arg">code_block</span>,
         <span class="summary-sig-arg">value</span>)</span><br />
-      Transforms a value expression of the original type to an 
-      equivalent value expression in the transformed type.</td>
+      Transforms a value expression of the original type to an equivalent 
+      value expression in the transformed type.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation.transform">source&nbsp;code</a></span>
             
@@ -221,10 +222,10 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation.get_untransformed_name">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Given a transformed named, get the original C type name. E.g., given a
-  smart pointer transformation, MySmartPointer:
+  <p>Given a transformed named, get the original C type name. E.g., given a
+  smart pointer transformation, MySmartPointer:</p>
 <pre class="literalblock">
  get_untransformed_name('MySmartPointer&lt;Foo&gt;') -&gt; 'Foo*'
 </pre>
@@ -247,10 +248,10 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation.create_type_handler">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Given a type_handler class, create an instance with proper 
-  customization.
+  <p>Given a type_handler class, create an instance with proper 
+  customization.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -277,15 +278,15 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation.transform">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
   <p>Transforms a value expression of the original type to an equivalent 
   value expression in the transformed type.</p>
-  Example, with the transformation:
+  <p>Example, with the transformation:</p>
 <pre class="literalblock">
   'T*' -&gt; 'boost::shared_ptr&lt;T&gt;'
 </pre>
-  Then:
+  <p>Then:</p>
 <pre class="literalblock">
   transform(wrapper, 'foo') -&gt; 'boost::shared_ptr&lt;%s&gt;(foo)' % type_handler.untransformed_ctype
 </pre>
@@ -309,15 +310,15 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.base-pysrc.html#TypeTransformation.untransform">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
   <p>Transforms a value expression of the transformed type to an equivalent
   value expression in the original type.</p>
-  Example, with the transformation:
+  <p>Example, with the transformation:</p>
 <pre class="literalblock">
  'T*' -&gt; 'boost::shared_ptr&lt;T&gt;'
 </pre>
-  Then:
+  <p>Then:</p>
 <pre class="literalblock">
   untransform(wrapper, 'foo') -&gt; 'foo-&gt;get_pointer()'
 </pre>
@@ -352,10 +353,11 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:12 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:51:01 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -366,9 +368,8 @@
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

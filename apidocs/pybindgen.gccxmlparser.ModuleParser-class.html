@@ -54,22 +54,24 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class ModuleParser</h1><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Class ModuleParser</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser">source&nbsp;code</a></span></p>
 <center>
-<center>  <map id="uml_class_diagram_for_pybindge_44" name="uml_class_diagram_for_pybindge_44">
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parses a set of header files and returns a pybindgen Module instance." alt="" coords="17,36,903,55"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#__init__" title="Creates an object that will be able parse header files and create a  pybindgen module definition." alt="" coords="17,55,903,73"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_pre_scan_hook" title="Add a function to be called right before converting a gccxml definition to  a PyBindGen wrapper object." alt="" coords="17,73,903,92"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_types" title="pybindgen.gccxmlparser.ModuleParser.scan_types" alt="" coords="17,92,903,111"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_methods" title="pybindgen.gccxmlparser.ModuleParser.scan_methods" alt="" coords="17,111,903,129"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_functions" title="pybindgen.gccxmlparser.ModuleParser.scan_functions" alt="" coords="17,129,903,148"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="Prepares to parse a set of header files." alt="" coords="17,148,903,167"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_finalize" title="pybindgen.gccxmlparser.ModuleParser.parse_finalize" alt="" coords="17,167,903,185"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_post_scan_hook" title="Add a function to be called right after converting a gccxml definition to a PyBindGen wrapper object." alt="" coords="17,185,903,204"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html" title="pybindgen.gccxmlparser.ModuleParser" alt="" coords="16,11,904,205"/>
+<center>  <map id="uml_class_diagram_for_pybindge_54" name="uml_class_diagram_for_pybindge_54">
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#enable_anonymous_containers" title="if True, pybindgen will attempt to scan for all std containers, even the &#160;ones that have no typedef&#39;ed name." alt="" coords="17,28,903,46"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#__init__" title="Creates an object that will be able parse header files and create a &#160;pybindgen module definition." alt="" coords="17,49,903,68"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_pre_scan_hook" title="Add a function to be called right before converting a gccxml definition to &#160;a PyBindGen wrapper object." alt="" coords="17,68,903,86"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#add_post_scan_hook" title="Add a function to be called right after converting a gccxml definition to a PyBindGen wrapper object." alt="" coords="17,86,903,105"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parses a set of header files and returns a pybindgen Module instance." alt="" coords="17,105,903,124"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="Prepares to parse a set of header files." alt="" coords="17,124,903,142"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_types" title="pybindgen.gccxmlparser.ModuleParser.scan_types" alt="" coords="17,142,903,161"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_methods" title="pybindgen.gccxmlparser.ModuleParser.scan_methods" alt="" coords="17,161,903,180"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_finalize" title="pybindgen.gccxmlparser.ModuleParser.parse_finalize" alt="" coords="17,180,903,198"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_functions" title="pybindgen.gccxmlparser.ModuleParser.scan_functions" alt="" coords="17,198,903,217"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html" title="pybindgen.gccxmlparser.ModuleParser" alt="" coords="16,10,904,218"/>
 </map>
-  <img src="uml_class_diagram_for_pybindge_44.gif" alt='' usemap="#uml_class_diagram_for_pybindge_44" ismap="ismap" class="graph-without-title" />
-</center></center>
+  <img src="uml_class_diagram_for_pybindge_54.gif" alt='' usemap="#uml_class_diagram_for_pybindge_54" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
 <hr />
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -88,8 +90,8 @@
           <td><span class="summary-sig"><a href="pybindgen.gccxmlparser.ModuleParser-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">module_name</span>,
         <span class="summary-sig-arg">module_namespace_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">::</code><code class="variable-quote">'</code></span>)</span><br />
-      Creates an object that will be able parse header files and create 
-      a pybindgen module definition.</td>
+      Creates an object that will be able parse header files and create a 
+      pybindgen module definition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.__init__">source&nbsp;code</a></span>
             
@@ -149,9 +151,9 @@
         <span class="summary-sig-arg">whitelist_paths</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">includes</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>,
         <span class="summary-sig-arg">pygen_sink</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">pygen_classifier</span>=<span class="summary-sig-default">None</span>)</span><br />
-      parses a set of header files and returns a pybindgen Module 
-      instance.</td>
+        <span class="summary-sig-arg">pygen_classifier</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">gccxml_options</span>=<span class="summary-sig-default">None</span>)</span><br />
+      parses a set of header files and returns a pybindgen Module instance.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.parse">source&nbsp;code</a></span>
             <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_parse-summary-div');return false;">call&nbsp;graph</a></span>&nbsp;
@@ -203,13 +205,14 @@
 <area shape="rect" href="pybindgen.gccxmlparser.GccXmlTypeRegistry&#45;class.html#__init__" title="GccXmlTypeRegistry.__init__()" alt="" coords="332,6,593,38"/>
 <area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_get_all_pygen_sinks" title="_get_all_pygen_sinks()" alt="" coords="365,62,560,94"/>
 <area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_get_main_pygen_sink" title="_get_main_pygen_sink()" alt="" coords="360,118,565,150"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parse()" alt="" coords="7,202,79,234"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="parse_init()" alt="" coords="129,202,233,234"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parse()" alt="" coords="7,230,79,262"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="parse_init()" alt="" coords="129,230,233,262"/>
 <area shape="rect" href="pybindgen.module.Module&#45;class.html#__init__" title="module.Module.__init__()" alt="" coords="355,174,571,206"/>
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="module.ModuleBase.add_include()" alt="" coords="321,230,604,262"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="typehandlers.codesink.CodeSink.indent()" alt="" coords="299,286,627,318"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="typehandlers.codesink.CodeSink.unindent()" alt="" coords="289,342,636,374"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html#writeln" title="typehandlers.codesink.FileCodeSink.writeln()" alt="" coords="283,398,643,430"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="412,454,513,486"/>
 </map>
   <img src="call_graph_for_parse_init.gif" alt='' usemap="#call_graph_for_parse_init" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -235,7 +238,7 @@
       <div style="display:none" id="call_graph_for_scan_types-summary-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_scan_types" name="call_graph_for_scan_types">
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="_scan_namespace_types()" alt="" coords="293,6,512,38"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_scan_namespace_types" title="_scan_namespace_types()" alt="" coords="295,6,513,38"/>
 <area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parse()" alt="" coords="7,6,79,38"/>
 <area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#scan_types" title="scan_types()" alt="" coords="128,6,245,38"/>
 </map>
@@ -361,6 +364,24 @@
     </td>
   </tr>
 </table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pybindgen.gccxmlparser.ModuleParser-class.html#enable_anonymous_containers" class="summary-name">enable_anonymous_containers</a><br />
+      if True, pybindgen will attempt to scan for all std containers, even 
+      the ones that have no typedef'ed name.
+    </td>
+  </tr>
+</table>
 <!-- ==================== PROPERTIES ==================== -->
 <a name="section-Properties"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -401,19 +422,19 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.__init__">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Creates an object that will be able parse header files and create a 
-  pybindgen module definition.
+  <p>Creates an object that will be able parse header files and create a 
+  pybindgen module definition.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>module_name</code></strong> - name of the Python module</li>
-        <li><strong class="pname"><code>module_namespace_name</code></strong> - optional C++ namespace name; if given, only definitions of 
-          this namespace will be included in the python module</li>
+        <li><strong class="pname"><code>module_namespace_name</code></strong> - optional C++ namespace name; if given, only definitions of this 
+          namespace will be included in the python module</li>
     </ul></dd>
     <dt>Overrides:
-      object.__init__
+        object.__init__
     </dt>
   </dl>
 </td></tr></table>
@@ -431,18 +452,18 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.add_pre_scan_hook">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Add a function to be called right before converting a gccxml 
+  <p>Add a function to be called right before converting a gccxml 
   definition to a PyBindGen wrapper object.  This hook function will be 
   called for every scanned type, function, or method, and given the a 
   chance to modify the annotations for that definition.  It will be called 
-  like this::
+  like this::</p>
 <pre class="literalblock">
  pre_scan_hook(module_parser, pygccxml_definition, global_annotations,
                parameter_annotations)
 </pre>
-  where:
+  <p>where:</p>
   <ul>
     <li>
       module_parser -- the ModuleParser (this class) instance
@@ -456,12 +477,12 @@
       not associated with any particular parameter
     </li>
     <li>
-      parameter_annotations -- a dicionary containing the 
-      &quot;parameter annotations&quot; for the definition.  It is a dict 
-      whose keys are parameter names and whose values are dicts containing 
-      the annotations for that parameter.  Annotations pertaining the 
-      return value of functions or methods are denoted by a annotation for 
-      a parameter named 'return'.
+      parameter_annotations -- a dicionary containing the &quot;parameter 
+      annotations&quot; for the definition.  It is a dict whose keys are 
+      parameter names and whose values are dicts containing the annotations
+      for that parameter.  Annotations pertaining the return value of 
+      functions or methods are denoted by a annotation for a parameter 
+      named 'return'.
     </li>
   </ul>
   <dl class="fields">
@@ -481,16 +502,16 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.add_post_scan_hook">source&nbsp;code</a></span>&nbsp;
     </td>
-  </table>
+  </tr></table>
   
-  Add a function to be called right after converting a gccxml definition
+  <p>Add a function to be called right after converting a gccxml definition
   to a PyBindGen wrapper object.  This hook function will be called for 
   every scanned type, function, or method.  It will be called like 
-  this:
+  this:</p>
 <pre class="literalblock">
  post_scan_hook(module_parser, pygccxml_definition, pybindgen_wrapper)
 </pre>
-  where:
+  <p>where:</p>
   <ul>
     <li>
       module_parser -- the ModuleParser (this class) instance
@@ -520,12 +541,13 @@
         <span class="sig-arg">whitelist_paths</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">includes</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">)</code></span>,
         <span class="sig-arg">pygen_sink</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">pygen_classifier</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">pygen_classifier</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">gccxml_options</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.parse">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_parse-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for_parse-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_parse" name="call_graph_for_parse">
@@ -542,8 +564,8 @@
 </table><br />
 </center></div>
 
-  parses a set of header files and returns a pybindgen Module instance. 
-  It is equivalent to calling the following methods:
+  <p>parses a set of header files and returns a pybindgen Module instance. 
+  It is equivalent to calling the following methods:</p>
   <ol start="1">
     <li>
       parse_init(header_files, include_paths, whitelist_paths)
@@ -558,10 +580,10 @@
       scan_functions()
     </li>
     <li>
-      <p>parse_finalize()</p>
-      The documentation for <a 
+      parse_finalize()
+      <p>The documentation for <a 
       href="pybindgen.gccxmlparser.ModuleParser-class.html#parse_init" 
-      class="link">ModuleParser.parse_init</a> explains the parameters.
+      class="link">ModuleParser.parse_init</a> explains the parameters.</p>
     </li>
   </ol>
   <dl class="fields">
@@ -587,20 +609,21 @@
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.gccxmlparser-pysrc.html#ModuleParser.parse_init">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_parse_init-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for_parse_init-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_parse_init" name="call_graph_for_parse_init">
 <area shape="rect" href="pybindgen.gccxmlparser.GccXmlTypeRegistry&#45;class.html#__init__" title="GccXmlTypeRegistry.__init__()" alt="" coords="332,6,593,38"/>
 <area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_get_all_pygen_sinks" title="_get_all_pygen_sinks()" alt="" coords="365,62,560,94"/>
 <area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#_get_main_pygen_sink" title="_get_main_pygen_sink()" alt="" coords="360,118,565,150"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parse()" alt="" coords="7,202,79,234"/>
-<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="parse_init()" alt="" coords="129,202,233,234"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse" title="parse()" alt="" coords="7,230,79,262"/>
+<area shape="rect" href="pybindgen.gccxmlparser.ModuleParser&#45;class.html#parse_init" title="parse_init()" alt="" coords="129,230,233,262"/>
 <area shape="rect" href="pybindgen.module.Module&#45;class.html#__init__" title="module.Module.__init__()" alt="" coords="355,174,571,206"/>
 <area shape="rect" href="pybindgen.module.ModuleBase&#45;class.html#add_include" title="module.ModuleBase.add_include()" alt="" coords="321,230,604,262"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#indent" title="typehandlers.codesink.CodeSink.indent()" alt="" coords="299,286,627,318"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.CodeSink&#45;class.html#unindent" title="typehandlers.codesink.CodeSink.unindent()" alt="" coords="289,342,636,374"/>
 <area shape="rect" href="pybindgen.typehandlers.codesink.FileCodeSink&#45;class.html#writeln" title="typehandlers.codesink.FileCodeSink.writeln()" alt="" coords="283,398,643,430"/>
+<area shape="rect" href="pybindgen.utils&#45;module.html#ascii" title="utils.ascii()" alt="" coords="412,454,513,486"/>
 </map>
   <img src="call_graph_for_parse_init.gif" alt='' usemap="#call_graph_for_parse_init" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -608,8 +631,8 @@
 </table><br />
 </center></div>
 
-  Prepares to parse a set of header files.  The following methods should
-  then be called in order to finish the rest of scanning process:
+  <p>Prepares to parse a set of header files.  The following methods should
+  then be called in order to finish the rest of scanning process:</p>
   <ol start="1">
     <li>
       scan_types()
@@ -630,30 +653,29 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>header_files</code></strong> (list of string) - header files to parse</li>
-        <li><strong class="pname"><code>include_paths</code></strong> (list of string) - (deprecated, use the parameter gccxml_options) list of include
+        <li><strong class="pname"><code>include_paths</code></strong> (list of string) - (deprecated, use the parameter gccxml_options) list of include 
           paths</li>
-        <li><strong class="pname"><code>whitelist_paths</code></strong> (list of string) - additional directories for definitions to be included Normally
+        <li><strong class="pname"><code>whitelist_paths</code></strong> (list of string) - additional directories for definitions to be included Normally 
           the module parser filters out API definitions that have been 
           defined outside one of the header files indicated for parsing.  
           The parameter whitelist_paths instructs the module parser to 
           accept definitions defined in another header file if such header 
-          file is inside one of the directories listed by 
-          whitelist_paths.</li>
-        <li><p><strong class="pname"><code>pygen_sink</code></strong> (<a href="pybindgen.typehandlers.codesink.CodeSink-class.html" 
+          file is inside one of the directories listed by whitelist_paths.</li>
+        <li><strong class="pname"><code>pygen_sink</code></strong> (<a href="pybindgen.typehandlers.codesink.CodeSink-class.html" 
           class="link">CodeSink</a> or list of <a 
           href="pybindgen.gccxmlparser.PygenSection-class.html" 
-          class="link">PygenSection</a> objects) - code sink for python script generation.</p>
+          class="link">PygenSection</a> objects) - code sink for python script generation.
           <p>This parameter activates a mode wherein ModuleParser, in 
           addition to building in memory API definitions, creates a python 
           script that will generate the module, when executed. The 
           generated Python script can be human editable and does not 
           require pygccxml or gccxml to run, only PyBindGen to be 
           installed.</p>
-          The pygen parameter can be either:
+          <p>The pygen parameter can be either:</p>
           <ol start="1">
             <li>
-              A single code sink: this will become the main and only 
-              script file to be generated
+              A single code sink: this will become the main and only script
+              file to be generated
             </li>
             <li>
               A list of <a 
@@ -663,12 +685,34 @@
             </li>
           </ol></li>
         <li><strong class="pname"><code>pygen_classifier</code></strong> - the classifier to use when pygen is given and is a dict</li>
-        <li><strong class="pname"><code>gccxml_options</code></strong> (dict) - extra options to pass into the gccxml_configuration_t object 
-          as keyword arguments (see <a 
+        <li><strong class="pname"><code>gccxml_options</code></strong> (dict) - extra options to pass into the gccxml_configuration_t object as 
+          keyword arguments (see <a 
           href="http://www.language-binding.net/pyplusplus/documentation/apidocs/pygccxml.parser.config.gccxml_configuration_t-class.html"
           target="_top">pygccxml API documentation</a> for more 
           information).</li>
     </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Variable Details</span></td>
+</tr>
+</table>
+<a name="enable_anonymous_containers"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">enable_anonymous_containers</h3>
+  if True, pybindgen will attempt to scan for all std containers, even the 
+  ones that have no typedef'ed name.  Enabled by default.
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -699,10 +743,11 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:56:05 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:50 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -713,9 +758,8 @@
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

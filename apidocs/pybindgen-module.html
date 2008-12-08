@@ -52,24 +52,24 @@
   </tr>
 </table>
 <!-- ==================== PACKAGE DESCRIPTION ==================== -->
-<h1 class="epydoc">Package pybindgen</h1><span class="codelink"><a href="pybindgen-pysrc.html">source&nbsp;code</a></span><br /><br />
+<h1 class="epydoc">Package pybindgen</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen-pysrc.html">source&nbsp;code</a></span></p>
 <h1 class="heading">What is pybindgen ?</h1>
-    Pybindgen is a tool which can be used to generate python bindings 
+    <p>Pybindgen is a tool which can be used to generate python bindings 
     for C or C++ APIs. It is similar in scope to tools such as 
     boost::python, XXX, and a few others but has a number of specific 
-    features which make it especially useful in a number of cases:
+    features which make it especially useful in a number of cases:</p>
     <ul>
       <li>
         pybindgen is implemented in python and is used and controlled 
         through python
       </li>
       <li>
-        pybindgen error messages do not involve c++ template deciphering
+        pybindgen error messages do not involve c++ template deciphering 
         (think about boost::python)
       </li>
       <li>
-        pybindgen generates highly-readable C or C++ code so it is 
-        possible to step into and debug the bindings
+        pybindgen generates highly-readable C or C++ code so it is possible
+        to step into and debug the bindings
       </li>
       <li>
         In simple cases, pybindgen is really easy to use. In more 
@@ -77,62 +77,62 @@
         wrap complex C or C++ APIs.
       </li>
       <li>
-        pybindgen also provides an optional tool to parse C and C++ 
-        headers and generate automatically bindings for them, potentially 
-        using extra inline or out-of-line annotations. This tool is based 
-        on gccxml and pygccxml: it can be used to generate the first 
-        version of the bindings and tweak them by hand later or as a fully 
+        pybindgen also provides an optional tool to parse C and C++ headers
+        and generate automatically bindings for them, potentially using 
+        extra inline or out-of-line annotations. This tool is based on 
+        gccxml and pygccxml: it can be used to generate the first version 
+        of the bindings and tweak them by hand later or as a fully 
         automated tool to continuously generate bindings for changing C/C++
         APIs.
       </li>
     </ul>
-    This tutorial will show how to build bindings for a couple of common
+    <p>This tutorial will show how to build bindings for a couple of common
     C and C++ API idioms and, then, will proceed to show how to use the 
-    automatic binding generator.
+    automatic binding generator.</p>
   <h1 class="heading">A simple example</h1>
-    The best way to get a feel for what pybindgen looks like is to go 
+    <p>The best way to get a feel for what pybindgen looks like is to go 
     through a simple example. Let's assume that we have a simple C API as 
-    shown below declared in a header my-module.h:
+    shown below declared in a header my-module.h:</p>
 <pre class="literalblock">
  void MyModuleDoAction (void);
 </pre>
-    What we want to do is call this C function from python and be able 
-    to write python code such as::
+    <p>What we want to do is call this C function from python and be able 
+    to write python code such as::</p>
 <pre class="literalblock">
  import MyModule
 
  MyModule.MyModuleDoAction ()
 </pre>
-    Getting there is, hopefully, not very complicated: we just need to 
+    <p>Getting there is, hopefully, not very complicated: we just need to 
     write a small python program whose job is to generate the C code which 
     will act as a bridge between our user's python program and the 
     underlying C function. First, we import the pybindgen and the sys 
-    modules::
+    modules::</p>
 <pre class="literalblock">
  import pybindgen
  import sys
 </pre>
-    Then, we create an object to represent the module we want to 
-    generate::
+    <p>Then, we create an object to represent the module we want to 
+    generate::</p>
 <pre class="literalblock">
  mod = pybindgen.Module('MyModule')
 </pre>
-    add our C header::
+    <p>add our C header::</p>
 <pre class="literalblock">
  mod.add_include('&quot;my-module.h&quot;')
 </pre>
-    and register our function which returns no value (hence, the second 
+    <p>and register our function which returns no value (hence, the second 
     argument 'None'), and, takes no arguments (hence, the third argument, 
-    the empty list '[]')::
+    the empty list '[]')::</p>
 <pre class="literalblock">
  mod.add_function('MyModuleDoAction', None, [])
 </pre>
-    Finally, we generate code for this binding directed to standard 
-    output::
+    <p>Finally, we generate code for this binding directed to standard 
+    output::</p>
 <pre class="literalblock">
  mod.generate(sys.stdout)
 </pre>
-    The final program is pretty short::
+    <p>The final program is pretty short::</p>
 <pre class="literalblock">
  import pybindgen
  import sys
@@ -142,11 +142,11 @@
  mod.add_function('MyModuleDoAction', None, [])
  mod.generate(sys.stdout)
 </pre>
-    This very small example is located in the <a 
+    <p>This very small example is located in the <a 
     href="http://pybindgen.googlecode.com/svn/trunk/tutorial/" 
     target="_top">tutorial/first-example</a> directory together with a 
     small makefile which will build our small C library, the bridging code,
-    and a python module::
+    and a python module::</p>
 <pre class="literalblock">
  mathieu@ns-test:~/code/pybindgen$ cd tutorial/first-example/
  mathieu@ns-test:~/code/pybindgen/tutorial/first-example$ make
@@ -157,24 +157,24 @@
  gcc -shared -o MyModule.so -L. -lmymodule my-module-binding.o
  mathieu@ns-test:~/code/pybindgen/tutorial/first-example$ 
 </pre>
-    The first two lines are simply used to build our example C library 
+    <p>The first two lines are simply used to build our example C library 
     in libmymodule.so so, these are not very interesting. The more 
-    interesting bit starts with::
+    interesting bit starts with::</p>
 <pre class="literalblock">
  PYTHONPATH=$PYTHONPATH:../../ python my-module.py &gt; my-module-binding.c
 </pre>
-    which is just a fancy way to run our binding generator program while
+    <p>which is just a fancy way to run our binding generator program while
     ensuring that it will find the pybindgen module and while dumping the 
     output of the program to the file named my-module-binding.c. This file 
-    is then build and linked into a python module::
+    is then build and linked into a python module::</p>
 <pre class="literalblock">
  gcc -fPIC -I/usr/include/python2.5 -c -o my-module-binding.o my-module-binding.c
  gcc -shared -o MyModule.so -L. -lmymodule my-module-binding.o
 </pre>
-    Once all of that code is built, we obviously want to run it. Setting
+    <p>Once all of that code is built, we obviously want to run it. Setting
     up your system to make sure that the python module is found by the 
     python runtime is outside the scope of this tutorial but, for most 
-    people, the following session should be self-explanatory::
+    people, the following session should be self-explanatory::</p>
 <pre class="literalblock">
  mathieu@ns-test:~/code/pybindgen/tutorial/first-example$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
  mathieu@ns-test:~/code/pybindgen/tutorial/first-example$ export PYTHONPATH=$PYTHONPATH:.
@@ -188,24 +188,24 @@
 </pre>
   <h1 class="heading">Wrapping types by value</h1>
     <h2 class="heading">Primitive types</h2>
-      The first example showed how to call a function which takes no 
+      <p>The first example showed how to call a function which takes no 
       arguments and returns no values which, obviously, is not especially 
       interesting so, let's look at how we can give meaningfull arguments 
-      to our function:
+      to our function:</p>
 <pre class="literalblock">
  int MyModuleDoAction (int v1, int v2);
 </pre>
-      and the corresponding bit from the code generation script: the 
+      <p>and the corresponding bit from the code generation script: the 
       second argument to add_function specifies that our function returns a
       value of type 'int' and the third argument specifies that our 
-      function takes as a single argument an 'int' of name 'value'::
+      function takes as a single argument an 'int' of name 'value'::</p>
 <pre class="literalblock">
  mod.add_function('MyModuleDoAction', 
                    pybindgen.retval ('int'), 
                   [pybindgen.param ('int', 'v1'),
                    pybindgen.param ('int', 'v2')])
 </pre>
-      The above then allows you to write:
+      <p>The above then allows you to write:</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> MyModule
 <span class="py-prompt">&gt;&gt;&gt; </span>v = MyModule.MyModuleDoAction (10, -1)
@@ -218,19 +218,19 @@
 <span class="py-output">-2</span></pre>
       <p>Which shows how the argument name can be used to avoid using 
       positional arguments.</p>
-      Of course, the above example could be rewritten to the more 
-      compact and readable::
+      <p>Of course, the above example could be rewritten to the more 
+      compact and readable::</p>
 <pre class="literalblock">
  from pybindgen import *
  mod.add_function('MyModuleDoAction', retval ('int'), 
                   [param ('int', 'v1'),
                    param ('int', 'v2')])
 </pre>
-      In the following examples, this is what we will do to avoid extra 
-      typing.
+      <p>In the following examples, this is what we will do to avoid extra 
+      typing.</p>
     <h2 class="heading">Enum types</h2>
-      Enums are often used to define C and C++ constants as shown 
-      below::
+      <p>Enums are often used to define C and C++ constants as shown 
+      below::</p>
 <pre class="literalblock">
  enum MyEnum_e
  {
@@ -240,7 +240,7 @@
  };
  void MyModuleDoAction (enum enum_e value);
 </pre>
-      And wrapping them is also pretty trivial::
+      <p>And wrapping them is also pretty trivial::</p>
 <pre class="literalblock">
  from pybindgen import *
  import sys
@@ -251,7 +251,7 @@
  mod.add_function('MyModuleDoAction', None, [param('MyEnum_e', 'value')])
  mod.generate(sys.stdout)
 </pre>
-      With the resulting python-visible API:
+      <p>With the resulting python-visible API:</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> MyModule
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> MyModule.CONSTANT_A
@@ -263,8 +263,8 @@
 <span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span>MyModule.MyModuleDoAction (MyModule.CONSTANT_B)
 <span class="py-output">MyModuleDoAction: 1</span></pre>
     <h2 class="heading">Compound types</h2>
-      Passing a structure to and from C is not really more complicated 
-      than our previous example. The API below::
+      <p>Passing a structure to and from C is not really more complicated 
+      than our previous example. The API below::</p>
 <pre class="literalblock">
  struct MyModuleStruct
  {
@@ -273,7 +273,7 @@
  };
  struct MyModuleStruct MyModuleDoAction (struct MyModuleStruct value);
 </pre>
-      can be bound to python using the following script::
+      <p>can be bound to python using the following script::</p>
 <pre class="literalblock">
  from pybindgen import *
  import sys
@@ -286,13 +286,13 @@
  mod.add_function('MyModuleDoAction', retval ('MyModuleStruct'), [param ('MyModuleStruct', 'value')])
  mod.generate(sys.stdout)
 </pre>
-      The most obvious change here is that we have to define the new 
-      structure type::
+      <p>The most obvious change here is that we have to define the new 
+      structure type::</p>
 <pre class="literalblock">
  struct = mod.add_struct('MyModuleStruct')
 </pre>
-      and register the names and types of each of the members we want to
-      make accessible from python::
+      <p>and register the names and types of each of the members we want to
+      make accessible from python::</p>
 <pre class="literalblock">
  struct.add_instance_attribute('a', 'int')
  struct.add_instance_attribute('b', 'int')
@@ -302,7 +302,7 @@
       C++, there exist both instance and static members so, pybindgen 
       provides two methods: add_instance_attribute and add_static_attribute
       to register these two kinds of members.</p>
-      Our C API then becomes accessible from python:
+      <p>Our C API then becomes accessible from python:</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> MyModule
 <span class="py-prompt">&gt;&gt;&gt; </span>st = MyModule.MyModuleStruct ()
@@ -321,9 +321,9 @@
 <span class="py-output"></span><span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> v.b
 <span class="py-output">-20</span></pre>
     <h2 class="heading">C++ classes</h2>
-      Wrapping C++ classes is very similar to wrapping a C struct with a
+      <p>Wrapping C++ classes is very similar to wrapping a C struct with a
       few functions: we will thus start by extending our C API with a C++ 
-      class declaration::
+      class declaration::</p>
 <pre class="literalblock">
  class MyClass
  {
@@ -332,35 +332,35 @@
    int GetInt (void) const;
  };
 </pre>
-      We first need to declare a C++ class::
+      <p>We first need to declare a C++ class::</p>
 <pre class="literalblock">
  mod = Module('MyModule')
  klass = mod.add_class('MyClass')
 </pre>
-      and, then, specify that it has a constructor::
+      <p>and, then, specify that it has a constructor::</p>
 <pre class="literalblock">
  klass.add_constructor([])
 </pre>
-      We can declare the setter method which is really a straightforward
-      extension from the add_function function.:
+      <p>We can declare the setter method which is really a straightforward
+      extension from the add_function function.:</p>
 <pre class="literalblock">
  klass.add_method('SetInt', None, [param('int', 'value')])
 </pre>
-      The getter is also pretty straightforward except for the 
-      declaration of constness::
+      <p>The getter is also pretty straightforward except for the 
+      declaration of constness::</p>
 <pre class="literalblock">
  klass.add_method('GetInt', retval('int'), [], is_const=True)
 </pre>
-      Using this API is also very similar to the struct example we went 
-      through in the previous section:
+      <p>Using this API is also very similar to the struct example we went 
+      through in the previous section:</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span>my = MyModule.MyClass()
 <span class="py-prompt">&gt;&gt;&gt; </span>my.SetInt(10)
 <span class="py-prompt">&gt;&gt;&gt; </span>v = my.GetInt()
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> v
 <span class="py-output">10</span></pre>
-      It is also possible to bind inner classes and enums such as 
-      these::
+      <p>It is also possible to bind inner classes and enums such as 
+      these::</p>
 <pre class="literalblock">
  class Outer
  {
@@ -381,30 +381,30 @@
    };
  };
 </pre>
-      We just need to bind the outer class::
+      <p>We just need to bind the outer class::</p>
 <pre class="literalblock">
  outer = mod.add_class('Outer')
  outer.add_constructor([])
  outer.add_method('Do', None, [])
 </pre>
-      Then, bind its inner enum::
+      <p>Then, bind its inner enum::</p>
 <pre class="literalblock">
  mod.add_enum('inner_e', ['INNER_A', 'INNER_B', 'INNER_C'], outer_class=outer)
 </pre>
-      and, finally, bind its inner class::
+      <p>and, finally, bind its inner class::</p>
 <pre class="literalblock">
  mod.add_class('Inner', outer_class=outer)
  inner.add_constructor([])
 </pre>
-      The only slightly tricky part is binding the Do method of the 
+      <p>The only slightly tricky part is binding the Do method of the 
       Inner class since it refers to the enum type defined in the Outer 
       class: we simply need to carefully use the fully scoped name of the 
-      enum.:
+      enum.:</p>
 <pre class="literalblock">
  inner.add_method('Do', None, [param('Outer::inner_e', value)])
 </pre>
-      The resulting python API reflects the underlying C++ API very 
-      closely:
+      <p>The resulting python API reflects the underlying C++ API very 
+      closely:</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> MyModule
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span> MyModule.Outer.INNER_A
@@ -416,8 +416,8 @@
 <span class="py-prompt">&gt;&gt;&gt; </span>inner = MyModule.Outer.Inner()
 <span class="py-prompt">&gt;&gt;&gt; </span>inner.Do(MyModule.Outer.INNER_A)</pre>
     <h2 class="heading">C++ namespaces</h2>
-      Wrapping multiple nested namespaces is, of course, possible and 
-      represents no special challenge. Let's look at an example::
+      <p>Wrapping multiple nested namespaces is, of course, possible and 
+      represents no special challenge. Let's look at an example::</p>
 <pre class="literalblock">
  namespace Outer {
    void Do (void);
@@ -430,27 +430,27 @@
    } // namespace Inner
  } // namespace Outer
 </pre>
-      First, we need to define the Outer namespace::
+      <p>First, we need to define the Outer namespace::</p>
 <pre class="literalblock">
  mod = Module('MyModule')
  outer = mod.add_cpp_namespace('Outer')
 </pre>
-      Then, register its classes and functions::
+      <p>Then, register its classes and functions::</p>
 <pre class="literalblock">
  outer.add_class('MyClass')
  outer.add_function('Do', None, [])
 </pre>
-      and, finally, define the Inner namespace and its associated 
-      functions and methods::
+      <p>and, finally, define the Inner namespace and its associated 
+      functions and methods::</p>
 <pre class="literalblock">
  inner = outer.add_cpp_namespace('Inner')
  inner.add_class('MyClass')
  inner.add_function('Do', None, [])
 </pre>
-      The resulting API, again, sticks to the underlying C++ API by 
+      <p>The resulting API, again, sticks to the underlying C++ API by 
       defining one python module for each C++ namespace and making sure 
       that the hierarchy of python modules matches the hierarchy of C++ 
-      namespaces.
+      namespaces.</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">import</span> MyModule
 <span class="py-prompt">&gt;&gt;&gt; </span>o = MyModule.Outer.MyClass()
@@ -462,43 +462,43 @@
     C/C++ APIs only by value but, a large fraction of real-world APIs use 
     raw pointers (and, in the case of C++, smart pointers) as arguments or 
     return values of functions/methods.</p>
-    Rather than try to explain the detail of every option offered by 
+    <p>Rather than try to explain the detail of every option offered by 
     pybindgen to deal with pointers, we will go through a couple of very 
-    classic memory management schemes and examples.
+    classic memory management schemes and examples.</p>
     <h2 class="heading">Function returns pointer</h2>
-      The API to bind:
+      <p>The API to bind:</p>
 <pre class="literalblock">
  class MyClass;
  MyClass *DoSomethingAndReturnClass (void);
 </pre>
-      First, we declare the MyClass type:
+      <p>First, we declare the MyClass type:</p>
 <pre class="literalblock">
  mod.add_class('MyClass')
  ...
 </pre>
-      Then, if we assume that the function returns ownership of the 
-      pointer to the caller, we can write:
+      <p>Then, if we assume that the function returns ownership of the 
+      pointer to the caller, we can write:</p>
 <pre class="literalblock">
  mod.add_function('DoSomethingAndReturnClass', retval('MyClass *', caller_owns_return=True), [])
 </pre>
       <p>The above will tell pybindgen that the caller (the python runtime)
       becomes responsible for deleting the instance of MyClass returned by 
       the function DoSomethingAndReturnClass when it is done with it.</p>
-      Of course, it is possible to not give back ownership of the 
-      returned pointer to the caller:
+      <p>Of course, it is possible to not give back ownership of the 
+      returned pointer to the caller:</p>
 <pre class="literalblock">
  mod.add_function('DoSomethingAndReturnClass', retval('MyClass *', caller_owns_return=False), [])
 </pre>
-      Which would make the python runtime assume that the lifetime of 
-      the returned pointer is longer than the associated python object.
+      <p>Which would make the python runtime assume that the lifetime of 
+      the returned pointer is longer than the associated python object.</p>
     <h2 class="heading">Function takes pointer</h2>
-      The API to bind:
+      <p>The API to bind:</p>
 <pre class="literalblock">
  class MyClass;
  void DoWithClass (MyClass *cls);
 </pre>
-      If we assume that the callee takes ownership of the input pointer,
-      we can write:
+      <p>If we assume that the callee takes ownership of the input pointer,
+      we can write:</p>
 <pre class="literalblock">
  mod.add_function('DoWithClass', None, [param('MyClass *', 'cls', transfer_ownership = True)])
 </pre>
@@ -508,19 +508,19 @@
       python has no way of knowing when the underlying MyClass instance is 
       really destroyed so, if you try to invoke methods on it _after_ it 
       has been destroyed, bad things will obviously happen.</p>
-      If, instead, we assume that the caller keeps ownership of the 
-      pointer, we can write the much safer version:
+      <p>If, instead, we assume that the caller keeps ownership of the 
+      pointer, we can write the much safer version:</p>
 <pre class="literalblock">
  mod.add_function('DoWithClass', None, [param('MyClass *', 'cls', transfer_ownership = False)])
 </pre>
-      Which will allow python to delete the MyClass instance only when 
-      the associated python wrapper disappears.
+      <p>Which will allow python to delete the MyClass instance only when 
+      the associated python wrapper disappears.</p>
     <h2 class="heading">A reference-counted object</h2>
-      A nice way to avoid some of the ambiguities of the above-mentioned
+      <p>A nice way to avoid some of the ambiguities of the above-mentioned
       API bindings is to use reference-counted C or C++ objects which must 
       provide a pair of functions or methods to increase or decrease the 
       reference count of the object. For example, a classic C++ 
-      reference-counted class:
+      reference-counted class:</p>
 <pre class="literalblock">
  class MyClass 
  {
@@ -530,51 +530,72 @@
    uint32_t PeekRef (void);
  };
 </pre>
-      And the associated function which takes a pointer:
+      <p>And the associated function which takes a pointer:</p>
 <pre class="literalblock">
  void DoSomething (MyClass *cls);
 </pre>
-      To wrap this class, we first need to declare our class:
+      <p>To wrap this class, we first need to declare our class:</p>
 <pre class="literalblock">
- mod.add_class('MyClass', 
-               incref_method='Ref', 
-               decref_method='Unref', 
-               peekref_method='PeekRef')
+ from pybindgen import cppclass
+ [...]
+ mod.add_class('MyClass', memory_policy=cppclass.ReferenceCountingMethodsPolicy( 
+                   incref_method='Ref', 
+                   decref_method='Unref', 
+                   peekref_method='PeekRef'))
 </pre>
-      The above allows pybindgen to maintain and track the reference 
+      <p>The above allows pybindgen to maintain and track the reference 
       count of the MyClass object while the code below shows how we can 
-      declare a function taking a pointer as input:
+      declare a function taking a pointer as input:</p>
 <pre class="literalblock">
- mod.add_function('DoSomething', None, [param('MyClass *', 'cls')]
+ mod.add_function('DoSomething', None, [param('MyClass *', 'cls', transfer_ownership=False)]
 </pre>
-      <p>Here, we obviously don't need to care much about the 
-      transfer_ownership attribute of the input argument to our function 
-      since ownership of the pointer will be implicitely shared between the
-      DoSomething function and the calling python runtime through the 
-      object's reference count.</p>
-      A more interesting case is that of returning such a reference 
-      counted object from a function:
+      <p>Here, the meaning of transfer_ownership changes slightly. Whithout
+      reference counting, transfer_ownership refers to the transfer of the 
+      object as a whole, i.e. either the caller or callee will own the 
+      object in the end, but not both.  With reference counting, 
+      transfer_ownership refers to the transfer of a _reference_.  In this 
+      example, transfer_ownership=False means that the caller will not 
+      &quot;steal&quot; our reference, i.e. it will either not keep a 
+      reference to our object for itself, or if it does it creates its own 
+      reference to the object by calling the incref method.  If 
+      transfer_ownership=True it would mean that the caller would keep the 
+      passed in reference to itself, and if the caller wants to keep the 
+      reference it must call the incref method first.</p>
+      <p>A more interesting case is that of returning such a reference 
+      counted object from a function:</p>
 <pre class="literalblock">
  MyClass *DoSomething (void);
 </pre>
-      While classic reference counting rules require that the callee 
+      <p>While classic reference counting rules require that the callee 
       returns a reference to the caller (i.e., it calls Ref on behalf of 
       the caller before returning the pointer), some APIs will undoubtedly 
       return a pointer and expect the caller to acquire a reference to the 
       returned object by calling Ref himself. Pybindgen hopefully can be 
-      made to support this case too:
+      made to support this case too:</p>
 <pre class="literalblock">
  mod.add_function('DoSomething', retval('MyClass *', caller_owns_return=False), [])
 </pre>
-      Which instructs pybindgen that DoSomething is not to be trusted 
+      <p>Which instructs pybindgen that DoSomething is not to be trusted 
       and that it should acquire ownership of the returned pointer if it 
-      needs to keep track of it.
+      needs to keep track of it.</p>
+    <h2 class="heading">A STL container</h2>
+      <p>If you have a function that takes a STL container, you have to 
+      tell pybindgen to wrap the container first:</p>
+<pre class="literalblock">
+ void DoSomething (std::list&lt;std::string&gt; const &amp;listOfStrings);
+</pre>
+      <p>Is wrapped by:</p>
+<pre class="literalblock">
+ module.add_container('std::list&lt;std::string&gt;', 'std::string', 'list') # declare a container only once
+ [...]
+ mod.add_function('DoSomething', None, [param('std::list&lt;std::string&gt; const &amp;', 'listOfStrings')])
+</pre>
   <h1 class="heading">Subclassing a C++ class from python</h1>
   <h1 class="heading">Extending a C++ class or namespace from python</h1>
   <h1 class="heading">Basic Interface with Error Handling</h1>
-    It is also possible to declare a error handler.  The error handler 
+    <p>It is also possible to declare a error handler.  The error handler 
     will be invoked for API definitions that cannot be wrapped for some 
-    reason:
+    reason:</p>
 <pre class="literalblock">
  #! /usr/bin/env python
 
@@ -611,7 +632,7 @@
     <p>In this example, we register a error handler that allows PyBindGen 
     to simply ignore API definitions with errors, and not wrap them, but 
     move on.</p>
-    The difference between is Parameter.new(...) and param(...), as well
+    <p>The difference between is Parameter.new(...) and param(...), as well
     as between ReturnValue.new(...) and retval(...) is to be noted here. 
     The main difference is not that param(...) and retval(...) are shorter,
     it is that they allow delayed error handling.  For example, when you 
@@ -621,10 +642,10 @@
     However, param(...) does not try to lookup the type handler immediately
     and instead lets Module.add_function() do that in a way that the error 
     handler can be invoked and the function is simply not wrapped if the 
-    error handler says so.
+    error handler says so.</p>
     <h2 class="heading">Header file scanning with (py)gccxml</h2>
-      If you have gccxml and pygccxml installed, PyBindGen can use them 
-      to scan the API definitions directly from the header files:
+      <p>If you have gccxml and pygccxml installed, PyBindGen can use them 
+      to scan the API definitions directly from the header files:</p>
 <pre class="literalblock">
  #! /usr/bin/env python
 
@@ -645,14 +666,14 @@
  if __name__ == '__main__':
      my_module_gen()
 </pre>
-      The above script will generate the bindings for the module 
+      <p>The above script will generate the bindings for the module 
       directly. It expects the input header file, a.h, as first command 
-      line argument.
+      line argument.</p>
     <h2 class="heading">Header file scanning with (py)gccxml: python intermediate file</h2>
-      The final code generation flow supported by PyBindGen is a hybrid 
+      <p>The final code generation flow supported by PyBindGen is a hybrid 
       of the previous ones.  One script scans C/C++ header files, but 
       instead of generating C/C++ binding code directly it instead 
-      generates a PyBindGen based Python script:
+      generates a PyBindGen based Python script:</p>
 <pre class="literalblock">
  #! /usr/bin/env python
 
@@ -668,9 +689,9 @@
  if __name__ == '__main__':
      my_module_gen()
 </pre>
-      The above script produces a Python program on stdout.  Running the
+      <p>The above script produces a Python program on stdout.  Running the
       generated Python program will, in turn, generate the C++ code binding
-      our interface.<br /><br />
+      our interface.</p>
 
 <!-- ==================== SUBMODULES ==================== -->
 <a name="section-Submodules"></a>
@@ -682,6 +703,9 @@
 </tr>
   <tr><td class="summary">
   <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="pybindgen.container-module.html">pybindgen.container</a></strong>: <em class="summary">Wrap C++ STL containers</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.converter_functions-module.html">pybindgen.converter_functions</a></strong>: <em class="summary">Generates simple converter functions that convert a single value 
+        from python to C or C to python.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppattribute-module.html">pybindgen.cppattribute</a></strong>: <em class="summary">Wraps C++ class instance/static attributes.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppclass-module.html">pybindgen.cppclass</a></strong>: <em class="summary">Wrap C++ classes and methods</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.cppclass_typehandlers-module.html">pybindgen.cppclass_typehandlers</a></strong>    </li>
@@ -692,13 +716,14 @@
     <li> <strong class="uidlink"><a href="pybindgen.module-module.html">pybindgen.module</a></strong>: <em class="summary">Objects that represent -- and generate code for -- C/C++ Python 
         extension modules.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.overloading-module.html">pybindgen.overloading</a></strong>: <em class="summary">C wrapper wrapper</em>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.pytypeobject-module.html">pybindgen.pytypeobject</a></strong>: <em class="summary">The class PyTypeObject generates a PyTypeObject structure contents.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.settings-module.html">pybindgen.settings</a></strong>: <em class="summary">Global settings to the code generator.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers-module.html">pybindgen.typehandlers</a></strong>
     <ul>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.base-module.html">pybindgen.typehandlers.base</a></strong>: <em class="summary">Base classes for all parameter/return type handlers, and base 
         interfaces for wrapper generators.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.booltype-module.html">pybindgen.typehandlers.booltype</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink-module.html">pybindgen.typehandlers.codesink</a></strong>: <em class="summary">Objects that receive generated C/C++ code lines, reindents them,
+    <li> <strong class="uidlink"><a href="pybindgen.typehandlers.codesink-module.html">pybindgen.typehandlers.codesink</a></strong>: <em class="summary">Objects that receive generated C/C++ code lines, reindents them, 
         and writes them to a file, memory, or another code sink object.</em>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.typehandlers.ctypeparser-module.html">pybindgen.typehandlers.ctypeparser</a></strong>
     <ul>
@@ -715,6 +740,8 @@
     </li>
     <li> <strong class="uidlink"><a href="pybindgen.utils-module.html">pybindgen.utils</a></strong>    </li>
     <li> <strong class="uidlink"><a href="pybindgen.version-module.html">pybindgen.version</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="pybindgen.wrapper_registry-module.html">pybindgen.wrapper_registry</a></strong>: <em class="summary">The class that generates code to keep track of existing python 
+        wrappers for a given root class.</em>    </li>
   </ul></td></tr>
 </table>
 
@@ -745,10 +772,11 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:55:55 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:33 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -759,9 +787,8 @@
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>

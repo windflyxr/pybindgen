@@ -55,13 +55,13 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module tokenizer</h1><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser.tokenizer-pysrc.html">source&nbsp;code</a></span><br /><br />
-Tokenize C++ source code.<br /><br />
+<h1 class="epydoc">Module tokenizer</h1><p class="nomargin-top"><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser.tokenizer-pysrc.html">source&nbsp;code</a></span></p>
+<p>Tokenize C++ source code.</p>
 
 <hr />
 <div class="fields">      <p><strong>Author:</strong>
-        nnorwitz@google.com (Neal Norwitz); minor changes by Gustavo J. 
-        A. M. Carneiro (gjcarneiro@gmail.com)
+        nnorwitz@google.com (Neal Norwitz); minor changes by Gustavo J. A. 
+        M. Carneiro (gjcarneiro@gmail.com)
       </p>
 </div><!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
@@ -107,7 +107,7 @@ Tokenize C++ source code.<br /><br />
   <tr><td><center>  <map id="call_graph_for_gettokens" name="call_graph_for_gettokens">
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="7,6,121,38"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer&#45;module.html#GetTokens" title="GetTokens()" alt="" coords="172,6,287,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer.Token&#45;class.html#__init__" title="Token.__init__()" alt="" coords="336,6,483,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer.Token&#45;class.html#__init__" title="Token.__init__()" alt="" coords="337,6,484,38"/>
 </map>
   <img src="call_graph_for_gettokens.gif" alt='' usemap="#call_graph_for_gettokens" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -137,27 +137,45 @@ Tokenize C++ source code.<br /><br />
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html#VALID_IDENTIFIER_CHARS" class="summary-name">VALID_IDENTIFIER_CHARS</a> = <code title="Set(['$', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', 'A', 'C', \
-'B', 'E', 'D', 'G', 'F', 'I', 'H', 'K', 'J', 'M', 'L', 'O', 'N', 'Q', \
-'P', 'S', 'R', 'U', 'T', 'W', 'V', 'Y', 'X', 'Z', '_', 'a', 'c', 'b', \
-'e', 'd', 'g', 'f', 'i', 'h', 'k', 'j', 'm', 'l', 'o', 'n', 'q', 'p', \
-'s', 'r', 'u', 't', 'w', 'v', 'y', 'x', 'z'])">Set(['$', '1', '0', '3', '2', '5', '4<code class="variable-ellipsis">...</code></code>
+        <a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html#VALID_IDENTIFIER_CHARS" class="summary-name">VALID_IDENTIFIER_CHARS</a> = <code title="set(['$',
+     '0',
+     '1',
+     '2',
+     '3',
+     '4',
+     '5',
+     '6',
+..."><code class="variable-group">set([</code><code class="variable-quote">'</code><code class="variable-string">$</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">2</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">3</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">4</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">5</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html#HEX_DIGITS" class="summary-name">HEX_DIGITS</a> = <code title="Set(['1', '0', '3', '2', '5', '4', '7', '6', '9', '8', 'A', 'C', 'B', \
-'E', 'D', 'F', 'a', 'c', 'b', 'e', 'd', 'f'])">Set(['1', '0', '3', '2', '5', '4', '7', '6', '9',<code class="variable-ellipsis">...</code></code>
+        <a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html#HEX_DIGITS" class="summary-name">HEX_DIGITS</a> = <code title="set(['0',
+     '1',
+     '2',
+     '3',
+     '4',
+     '5',
+     '6',
+     '7',
+..."><code class="variable-group">set([</code><code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">2</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">3</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">4</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">5</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">6</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">7</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">8</code><code class="variable-quote">'</code><code class="variable-op">,</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html#INT_OR_FLOAT_DIGITS" class="summary-name">INT_OR_FLOAT_DIGITS</a> = <code title="Set(['e', '+', '-', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', \
-'E'])">Set(['e', '+', '-', '1', '0', '3', '2', <code class="variable-ellipsis">...</code></code>
+        <a href="pybindgen.typehandlers.ctypeparser.tokenizer-module.html#INT_OR_FLOAT_DIGITS" class="summary-name">INT_OR_FLOAT_DIGITS</a> = <code title="set(['+',
+     '-',
+     '0',
+     '1',
+     '2',
+     '3',
+     '4',
+     '5',
+..."><code class="variable-group">set([</code><code class="variable-quote">'</code><code class="variable-string">+</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">-</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">2</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">3</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">4</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
@@ -231,13 +249,13 @@ Tokenize C++ source code.<br /><br />
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pybindgen.typehandlers.ctypeparser.tokenizer-pysrc.html#GetTokens">source&nbsp;code</a></span>&nbsp;
     <br /><span class="codelink"><a href="javascript:void(0);" onclick="toggleCallGraph('call_graph_for_gettokens-div');return false;">call&nbsp;graph</a></span>&nbsp;</td>
-  </table>
+  </tr></table>
   <div style="display:none" id="call_graph_for_gettokens-div"><center>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr><td><center>  <map id="call_graph_for_gettokens" name="call_graph_for_gettokens">
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser&#45;module.html#parse_type" title="parse_type()" alt="" coords="7,6,121,38"/>
 <area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer&#45;module.html#GetTokens" title="GetTokens()" alt="" coords="172,6,287,38"/>
-<area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer.Token&#45;class.html#__init__" title="Token.__init__()" alt="" coords="336,6,483,38"/>
+<area shape="rect" href="pybindgen.typehandlers.ctypeparser.tokenizer.Token&#45;class.html#__init__" title="Token.__init__()" alt="" coords="337,6,484,38"/>
 </map>
   <img src="call_graph_for_gettokens.gif" alt='' usemap="#call_graph_for_gettokens" ismap="ismap" class="graph-without-title" />
 </center></td></tr>
@@ -245,7 +263,7 @@ Tokenize C++ source code.<br /><br />
 </table><br />
 </center></div>
 
-  Returns a sequence of Tokens.
+  <p>Returns a sequence of Tokens.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -280,11 +298,15 @@ Tokenize C++ source code.<br /><br />
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Set(['$', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', 'A', 'C', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'B', 'E', 'D', 'G', 'F', 'I', 'H', 'K', 'J', 'M', 'L', 'O', 'N', 'Q', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'P', 'S', 'R', 'U', 'T', 'W', 'V', 'Y', 'X', 'Z', '_', 'a', 'c', 'b', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'e', 'd', 'g', 'f', 'i', 'h', 'k', 'j', 'm', 'l', 'o', 'n', 'q', 'p', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'s', 'r', 'u', 't', 'w', 'v', 'y', 'x', 'z'])
+<code class="variable-group">set([</code><code class="variable-quote">'</code><code class="variable-string">$</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">2</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">3</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">4</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">5</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">6</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -302,8 +324,15 @@ Set(['$', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', 'A', 'C', <span clas
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Set(['1', '0', '3', '2', '5', '4', '7', '6', '9', '8', 'A', 'C', 'B', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'E', 'D', 'F', 'a', 'c', 'b', 'e', 'd', 'f'])
+<code class="variable-group">set([</code><code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">2</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">3</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">4</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">5</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">6</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">7</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -321,8 +350,15 @@ Set(['1', '0', '3', '2', '5', '4', '7', '6', '9', '8', 'A', 'C', 'B', <span clas
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-Set(['e', '+', '-', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'E'])
+<code class="variable-group">set([</code><code class="variable-quote">'</code><code class="variable-string">+</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">-</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">2</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">3</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">4</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+     <code class="variable-quote">'</code><code class="variable-string">5</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -355,10 +391,11 @@ Set(['e', '+', '-', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', <span clas
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0beta1 on Sun Jul 27 17:55:55 2008
+    Generated by Epydoc 3.0.1 on Mon Dec  8 15:50:33 2008
     </td>
     <td align="right" class="footer">
-      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
     </td>
   </tr>
 </table>
@@ -369,9 +406,8 @@ Set(['e', '+', '-', '1', '0', '3', '2', '5', '4', '7', '6', '9', '8', <span clas
   // javascript is turned off then we want them to be
   // visible); but by default, we want to hide them.  So hide
   // them unless we have a cookie that says to show them.
-  checkCookie()
+  checkCookie();
   // -->
 </script>
-  
 </body>
 </html>
