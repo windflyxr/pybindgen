@@ -19,7 +19,6 @@
   * C++ implicit conversions in parameters of functions, methods, and construtors;
 
 = Notable features NOT (yet) implemented =
-  * Handling of C++ exceptions;
   * Multiple inheritance;
   * Callbacks (not automatically, custom callback handling code can be written, though).
 
