@@ -18,9 +18,9 @@
   * Automatic type narrowing on pointer-to-object return values, using C++ RTTI;
   * C++ implicit conversions in parameters of functions, methods, and construtors;
   * Translation of C++ exceptions to Python
+  * Multiple inheritance;
 
 = Notable features NOT (yet) implemented =
-  * Multiple inheritance;
   * Callbacks (not automatically, custom callback handling code can be written, though).
   * Translation of Python exceptions to C++
 
