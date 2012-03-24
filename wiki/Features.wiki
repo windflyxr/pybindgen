@@ -23,5 +23,6 @@
 = Notable features NOT (yet) implemented =
   * Callbacks (not automatically, custom callback handling code can be written, though).
   * Translation of Python exceptions to C++
+  * Translation of __special_methods__ into python PyType tp_xxx is not supported, with some exceptions.
 
 More features not implemented or known problems can be found by [https://bugs.launchpad.net/pybindgen/+bugs? searching the bug tracker].
